@@ -588,7 +588,7 @@ def add_variant(canonical_name, variant):
     drug_variant_to_canonical[variant].add(canonical_name)
 
 
-def add_drug(id, synonyms, is_biologic=True):
+def add_drug(id, synonyms):
     synonyms = [s.strip() for s in synonyms]
     if re.sub("[- ].+", "", synonyms[0].upper()) in exclusions:
         return
@@ -604,7 +604,6 @@ def add_drug(id, synonyms, is_biologic=True):
         drug_canonical_to_data[synonyms[0]]["wikipedia_url"] = id
     else:
         drug_canonical_to_data[synonyms[0]]["drugbank_id"] = id
-    drug_canonical_to_data[synonyms[0]]["is_biologic"] = is_biologic
     for variant in synonyms:
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
@@ -668,10 +667,9 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
             headers = row
             continue
         id = row[0]
-        is_biologic = "BIO" in row[1]
         name = row[2]
         synonyms = row[5].split(r"\|")
-        add_drug(id, [name] + synonyms, is_biologic)
+        add_drug(id, [name] + synonyms)
 
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
@@ -705,3 +703,4 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
     return drug_matches
 
 
+print (find_drugs("bought HEMLIBRA".split(" "), is_ignore_case=True))
