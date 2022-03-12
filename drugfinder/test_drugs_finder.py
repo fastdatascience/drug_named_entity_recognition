@@ -29,8 +29,9 @@ class TestDrugsFinder(unittest.TestCase):
     def test_generic_lc(self):
         drugs = find_drugs("i bought some penicillin".split(" "))
 
-        self.assertEqual(1, len(drugs))
+        self.assertEqual(2, len(drugs))
         self.assertEqual("Phenoxymethylpenicillin", drugs[0][0]['name'])
+        self.assertEqual("Penicillin", drugs[1][0]['name'])
 
     def test_two_word_drug(self):
         drugs = find_drugs("i bought some Amphotericin B".split(" "))

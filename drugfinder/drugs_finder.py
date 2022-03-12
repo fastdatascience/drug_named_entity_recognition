@@ -676,6 +676,7 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
     drug_matches = []
+    is_exclude = set()
 
     # Search for 2 token sequences
     for token_idx, token in enumerate(tokens[:-1]):
@@ -687,8 +688,12 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
         if match:
             for m in match:
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx + 1))
+                is_exclude.add(token_idx)
+                is_exclude.add(token_idx + 1)
 
     for token_idx, token in enumerate(tokens):
+        if token_idx in is_exclude:
+            continue
         if is_ignore_case:
             match = drug_variant_to_canonical.get(token.upper(), None)
         else:
@@ -700,4 +705,3 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
     return drug_matches
 
 
-print (find_drugs("bought HEMLIBRA".split(" "), is_ignore_case=True))
