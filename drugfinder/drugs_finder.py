@@ -602,8 +602,10 @@ def add_drug(id, synonyms):
         drug_canonical_to_data[synonyms[0]]["nhs_url"] = id
     elif id.startswith("https://en.wikipedia"):
         drug_canonical_to_data[synonyms[0]]["wikipedia_url"] = id
-    else:
+    elif id.startswith("DB"):
         drug_canonical_to_data[synonyms[0]]["drugbank_id"] = id
+    else:
+        drug_canonical_to_data[synonyms[0]]["mesh_id"] = id
     for variant in synonyms:
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
@@ -658,7 +660,19 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
         synonyms = row[2].split(r"\|")
 
         add_drug(id, [name] + synonyms)
-
+        
+with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in spamreader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        name = row[1]
+        synonyms = row[2].split(r"\|")
+        add_drug(id, [name] + synonyms)
+        
 with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
@@ -670,6 +684,7 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
         name = row[2]
         synonyms = row[5].split(r"\|")
         add_drug(id, [name] + synonyms)
+        
 
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
