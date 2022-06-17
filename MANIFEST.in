@@ -1,0 +1,3 @@
+include drug_named_entity_recognition/*csv
+exclude drug_named_entity_recognition/extract*py
+recursive-include *.csv

@@ -1,7 +1,6 @@
 import csv
 import re
 import pathlib
-from nltk.tokenize import RegexpTokenizer, WhitespaceTokenizer
 this_path = pathlib.Path(__file__).parent.resolve()
 
 drug_variant_to_canonical = {}
@@ -716,6 +715,3 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
 
     return drug_matches
-
-
-print (find_drugs("bought HEMLIBRA".split(" "), is_ignore_case=True))

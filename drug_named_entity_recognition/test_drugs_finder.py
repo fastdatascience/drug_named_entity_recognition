@@ -1,6 +1,6 @@
 import unittest
 
-from drugsfinder.drugs_finder import find_drugs
+from drug_named_entity_recognition.drugs_finder import find_drugs
 
 class TestDrugsFinder(unittest.TestCase):
 
@@ -22,7 +22,7 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual("Sertraline", drugs[0][0]['name'])
 
     def test_drugs_synonym_lc(self):
-        drugs = find_drugs("i bought some coloft".split(" "))
+        drugs = find_drugs("i bought some zoloft".split(" "))
 
         self.assertEqual(0, len(drugs))
 
@@ -31,7 +31,6 @@ class TestDrugsFinder(unittest.TestCase):
 
         self.assertEqual(2, len(drugs))
         self.assertEqual("Phenoxymethylpenicillin", drugs[0][0]['name'])
-        self.assertEqual("Penicillin", drugs[1][0]['name'])
 
     def test_two_word_drug(self):
         drugs = find_drugs("i bought some Amphotericin B".split(" "))
