@@ -76,3 +76,15 @@ and run `extract_drug_names_and_synonyms_from_wikipedia_dump.py`
 If you want to update the dictionary, download the open data dump from https://www.nlm.nih.gov/ 
 
 and run `extract_drug_names_and_synonyms_from_mesh_dump.py`
+
+
+# License information
+
+* Data from Drugbank is licensed under [CC0](https://go.drugbank.com/releases/latest#open-data).
+
+```
+To the extent possible under law, the person who associated CC0 with the DrugBank Open Data has waived all copyright and related or neighboring rights to the DrugBank Open Data. This work is published from: Canada.
+```
+
+* Text from Wikipedia data dump is licensed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.html) and [Creative Commons Attribution-Share-Alike 3.0 License](https://creativecommons.org/licenses/by-sa/3.0/).
+
