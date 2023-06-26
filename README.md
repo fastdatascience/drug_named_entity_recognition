@@ -4,6 +4,8 @@ Developed by Fast Data Science, https://fastdatascience.com
 
 Source code at https://github.com/fastdatascience/drug_named_entity_recognition
 
+Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
+
 This is a lightweight Python library for finding drug names in a string.
 
 Please note this library finds only high confidence drugs.
@@ -87,3 +89,17 @@ To the extent possible under law, the person who associated CC0 with the DrugBan
 ```
 
 * Text from Wikipedia data dump is licensed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.html) and [Creative Commons Attribution-Share-Alike 3.0 License](https://creativecommons.org/licenses/by-sa/3.0/). [More information](https://dumps.wikimedia.org/legal.html).
+
+## Citing the Drug Named Entity Recognition library
+
+Wood, T.A., Drug Named Entity Recognition [Computer software], Version 0.1, accessed at https://fastdatascience.com/drug-named-entity-recognition-python-library/, Fast Data Science Ltd (2022)
+
+```
+@unpublished{countrynamedentityrecognition,
+    AUTHOR = {Wood, T.A.},
+    TITLE  = {Drug Named Entity Recognition (Computer software), Version 0.1},
+    YEAR   = {2022},
+    Note   = {To appear},
+    url = {https://fastdatascience.com/drug-named-entity-recognition-python-library/}
+}
+```
