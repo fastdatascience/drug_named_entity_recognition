@@ -91,10 +91,15 @@ and run `extract_drug_names_and_synonyms_from_wikipedia_dump.py`
 
 ## Update the MeSH dictionary
 
-If you want to update the dictionary, download the open data dump from https://www.nlm.nih.gov/ 
+If you want to update the dictionary, run
 
-and run `extract_drug_names_and_synonyms_from_mesh_dump.py`
+```
+python download_mesh_dump_and_extract_drug_names_and_synonyms.py
+```
 
+This will download the latest XML file from NIH.
+
+If the link doesn't work, download the open data dump manually from https://www.nlm.nih.gov/. It should be called something like `desc2023.xml`. And comment out the Wget/Curl commands in the code.
 
 # License information
 

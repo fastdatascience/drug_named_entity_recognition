@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
+
+# Data dumps
+.xml
+*.xml
+*/*xml
