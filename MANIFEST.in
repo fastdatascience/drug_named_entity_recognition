@@ -1,3 +1,4 @@
-include drug_named_entity_recognition/*csv
-exclude drug_named_entity_recognition/extract*py
-recursive-include *.csv
+include pyproject.toml
+include *.md
+include LICENSE
+recursive-include tests test*.py
