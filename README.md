@@ -204,13 +204,13 @@ MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
 
 ## Citing the Drug Named Entity Recognition library
 
-Wood, T.A., Drug Named Entity Recognition [Computer software], Version 0.1, accessed at https://fastdatascience.com/drug-named-entity-recognition-python-library/, Fast Data Science Ltd (2022)
+Wood, T.A., Drug Named Entity Recognition [Computer software], Version 1.0, accessed at https://fastdatascience.com/drug-named-entity-recognition-python-library/, Fast Data Science Ltd (2023)
 
 ```
 @unpublished{countrynamedentityrecognition,
     AUTHOR = {Wood, T.A.},
-    TITLE  = {Drug Named Entity Recognition (Computer software), Version 0.1},
-    YEAR   = {2022},
+    TITLE  = {Drug Named Entity Recognition (Computer software), Version 1.0},
+    YEAR   = {2023},
     Note   = {To appear},
 }
 ```
