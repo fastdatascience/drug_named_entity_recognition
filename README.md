@@ -129,7 +129,7 @@ This will download the latest XML file from NIH.
 
 If the link doesn't work, download the open data dump manually from https://www.nlm.nih.gov/. It should be called something like `desc2023.xml`. And comment out the Wget/Curl commands in the code.
 
-# License information
+## License information for external data sources
 
 * Data from Drugbank is licensed under [CC0](https://go.drugbank.com/releases/latest#open-data).
 
@@ -199,10 +199,9 @@ The tool was developed:
 
 * Thomas Wood ([Fast Data Science](https://fastdatascience.com))
 
-## License
+## License of Drug Named Entity Recognition library
 
 MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
-
 
 ## Citing the Drug Named Entity Recognition library
 
