@@ -133,3 +133,6 @@ dmypy.json
 .xml
 *.xml
 */*xml
+wget-log*
+*wget-log*
+*wget-log
