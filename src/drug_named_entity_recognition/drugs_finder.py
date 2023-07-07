@@ -625,7 +625,7 @@ with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding=
             continue
         id = row[0]
         name = row[1]
-        synonyms = row[2].split(r"\|")
+        synonyms = row[2].split("|")
 
         name = re.sub(
             " (Injection|Oral Inhalation|Transdermal|Ophthalmic|Topical|Vaginal Cream|Nasal Spray|Transdermal Patch|Rectal)",
@@ -642,7 +642,7 @@ with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8")
             continue
         id = row[0]
         name = row[1]
-        synonyms = row[2].split(r"\|")
+        synonyms = row[2].split("|")
 
         add_drug(id, [name] + synonyms)
 
@@ -656,7 +656,7 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
             continue
         id = row[0]
         name = row[1]
-        synonyms = row[2].split(r"\|")
+        synonyms = row[2].split("|")
 
         add_drug(id, [name] + synonyms)
         
@@ -669,7 +669,7 @@ with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8"
             continue
         id = row[0]
         name = row[1]
-        synonyms = row[2].split(r"\|")
+        synonyms = row[2].split("|")
         add_drug(id, [name] + synonyms)
         
 with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
@@ -681,7 +681,7 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
             continue
         id = row[0]
         name = row[2]
-        synonyms = row[5].split(r"\|")
+        synonyms = row[5].split("|")
         add_drug(id, [name] + synonyms)
         
 
