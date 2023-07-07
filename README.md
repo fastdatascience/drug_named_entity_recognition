@@ -51,24 +51,50 @@ Example 1
 ```
 from drug_named_entity_recognition import find_drugs
 
-find_drugs("i bought some Phenoxymethylpenicillin".split(" "))
+find_drugs("i bought some Prednisone".split(" "))
 ```
 
 outputs a list of tuples.
 
 ```
-[({'name': 'Phenoxymethylpenicillin',
-   'synonyms': {'Penicillin', 'Phenoxymethylpenicillin'},
-   'nhs_url': 'https://www.nhs.uk/medicines/phenoxymethylpenicillin',
-   'drugbank_id': 'DB00417'},
-  3,
-  3)]
+[({'name': 'Prednisone', 'synonyms': {'Sone', 'Sterapred', 'Deltasone', 'Panafcort', 'Prednidib', 'Cortan', 'Rectodelt', 'Prednisone', 'Cutason', 'Meticorten', 'Panasol', 'Enkortolon', 'Ultracorten', 'Decortin', 'Orasone', 'Winpred', 'Dehydrocortisone', 'Dacortin', 'Cortancyl', 'Encorton', 'Encortone', 'Decortisyl', 'Kortancyl', 'Pronisone', 'Prednisona', 'Predniment', 'Prednisonum', 'Rayos'}, 'medline_plus_id': 'a601102', 'mesh_id': 'D018931', 'drugbank_id': 'DB00635'}, 3, 3)]
 ```
 
 You can ignore case with:
 
 ```
-find_drugs("i bought some phenoxymethylpenicillin".split(" "), is_ignore_case=True)
+find_drugs("i bought some prednisone".split(" "), is_ignore_case=True)
+```
+
+# Compatibility with other natural language processing libraries
+
+The Drug Named Entity Recognition library is independent of other NLP tools and has no dependencies. You don't need any advanced system requirements and the tool is lightweight. However, it combines well with other libraries  such as [spaCy](https://spacy.io) or the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html).
+
+## Using Drug Named Entity Recognition together with spaCy
+
+Here is an example call to the tool with a [spaCy](https://spacy.io) Doc object:
+
+```
+import spacy
+nlp = spacy.blank("en")
+doc = nlp("i routinely rx rimonabant and pts prefer it to chemo")
+find_drugs([t.text for t in doc], is_ignore_case=True)
+```
+
+outputs:
+
+```
+[({'name': 'Rimonabant', 'synonyms': {'Acomplia', 'Rimonabant', 'Zimulti'}, 'mesh_id': 'D063387', 'drugbank_id': 'DB06155'}, 3, 3)]
+```
+
+## Using Drug Named Entity Recognition together with NLTK
+
+You can also use the tool together with the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html):
+
+```
+from nltk.tokenize import wordpunct_tokenize
+tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it to chemo")
+find_drugs(tokens, is_ignore_case=True)
 ```
 
 # Data sources
