@@ -75,9 +75,10 @@ The Drug Named Entity Recognition library is independent of other NLP tools and 
 Here is an example call to the tool with a [spaCy](https://spacy.io) Doc object:
 
 ```
+from drug_named_entity_recognition import find_drugs
 import spacy
 nlp = spacy.blank("en")
-doc = nlp("i routinely rx rimonabant and pts prefer it to chemo")
+doc = nlp("i routinely rx rimonabant and pts prefer it")
 find_drugs([t.text for t in doc], is_ignore_case=True)
 ```
 
@@ -92,8 +93,9 @@ outputs:
 You can also use the tool together with the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html):
 
 ```
+from drug_named_entity_recognition import find_drugs
 from nltk.tokenize import wordpunct_tokenize
-tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it to chemo")
+tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it")
 find_drugs(tokens, is_ignore_case=True)
 ```
 
