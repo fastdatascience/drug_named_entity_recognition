@@ -1,4 +1,4 @@
-# Harmony Python library
+# Drug named entity recognition Python library
 
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
@@ -209,7 +209,7 @@ MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
 Wood, T.A., Drug Named Entity Recognition [Computer software], Version 1.0.0, accessed at https://fastdatascience.com/drug-named-entity-recognition-python-library/, Fast Data Science Ltd (2023)
 
 ```
-@unpublished{countrynamedentityrecognition,
+@unpublished{drugnamedentityrecognition,
     AUTHOR = {Wood, T.A.},
     TITLE  = {Drug Named Entity Recognition (Computer software), Version 1.0.0},
     YEAR   = {2023},
