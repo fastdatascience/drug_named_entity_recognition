@@ -15,7 +15,7 @@ Source code at https://github.com/fastdatascience/drug_named_entity_recognition
 
 Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
 
-This is a lightweight Python library for finding drug names in a string.
+This is a lightweight Python library for finding drug names in a string, otherwise known as named entity recognition (NER) and named entity linking.
 
 Please note this library finds only high confidence drugs.
 
@@ -30,6 +30,16 @@ Python 3.9 and above
 ## Who to contact?
 
 You can contact Thomas Wood or Fast Data Science team at https://fastdatascience.com/.
+
+# Interested in other kinds of named entity recognition (NER)? Finances, company names, countries, locations, proteins, genes, molecules?
+
+If your NER problem is common across industries and likely to have been seen before, there may be an off-the-shelf NER tool for your purposes, such as our [Country Named Entity Recognition](/country-named-entity-recognition/) Python library. Dictionary-based named entity recognition is not always the solution, as sometimes the total set of entities is an open set and can't be listed (e.g. personal names), so sometimes a bespoke trained NER model is the answer. For tasks like finding email addresses or phone numbers, regular expressions (simple rules) are sufficient for the job.
+
+If your named entity recognition or named entity linking problem is very niche and unusual, and a product exists for that problem, that product is likely to only solve your problem 80% of the way, and you will have more work trying to fix the final mile than if you had done the whole thing manually. Please [contact Fast Data Science](/contact) and we'll be glad to discuss. For example, we've worked on [a consultancy engagement to find molecule names in papers, and match author names to customers](/boehringer-ingelheim-finding-molecules-and-proteins-in-scientific-literature/) where the goal was to trace molecule samples ordered from a pharma company and identify when the samples resulted in a publication. For this case, there was no off-the-shelf library that we could use.
+
+For a problem like identifying country names in English, which is a closed set with well-known variants and aliases, and an off-the-shelf library is usually available.
+
+For identifying a set of molecules manufactured by a particular company, this is the kind of task more suited to a [consulting engagement](https://fastdatascience.com/portfolio/nlp-consultant/).
 
 # Installing drug named entity recognition Python package
 
