@@ -3,7 +3,7 @@
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
 
-[![PyPI package](https://img.shields.io/badge/pip%20install-drug-named-entity-recognition-brightgreen)](https://pypi.org/project/drug-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/drug-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/drug_named_entity_recognition)](https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE)
+[![PyPI package](https://img.shields.io/badge/pip%20install-drug%2Dnamed%2Dentity%2Drecognition-brightgreen)](https://pypi.org/project/drug-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/drug-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/drug_named_entity_recognition)](https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE)
 
 <!-- badges: end -->
 
