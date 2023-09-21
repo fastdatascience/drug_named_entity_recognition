@@ -1,0 +1,16 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Drug named entity recognition
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Wood
+    given-names: Thomas
+    orcid: 'https://orcid.org/0000-0001-8962-8571'
+repository-code: 'https://github.com/fastdatascience/drug_named_entity_recognition'
+url: 'https://fastdatascience.com/drug-named-entity-recognition-python-library/'
+license: MIT
+version: 1.0.1
+date-released: '2023-07-07'
