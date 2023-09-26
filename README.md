@@ -10,7 +10,7 @@
 <a href="https://medium.com/fast-data-science"><img align="left" src="https://raw.githubusercontent.com//harmonydata/.github/main/profile/medium.svg" alt="Fast Data Science | Medium" width="21px"/></a>
 <a href="https://mastodon.social/@fastdatascience"><img align="left" src="https://raw.githubusercontent.com//harmonydata/.github/main/profile/mastodon.svg" alt="Fast Data Science | Mastodon" width="21px"/></a>
 
-# Drug named entity recognition Python library
+# Drug named entity recognition Python library by Fast Data Science
 
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
@@ -19,7 +19,7 @@
 
 <!-- badges: end -->
 
-# Drug named entity recognition
+# 💊 Drug named entity recognition
 
 Developed by Fast Data Science, https://fastdatascience.com
 
@@ -27,16 +27,16 @@ Source code at https://github.com/fastdatascience/drug_named_entity_recognition
 
 Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
 
-This is a lightweight Python library for finding drug names in a string, otherwise known as named entity recognition (NER) and named entity linking.
+This is a lightweight Python library for finding drug names in a string, otherwise known as [named entity recognition (NER)](https://fastdatascience.com/named-entity-recognition/) and named entity linking.
 
-Please note this library finds only high confidence drugs.
+Please note this library finds only high confidence drugs and doesn't support misspellings at present.
 
 It also only finds the English names of these drugs. Names in other languages are not supported.
 
 It also doesn't find short code names of drugs, such as abbreviations commonly used in medicine, such as "Ceph" for "Cephradin" - as these are highly ambiguous.
 
 
-# Interested in other kinds of named entity recognition (NER)? Finances, company names, countries, locations, proteins, genes, molecules?
+# Interested in other kinds of named entity recognition (NER)? 💸Finances, 🎩company names, 🌎countries, 🗺️locations, proteins, 🧬genes, 🧪molecules?
 
 If your NER problem is common across industries and likely to have been seen before, there may be an off-the-shelf NER tool for your purposes, such as our [Country Named Entity Recognition](http://fastdatascience.com//country-named-entity-recognition/) Python library. Dictionary-based named entity recognition is not always the solution, as sometimes the total set of entities is an open set and can't be listed (e.g. personal names), so sometimes a bespoke trained NER model is the answer. For tasks like finding email addresses or phone numbers, regular expressions (simple rules) are sufficient for the job.
 
@@ -50,11 +50,11 @@ For identifying a set of molecules manufactured by a particular company, this is
 
 Python 3.9 and above
 
-## Who to contact?
+## ✉️Who to contact?
 
-You can contact Thomas Wood or Fast Data Science team at https://fastdatascience.com/.
+You can contact Thomas Wood or the Fast Data Science team at https://fastdatascience.com/.
 
-# Installing drug named entity recognition Python package
+# 💻Installing drug named entity recognition Python package
 
 You can install from [PyPI](https://pypi.org/project/drug-named-entity-recognition).
 
@@ -63,7 +63,7 @@ pip install drug-named-entity-recognition
 ```
 
 
-# Usage examples
+# 💡Usage examples
 
 You must first tokenise your input text using a tokeniser of your choice (NLTK, spaCy, etc).
 
@@ -89,7 +89,7 @@ You can ignore case with:
 find_drugs("i bought some prednisone".split(" "), is_ignore_case=True)
 ```
 
-# Compatibility with other natural language processing libraries
+# 🤝Compatibility with other natural language processing libraries
 
 The Drug Named Entity Recognition library is independent of other NLP tools and has no dependencies. You don't need any advanced system requirements and the tool is lightweight. However, it combines well with other libraries  such as [spaCy](https://spacy.io) or the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html).
 
@@ -122,7 +122,7 @@ tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it")
 find_drugs(tokens, is_ignore_case=True)
 ```
 
-# Data sources
+# 📁Data sources
 
 The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
 
@@ -193,7 +193,7 @@ tox -e py39
 
 Thanks to GitHub Actions' automated process, you don't need to generate distribution files locally. But if you insist, click to read the "Generate distribution files" section.
 
-### Continuous integration/deployment to PyPI
+### 🤖 Continuous integration/deployment to PyPI
 
 This package is based on the template https://pypi.org/project/example-pypi-package/
 
@@ -204,7 +204,7 @@ This package
 - includes test files in the source distribution
 - uses **setup.cfg** for [version single-sourcing](https://packaging.python.org/guides/single-sourcing-package-version/) (setuptools 46.4.0+)
 
-## Re-releasing the package manually
+## 🧍Re-releasing the package manually
 
 The code to re-release Harmony on PyPI is as follows:
 
@@ -216,17 +216,17 @@ python setup.py sdist
 twine upload dist/*
 ```
 
-## Who worked on the Drug Named Entity Recognition library?
+## 😊 Who worked on the Drug Named Entity Recognition library?
 
 The tool was developed:
 
 * Thomas Wood ([Fast Data Science](https://fastdatascience.com))
 
-## License of Drug Named Entity Recognition library
+## 📜License of Drug Named Entity Recognition library
 
 MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
 
-## Citing the Drug Named Entity Recognition library
+## ✍️ Citing the Drug Named Entity Recognition library
 
 Wood, T.A., Drug Named Entity Recognition [Computer software], Version 1.0.1, accessed at [https://fastdatascience.com/drug-named-entity-recognition-python-library](https://fastdatascience.com/drug-named-entity-recognition-python-library), Fast Data Science Ltd (2023)
 
