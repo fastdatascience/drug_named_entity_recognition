@@ -126,6 +126,8 @@ find_drugs(tokens, is_ignore_case=True)
 
 The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
 
+🌟 There is a handy Jupyter Notebook, `update.ipynb` which will update the Drugbank and MeSH data sources (re-download them from the relevant third parties). 
+
 ## Update the Drugbank dictionary
 
 If you want to update the dictionary, you can use the data dump from Drugbank and replace the file `drugbank vocabulary.csv`:
