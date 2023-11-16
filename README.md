@@ -47,7 +47,7 @@ For a problem like identifying country names in English, which is a closed set w
 For identifying a set of molecules manufactured by a particular company, this is the kind of task more suited to a [consulting engagement](https://fastdatascience.com/portfolio/nlp-consultant/).
 
 
-# Using this tool directly from Google Sheets (no-code!)
+# 😊 Using this tool directly from Google Sheets (no-code!)
 
 ![google_sheets_screenshot.png](google_sheets_screenshot.png)
 
