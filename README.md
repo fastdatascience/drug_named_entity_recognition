@@ -46,6 +46,13 @@ For a problem like identifying country names in English, which is a closed set w
 
 For identifying a set of molecules manufactured by a particular company, this is the kind of task more suited to a [consulting engagement](https://fastdatascience.com/portfolio/nlp-consultant/).
 
+
+## Drug name recogniser Google Sheets plugin
+
+This library has also been wrapped as a Google Sheets plugin. [Click here](https://www.youtube.com/watch?v=7aJPS5tGeDw) to watch a video of how the plugin works.
+
+You can install the plugin in Google Sheets [here](https://workspace.google.com/marketplace/app/drug_name_recogniser/463844408236).
+
 # Requirements
 
 Python 3.9 and above
