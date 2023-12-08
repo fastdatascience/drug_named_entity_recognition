@@ -16,7 +16,6 @@ You can run the walkthrough Python notebook in [Google Colab](https://colab.rese
 
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
-
 [![PyPI package](https://img.shields.io/badge/pip%20install-drug_named_entity_recognition-brightgreen)](https://pypi.org/project/drug-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/drug-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/drug_named_entity_recognition)](https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE)
 [![pypi Version](https://img.shields.io/pypi/v/drug_named_entity_recognition.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/drug_named_entity_recognition/)
  [![version number](https://img.shields.io/pypi/v/drug_named_entity_recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![PyPi downloads](https://static.pepy.tech/personalized-badge/drug_named_entity_recognition?period=total&units=international_system&left_color=grey&right_color=orange&left_text=pip%20downloads)](https://pypi.org/project/drug_named_entity_recognition/)
