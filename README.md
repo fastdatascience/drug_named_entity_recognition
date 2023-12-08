@@ -87,7 +87,7 @@ For identifying a set of molecules manufactured by a particular company, this is
 
 We have a no-code solution where you can [use the library directly from Google Sheets](https://fastdatascience.com/drug-name-recogniser) as the library has also been wrapped as a Google Sheets plugin.
 
-[Click here](https://www.youtube.com/watch?v=7aJPS5tGeDw) to watch a video of how the plugin works.
+[Click here](https://www.youtube.com/watch?v=qab1Bv_YpYU) to watch a video of how the plugin works.
 
 You can install the plugin in Google Sheets [here](https://workspace.google.com/marketplace/app/drug_name_recogniser/463844408236).
 
