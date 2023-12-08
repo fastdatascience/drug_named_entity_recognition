@@ -45,6 +45,7 @@ pip install drug-named-entity-recognition
 
 If you get an error installing, try making a new Python environment in Conda (`conda create -n test-env; conda activate test-env`) or Venv (`python -m testenv; source testenv/bin/activate` / `testenv\Scripts\activate`) and then installing the library.
 
+The library already contains the drug names so if you don't need to update the dictionary, then you should not have to run any of the download scripts.
 
 # 💡Usage examples
 
