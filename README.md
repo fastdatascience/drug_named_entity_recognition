@@ -86,7 +86,7 @@ If your NER problem is common across industries and likely to have been seen bef
 
 If your named entity recognition or named entity linking problem is very niche and unusual, and a product exists for that problem, that product is likely to only solve your problem 80% of the way, and you will have more work trying to fix the final mile than if you had done the whole thing manually. Please [contact Fast Data Science](http://fastdatascience.com//contact) and we'll be glad to discuss. For example, we've worked on [a consultancy engagement to find molecule names in papers, and match author names to customers](http://fastdatascience.com//boehringer-ingelheim-finding-molecules-and-proteins-in-scientific-literature/) where the goal was to trace molecule samples ordered from a pharma company and identify when the samples resulted in a publication. For this case, there was no off-the-shelf library that we could use.
 
-For a problem like identifying country names in English, which is a closed set with well-known variants and aliases, and an off-the-shelf library is usually available.
+For a problem like identifying country names in English, which is a closed set with well-known variants and aliases, and an off-the-shelf library is usually available. You may wish to try our [Country Named Entity Recognition](https://fastdatascience.com/country-named-entity-recognition/) library, also open-source and under MIT license.
 
 For identifying a set of molecules manufactured by a particular company, this is the kind of task more suited to a [consulting engagement](https://fastdatascience.com/portfolio/nlp-consultant/).
 
