@@ -10,6 +10,9 @@
 <a href="https://medium.com/fast-data-science"><img align="left" src="https://raw.githubusercontent.com//harmonydata/.github/main/profile/medium.svg" alt="Fast Data Science | Medium" width="21px"/></a>
 <a href="https://mastodon.social/@fastdatascience"><img align="left" src="https://raw.githubusercontent.com//harmonydata/.github/main/profile/mastodon.svg" alt="Fast Data Science | Mastodon" width="21px"/></a>
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10970631.svg)](https://doi.org/10.5281/zenodo.10970631)
+
+
 You can run the walkthrough Python notebook in [Google Colab](https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb) with a single click: <a href="https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 # Drug named entity recognition Python library by Fast Data Science
