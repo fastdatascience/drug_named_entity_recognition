@@ -790,7 +790,3 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
 
     return drug_matches
 
-
-drugs = find_drugs(["I","bought","paracetamol"], is_ignore_case=True)
-
-print (drugs)
