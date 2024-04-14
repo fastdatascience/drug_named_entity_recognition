@@ -28,14 +28,16 @@ SOFTWARE.
 '''
 
 import csv
-import re
 import pathlib
+import re
+
 this_path = pathlib.Path(__file__).parent.resolve()
 
 drug_variant_to_canonical = {}
 drug_canonical_to_data = {}
 
-exclusions = {'ACACIA',
+exclusions = {'ABATE',
+              'ACACIA',
               'ACETAMIDE',
               'ACETATE',
               'ACETOPHENONE',
@@ -48,6 +50,7 @@ exclusions = {'ACACIA',
               'ADENOSINE',
               'ADRENALONE',
               'AGMATINE',
+              'AGON',
               'AIM',
               'ALANINE',
               'ALLANTOIN',
@@ -55,6 +58,7 @@ exclusions = {'ACACIA',
               'ALMOND',
               'ALUMINIUM',
               'AMBER',
+              'AMBUSH',
               'AMEN',
               'AMMONIA',
               'AMYLAMINE',
@@ -73,10 +77,12 @@ exclusions = {'ACACIA',
               'ASPARAGUS',
               'AVOCADO',
               'BA',
+              'BALANCE',
               'BANANA',
               'BARIUM',
               'BARLEY',
               'BASIL',
+              'BEAM',
               'BEAN',
               'BEEF',
               'BEESWAX',
@@ -139,6 +145,7 @@ exclusions = {'ACACIA',
               'CINCHOPHEN',
               'CINNAMALDEHYDE',
               'CINNAMON',
+              'CIT',
               'CLOVE',
               'COBALT',
               'COCAINE',
@@ -165,6 +172,7 @@ exclusions = {'ACACIA',
               'CYCLOHEXANOL',
               'CYCLOHEXANONE',
               'CYCLOPROPANE',
+              'CYCLOPS',
               'CYSTEINE',
               'CYSTINE',
               'CYTISINE',
@@ -185,6 +193,7 @@ exclusions = {'ACACIA',
               'ECHINACEA',
               'EGG',
               'EGGPLANT',
+              'ELLA',
               'ELM',
               'EMETINE',
               'EMODIN',
@@ -198,8 +207,8 @@ exclusions = {'ACACIA',
               'ESCULIN',
               'ESTRADIOL',
               'ESTRIOL',
-              'ESTRONE',
               'ESTROGEN',
+              'ESTRONE',
               'ETHANOL',
               'ETHANOLAMINE',
               'ETHER',
@@ -219,6 +228,7 @@ exclusions = {'ACACIA',
               'FLUORIDE',
               'FLUORSPAR',
               'FORMALDEHYDE',
+              'FOY',
               'FRANKINCENSE',
               'FRUCTOSE',
               'FUCOSE',
@@ -248,11 +258,13 @@ exclusions = {'ACACIA',
               'GUANOSINE',
               'GUVACINE',
               'HADDOCK',
+              'HAEM',
               'HARMALINE',
               'HARMINE',
               'HAZELNUT',
               'HELIUM',
               'HEMATIN',
+              'HEME',
               'HEMIN',
               'HEMOGLOBIN',
               'HEPARIN',
@@ -271,6 +283,7 @@ exclusions = {'ACACIA',
               'HYPOPHOSPHITE',
               'HYPOXANTHINE',
               'IMIDAZOLE',
+              'INDIGO',
               'INDIRUBIN',
               'INDIUM',
               'INDOLE',
@@ -292,6 +305,7 @@ exclusions = {'ACACIA',
               'KALE',
               'KAOLIN',
               'KAVA',
+              'LACTASE',
               'LACTOSE',
               'LAMB',
               'LANOLIN',
@@ -327,9 +341,12 @@ exclusions = {'ACACIA',
               'METHANE',
               'METHIONINE',
               'METHYLAMINE',
+              'METRIC',
               'MOLYBDATE',
               'MOLYBDENUM',
+              'MONO',
               'MORPHOLINE',
+              'MUSE',
               'MUSKMELON',
               'MYRICETIN',
               'MYRRH',
@@ -347,6 +364,8 @@ exclusions = {'ACACIA',
               'NITROGEN',
               'NITROGLYCERIN',
               'NITROPRUSSIDE',
+              'NIX',
+              'NOCTURNE',
               'NORLEUCINE',
               'NUTMEG',
               'OAT',
@@ -357,8 +376,8 @@ exclusions = {'ACACIA',
               'ORANGE',
               'ORNITHINE',
               'ORRIS',
-              'OUABAIN',
               'OTHER',
+              'OUABAIN',
               'OXYGEN',
               'OXYTOCIN',
               'OYSTER',
@@ -408,6 +427,7 @@ exclusions = {'ACACIA',
               'PROCAINE',
               'PROFLAVINE',
               'PROGESTERONE',
+              'PROLATE',
               'PROLINE',
               'PROTAMINE',
               'PROTHROMBIN',
@@ -422,6 +442,8 @@ exclusions = {'ACACIA',
               'RABBIT',
               'RADISH',
               'RASPBERRY',
+              'RECEDE',
+              'REDUX',
               'REPOSAL',
               'RESORCINOL',
               'RHAMNOSE',
@@ -430,9 +452,11 @@ exclusions = {'ACACIA',
               'RIBOFLAVIN',
               'RIBOSE',
               'RICE',
+              'RID',
               'ROSEMARY',
               'ROSIN',
               'ROTENONE',
+              'ROUNDUP',
               'RUBIDIUM',
               'RUTIN',
               'RYE',
@@ -447,14 +471,18 @@ exclusions = {'ACACIA',
               'SCOPOLAMINE',
               'SELENIUM',
               'SENNA',
+              'SEQUEL',
+              'SERENADE',
               'SERINE',
               'SHRIMP',
               'SILICON',
               'SILVER',
               'SMELT',
               'SNAIL',
+              'SOMA',
               'SONATA',
               'SORBITOL',
+              'SORGHUM',
               'SOYBEAN',
               'SPARTEINE',
               'SPEARMINT',
@@ -474,6 +502,7 @@ exclusions = {'ACACIA',
               'TALC',
               'TANGERINE',
               'TANTALUM',
+              'TANTUM',
               'TARTRONATE',
               'TAURINE',
               'TENUATE',
@@ -490,6 +519,7 @@ exclusions = {'ACACIA',
               'THYMOL',
               'THYROID',
               'TING',
+              'TIRADE',
               'TITANIUM',
               'TOCOPHEROL',
               'TOLUENE',
@@ -525,6 +555,8 @@ exclusions = {'ACACIA',
               'WATER',
               'WATERMELON',
               'WHEAT',
+              'WHEY',
+              'WIND',
               'WORMWOOD',
               'XANTHINE',
               'XENON',
@@ -532,7 +564,8 @@ exclusions = {'ACACIA',
               'XYLOSE',
               'YEAST',
               'ZINC',
-              'ZINGERONE'}
+              'ZINGERONE',
+              'ZONAL'}
 
 # Drug names which are sufficiently generic that they may occur lower case
 words_to_allow_lower_case = {'amphetamine',
@@ -617,8 +650,9 @@ def add_variant(canonical_name, variant):
     drug_variant_to_canonical[variant].add(canonical_name)
 
 
-def add_drug(id, synonyms):
+def add_drug(id, generic_names: list, synonyms: list):
     synonyms = [s.strip() for s in synonyms]
+
     if re.sub("[- ].+", "", synonyms[0].upper()) in exclusions:
         return
     if not variant_regex.match(synonyms[0]):
@@ -635,7 +669,11 @@ def add_drug(id, synonyms):
         drug_canonical_to_data[synonyms[0]]["drugbank_id"] = id
     else:
         drug_canonical_to_data[synonyms[0]]["mesh_id"] = id
-    for variant in synonyms:
+    if "generic_names" not in drug_canonical_to_data[synonyms[0]]:
+        drug_canonical_to_data[synonyms[0]]["generic_names"] = generic_names
+    else:
+        drug_canonical_to_data[synonyms[0]]["generic_names"] = list(set(drug_canonical_to_data[synonyms[0]]["generic_names"] + generic_names))
+    for variant in set(generic_names + synonyms):
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
         if variant_regex.match(variant):
@@ -661,7 +699,7 @@ with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding=
             " (Injection|Oral Inhalation|Transdermal|Ophthalmic|Topical|Vaginal Cream|Nasal Spray|Transdermal Patch|Rectal)",
             "", name)
 
-        add_drug(id, [name] + synonyms)
+        add_drug(id, [name], [name] + synonyms)
 
 with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
@@ -674,7 +712,33 @@ with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8")
         name = row[1]
         synonyms = row[2].split("|")
 
-        add_drug(id, [name] + synonyms)
+        add_drug(id, [], [name] + synonyms)
+
+
+with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in spamreader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        generic_names = row[1].split("|")
+        name = row[2]
+        synonyms = row[3].split("|")
+        add_drug(id, generic_names, [name] + synonyms)
+
+with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in spamreader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        name = row[2]
+        synonyms = row[5].split("|")
+        add_drug(id, [name], [name] + synonyms)
 
 
 with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
@@ -688,33 +752,13 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
         name = row[1]
         synonyms = row[2].split("|")
 
-        add_drug(id, [name] + synonyms)
-        
-with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=',')
-    headers = None
-    for row in spamreader:
-        if not headers:
-            headers = row
-            continue
-        id = row[0]
-        name = row[1]
-        synonyms = row[2].split("|")
-        add_drug(id, [name] + synonyms)
-        
-with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=',')
-    headers = None
-    for row in spamreader:
-        if not headers:
-            headers = row
-            continue
-        id = row[0]
-        name = row[2]
-        synonyms = row[5].split("|")
-        add_drug(id, [name] + synonyms)
-        
+        uc_name = name.upper()
 
+        if uc_name  in drug_variant_to_canonical and len(drug_variant_to_canonical[uc_name]) == 1 and list(drug_variant_to_canonical[uc_name])[0].upper() != uc_name:
+            synonyms = [name] + synonyms
+            name = list(drug_variant_to_canonical[uc_name])[0]
+
+        add_drug(id, [], [name] + synonyms)
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
     drug_matches = []
@@ -745,3 +789,8 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
 
     return drug_matches
+
+
+drugs = find_drugs(["I","bought","paracetamol"], is_ignore_case=True)
+
+print (drugs)

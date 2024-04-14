@@ -1,3 +1,7 @@
+# Cross check the Drug Named Entity Recognition drugs against common English words
+
+# You need to install NLTK to run this
+
 '''
 MIT License
 
@@ -27,7 +31,19 @@ SOFTWARE.
 
 '''
 
-__version__ = "1.0.3"
+import sys
+sys.path.append("src")
+
+from nltk.corpus import words
+
+from drug_named_entity_recognition import find_drugs
+
+print ("Finding all drugs that are also in the NLTK list of English words.")
+
+for word in words.words():
+    drugs = find_drugs([word], is_ignore_case=True)
+    if len(drugs) >0:
+        print (word)
 
 
-from drug_named_entity_recognition.drugs_finder import find_drugs
+
