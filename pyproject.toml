@@ -1,3 +1,49 @@
+[project]
+name = "harmonydata"
+version = "0.5.2"
+description = "Harmony Tool for Retrospective Data Harmonisation"
+readme = "README.md"
+keywords = ['drug', 'bio', 'biomedical', 'medical', 'pharma', 'pharmaceutical', 'ner', 'nlp', 'named entity recognition', 'natural language processing', 'named entity linking']
+license = { file = "LICENSE" }
+maintainers = [
+  { name = "Thomas Wood", email = "thomas@fastdatascience.com" },
+]
+authors = [
+    { name = "Thomas Wood", email = "thomas@fastdatascience.com" },
+]
+requires-python = ">=3.6,<=3.13"
+classifiers=[
+    # see https://pypi.org/classifiers/
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+# this set should be kept minimal!
+dependencies = [
+]
+
+[project.optional-dependencies]
+
+# dev - the developer dependency set, for contributors to harmony
+dev = ["check-manifest", "pytest"]
+
+[project.urls]
+"Documentation" = "https://fastdatascience.com/drug-named-entity-recognition-python-library/"
+"Bug Reports" = "https://github.com/fastdatascience/drug_named_entity_recognition/issues"
+"Source Code" = "https://github.com/fastdatascience/drug_named_entity_recognition"
+
 [build-system]
-requires = ["setuptools>=46.4.0", "wheel"]
+requires = ["setuptools>=46.4.0", "wheel", "twine"]
 build-backend = "setuptools.build_meta"
