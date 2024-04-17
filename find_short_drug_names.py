@@ -35,13 +35,13 @@ import sys
 
 sys.path.append("src")
 
-from nltk.corpus import words
+from drug_named_entity_recognition.drugs_finder import drug_variant_to_canonical
 
-from drug_named_entity_recognition import find_drugs
+print("Finding all drugs that are short")
 
-print("Finding all drugs that are also in the NLTK list of English words.")
+short_drug_names = set()
+for word in drug_variant_to_canonical:
+    if len(word) <= 3:
+        short_drug_names.add(word.upper())
 
-for word in words.words():
-    drugs = find_drugs([word], is_ignore_case=True)
-    if len(drugs) > 0:
-        print(word)
+print(list(short_drug_names))
