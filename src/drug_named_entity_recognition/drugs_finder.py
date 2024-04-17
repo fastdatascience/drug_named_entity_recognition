@@ -672,7 +672,8 @@ def add_drug(id, generic_names: list, synonyms: list):
     if "generic_names" not in drug_canonical_to_data[synonyms[0]]:
         drug_canonical_to_data[synonyms[0]]["generic_names"] = generic_names
     else:
-        drug_canonical_to_data[synonyms[0]]["generic_names"] = list(set(drug_canonical_to_data[synonyms[0]]["generic_names"] + generic_names))
+        drug_canonical_to_data[synonyms[0]]["generic_names"] = list(
+            set(drug_canonical_to_data[synonyms[0]]["generic_names"] + generic_names))
     for variant in set(generic_names + synonyms):
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
@@ -714,7 +715,6 @@ with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8")
 
         add_drug(id, [], [name] + synonyms)
 
-
 with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
@@ -740,7 +740,6 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
         synonyms = row[5].split("|")
         add_drug(id, [name], [name] + synonyms)
 
-
 with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
@@ -754,11 +753,16 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
 
         uc_name = name.upper()
 
-        if uc_name  in drug_variant_to_canonical and len(drug_variant_to_canonical[uc_name]) == 1 and list(drug_variant_to_canonical[uc_name])[0].upper() != uc_name:
+        if uc_name in drug_variant_to_canonical and len(drug_variant_to_canonical[uc_name]) == 1 and \
+                list(drug_variant_to_canonical[uc_name])[0].upper() != uc_name:
             synonyms = [name] + synonyms
             name = list(drug_variant_to_canonical[uc_name])[0]
 
         add_drug(id, [], [name] + synonyms)
+
+for v in drug_canonical_to_data.values():
+    v["synonyms"] = list(v["synonyms"])
+
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
     drug_matches = []
@@ -790,3 +794,8 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
 
     return drug_matches
 
+
+if __name__ == "__main__":
+    drugs = find_drugs(["I", "bought", "paracetamol"], is_ignore_case=True)
+
+    print(drugs)
