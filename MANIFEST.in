@@ -7,3 +7,4 @@ include *.ipynb
 include *.png
 include cross_check_against_common_english_vocab.py
 include find_short_drug_names.py
+recursive-include harvesting_data_from_source *.py
