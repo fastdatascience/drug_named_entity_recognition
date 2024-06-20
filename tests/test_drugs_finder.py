@@ -100,3 +100,15 @@ class TestDrugsFinder(unittest.TestCase):
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("insulin", drugs[0][0]['name'])
+
+    def test_acetylsalicylic_acid(self):
+        drugs = find_drugs("i bought some acetylsalicylic acid".split(" "), is_ignore_case=True)
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Aspirin", drugs[0][0]['name'])
+    #
+    # def test_acetylsalicylic_acid_case_sensitive(self):
+    #     drugs = find_drugs("i bought some acetylsalicylic acid".split(" "), is_ignore_case=False)
+    #
+    #     self.assertEqual(1, len(drugs))
+    #     self.assertEqual("Aspirin", drugs[0][0]['name'])

@@ -645,8 +645,6 @@ words_to_allow_lower_case = {'amphetamine',
                              'tryptophan',
                              'yohimbine'}
 
-variant_regex = re.compile(r'^[A-Za-z][a-z]+(?:[ -][A-Z])?$')
-
 
 def add_variant(canonical_name, variant):
     if variant not in drug_variant_to_canonical:
@@ -664,8 +662,6 @@ def add_drug(id, generic_names: list, synonyms: list):
             break
 
     if re.sub("[- ].+", "", synonyms[0].upper()) in exclusions:
-        return
-    if not variant_regex.match(synonyms[0]):
         return
     if synonyms[0] not in drug_canonical_to_data:
         drug_canonical_to_data[synonyms[0]] = {"name": synonyms[0], "synonyms": set()}
@@ -687,12 +683,11 @@ def add_drug(id, generic_names: list, synonyms: list):
     for variant in set(generic_names + synonyms):
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
-        if variant_regex.match(variant):
-            drug_canonical_to_data[synonyms[0]]["synonyms"].add(variant)
-            add_variant(synonyms[0], variant)
-            add_variant(synonyms[0], variant.upper())
-            if variant.lower() in words_to_allow_lower_case:
-                add_variant(synonyms[0], variant.lower())
+        drug_canonical_to_data[synonyms[0]]["synonyms"].add(variant)
+        add_variant(synonyms[0], variant)
+        add_variant(synonyms[0], variant.upper())
+        if variant.lower() in words_to_allow_lower_case:
+            add_variant(synonyms[0], variant.lower())
 
 
 with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding="utf-8") as csvfile:
