@@ -1,6 +1,6 @@
 [project]
 name = "drug-named-entity-recognition"
-version = "0.5.2"
+version = "1.0.7"
 description = "Drug Named Entity Recognition library to find and resolve drug names in a string (drug named entity linking)"
 readme = "README.md"
 keywords = ['drug', 'bio', 'biomedical', 'medical', 'pharma', 'pharmaceutical', 'ner', 'nlp', 'named entity recognition', 'natural language processing', 'named entity linking']
