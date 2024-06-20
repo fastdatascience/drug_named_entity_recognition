@@ -94,3 +94,9 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual(1, len(drugs))
         self.assertEqual("Tocilizumab", drugs[0][0]['name'])
         self.assertEqual("Tocilizumab", drugs[0][0]['generic_names'][0])
+
+    def test_insulin(self):
+        drugs = find_drugs("i bought some insulin".split(" "), is_ignore_case=True)
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("insulin", drugs[0][0]['name'])

@@ -16,7 +16,11 @@ for link in outgoing_links:
     if "medicines/#" not in link.attrib["href"]:
         drug_name = link.text.strip()
         drug_name = re.sub(r'\s+', ' ', drug_name)
-        links_to_follow.append(['https://www.nhs.uk' + link.attrib["href"], drug_name])
+        if link.attrib["href"].startswith("http"):
+            absolute_url = link.attrib["href"]
+        else:
+            absolute_url = 'https://www.nhs.uk' + link.attrib["href"]
+        links_to_follow.append([absolute_url, drug_name])
 
 # # Download all drug pages
 

@@ -657,6 +657,12 @@ def add_variant(canonical_name, variant):
 def add_drug(id, generic_names: list, synonyms: list):
     synonyms = [s.strip() for s in synonyms]
 
+    for synonym_idx, synonym in enumerate(list(synonyms)):
+        if synonym in drug_canonical_to_data:
+            if synonym_idx > 0:
+                synonyms = [synonym] + synonyms
+            break
+
     if re.sub("[- ].+", "", synonyms[0].upper()) in exclusions:
         return
     if not variant_regex.match(synonyms[0]):
@@ -767,6 +773,30 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
 for v in drug_canonical_to_data.values():
     v["synonyms"] = list(v["synonyms"])
 
+# Make sure we don't have multiple mappings.
+for variant, candidate_canonicals in drug_variant_to_canonical.items():
+    if len(candidate_canonicals) > 1:
+        combined_canonical = {}
+        ranked_canonicals = sorted(candidate_canonicals, key=lambda candidate: len(drug_canonical_to_data[candidate]),
+                                   reverse=True)
+        best_canonical = ranked_canonicals[0]
+        combined_canonical_data = drug_canonical_to_data[best_canonical]
+
+        for other_canonical in ranked_canonicals[1:]:
+            other_canonical_data = drug_canonical_to_data[other_canonical]
+            if other_canonical_data["name"] == combined_canonical_data["name"].lower():
+                combined_canonical_data["name"] = other_canonical_data["name"]
+
+            combined_canonical_data['synonyms'].extend(other_canonical_data['synonyms'])
+
+            combined_canonical_data['generic_names'].extend(other_canonical_data['generic_names'])
+
+            if combined_canonical_data.get('nhs_url') is None and other_canonical_data.get('nhs_url') is not None:
+                combined_canonical_data['nhs_url'] = other_canonical_data['nhs_url']
+
+        drug_variant_to_canonical[variant] = [best_canonical]
+        drug_canonical_to_data[best_canonical] = combined_canonical_data
+
 
 def find_drugs(tokens: list, is_ignore_case: bool = False):
     drug_matches = []
@@ -797,9 +827,3 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
 
     return drug_matches
-
-
-if __name__ == "__main__":
-    drugs = find_drugs(["I", "bought", "paracetamol"], is_ignore_case=True)
-
-    print(drugs)
