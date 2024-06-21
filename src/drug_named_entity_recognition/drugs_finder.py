@@ -822,7 +822,3 @@ def find_drugs(tokens: list, is_ignore_case: bool = True):
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
 
     return drug_matches
-
-
-drugs = find_drugs("i bought some Polysporin".split(" "))
-print(drugs)

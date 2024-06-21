@@ -119,3 +119,9 @@ class TestDrugsFinder(unittest.TestCase):
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Bacitracin/polymyxin B", drugs[0][0]['name'])
+    #
+    # def test_glycyrrhiza(self):
+    #     drugs = find_drugs("i bought some Glycyrrhiza Spp. Root".split(" "))
+    #
+    #     self.assertEqual(1, len(drugs))
+    #     self.assertEqual("Glycyrrhiza", drugs[0][0]['name'])
