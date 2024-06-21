@@ -41,7 +41,7 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual("Sertraline", drugs[0][0]['name'])
 
     def test_drugs_lowercase(self):
-        drugs = find_drugs("i bought some sertraline".split(" "))
+        drugs = find_drugs("i bought some sertraline".split(" "), is_ignore_case=False)
 
         self.assertEqual(0, len(drugs))
 
@@ -52,7 +52,7 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual("Sertraline", drugs[0][0]['name'])
 
     def test_drugs_synonym_lc(self):
-        drugs = find_drugs("i bought some zoloft".split(" "))
+        drugs = find_drugs("i bought some zoloft".split(" "), is_ignore_case=False)
 
         self.assertEqual(0, len(drugs))
 
@@ -106,9 +106,16 @@ class TestDrugsFinder(unittest.TestCase):
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Aspirin", drugs[0][0]['name'])
+
     #
     # def test_acetylsalicylic_acid_case_sensitive(self):
     #     drugs = find_drugs("i bought some acetylsalicylic acid".split(" "), is_ignore_case=False)
     #
     #     self.assertEqual(1, len(drugs))
     #     self.assertEqual("Aspirin", drugs[0][0]['name'])
+
+    def test_polysporin(self):
+        drugs = find_drugs("i bought some Polysporin".split(" "))
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Bacitracin/polymyxin B", drugs[0][0]['name'])

@@ -793,7 +793,7 @@ for variant, candidate_canonicals in drug_variant_to_canonical.items():
         drug_canonical_to_data[best_canonical] = combined_canonical_data
 
 
-def find_drugs(tokens: list, is_ignore_case: bool = False):
+def find_drugs(tokens: list, is_ignore_case: bool = True):
     drug_matches = []
     is_exclude = set()
 
@@ -822,3 +822,7 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
                 drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
 
     return drug_matches
+
+
+drugs = find_drugs("i bought some Polysporin".split(" "))
+print(drugs)
