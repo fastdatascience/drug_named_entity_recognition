@@ -569,7 +569,9 @@ exclusions = {'ABATE',
               'YEAST',
               'ZINC',
               'ZINGERONE',
-              'ZONAL'}
+              'ZONAL',
+              'OE', 'Q', 'AP', 'T3', 'BT', 'M', 'BU', 'AX', 'VA', 'BD', 'AS', 'T4', 'W', 'TG', '&', 'D', 'LA', 'PG',
+              'SK', 'LH', 'DC', 'SA', 'CO', 'T', 'PV', 'PC', 'JM', 'DM', 'PS', 'E5', 'NO', 'CD', 'CP'}
 
 # Drug names which are sufficiently generic that they may occur lower case
 words_to_allow_lower_case = {'amphetamine',
