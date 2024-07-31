@@ -27,40 +27,36 @@ SOFTWARE.
 
 '''
 
+import os
 import re
-import time
+import subprocess
+from sys import platform
 
 import requests
-from lxml import etree
 
-response = requests.get('https://www.nhs.uk/medicines/')
+response = requests.get("https://go.drugbank.com/releases/latest#open-data")
 
-tree = etree.HTML(response.text)
+re_url = re.compile(r'\bhttps://go.drugbank.com/releases/[a-z0-9-/]+all-drugbank-vocabulary\b')
 
-outgoing_links = tree.xpath("//a[contains(@href,'/medicines/')]")
+url = re_url.findall(response.text)[0]
 
-links_to_follow = []
+print(f"Platform is {platform}.")
+if "win" in platform:  # if we are on Windows, use curl.exe (supported in Windows 10 and up)
+    tmpfile = "C:/temp/tmp.zip"
+    wget = subprocess.Popen(["curl.exe", "--output", tmpfile, "--url", url])
+else:
+    tmpfile = "/tmp/tmp.zip"
+    wget = subprocess.Popen(["wget", "-O", tmpfile, url])
 
-for link in outgoing_links:
-    if "medicines/#" not in link.attrib["href"]:
-        drug_name = link.text.strip()
-        drug_name = re.sub(r'\s+', ' ', drug_name)
-        if link.attrib["href"].startswith("http"):
-            absolute_url = link.attrib["href"]
-        else:
-            absolute_url = 'https://www.nhs.uk' + link.attrib["href"]
-        links_to_follow.append([absolute_url, drug_name])
+os.waitpid(wget.pid, 0)
 
-# # Download all drug pages
+print(f"Downloaded Drugbank dump from {url} to {tmpfile}.")
 
-for medicine_page_url, drug_name in links_to_follow:
-    words = len(drug_name.split(" "))
-    print(medicine_page_url, drug_name)
-    page_url_hash = re.sub(r'.+/medicines/|/$', '', medicine_page_url).lower()
-    page_url_hash = re.sub(r'[^a-z0-9]+', '-', page_url_hash)
-    response = requests.get(medicine_page_url)
+if "win" in platform:  # if we are on Windows, use curl.exe (supported in Windows 10 and up)
+    unzip = subprocess.Popen(["unzip", -"o", tmpfile, "-d", "."])
+else:
+    unzip = subprocess.Popen(["unzip", "-o", tmpfile, "-d", "."])
 
-    with open("nhs_pages/" + page_url_hash + ".html", "w", encoding="utf-8") as f:
-        f.write(medicine_page_url + "\n" + drug_name + "\n" + response.text)
+os.waitpid(unzip.pid, 0)
 
-    time.sleep(10)
+print(f"Unzipped Drugbank dump from {tmpfile} to current directory.")
