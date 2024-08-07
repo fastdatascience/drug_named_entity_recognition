@@ -27,7 +27,6 @@ SOFTWARE.
 
 '''
 
-
 import bz2
 import csv
 import json
@@ -218,12 +217,19 @@ for word in list(drug_variant_to_canonical):
     if reason is not None:
         print(f"Removing [{word}] from drug dictionary because {reason}")
         del drug_variant_to_canonical[word]
-        if word in drug_canonical_to_data:
-            del drug_canonical_to_data[word]
+
+canonical_has_variants_pointing_to_it = set()
+for variant, canonicals in drug_variant_to_canonical.items():
+    for canonical in canonicals:
+        canonical_has_variants_pointing_to_it.add(canonical)
+
+for canonical in list(drug_canonical_to_data):
+    if canonical not in canonical_has_variants_pointing_to_it:
+        print(f"removing data for {canonical} because there are no synonyms pointing to it")
+        del drug_canonical_to_data[canonical]
 
 with open("words_to_check_with_ai.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(words_to_check_with_ai))
-
 
 with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
     pkl.dump(
