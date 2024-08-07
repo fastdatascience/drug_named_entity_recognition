@@ -1,3 +1,4 @@
+
 '''
 MIT License
 
@@ -33,8 +34,6 @@ import os
 import subprocess
 import xml.sax
 from sys import platform
-
-import drugs_finder
 
 # Example URL of MeSH dump: https://nlmpubs.nlm.nih.gov/projects/mesh/MESH_FILES/xmlmesh/desc2023.xml
 
@@ -103,8 +102,6 @@ class CustomContentHandler(xml.sax.ContentHandler):
                 if len(t.split('.')) < 4:
                     is_include = False
                     break
-            if not self.title.upper() in drugs_finder.drug_variant_to_canonical:
-                is_include = False
             if is_include:
                 self.writer.writerow([self.id, "|".join(self.generic_names), self.title, "|".join(self.terms)])
                 print(self.id, self.title, self.tree_numbers, self.terms)

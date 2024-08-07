@@ -1,4 +1,27 @@
-'''
+import json
+import re
+
+import pandas as pd
+
+from inclusions import common_english_words_to_include_in_drugs_dictionary
+
+df = pd.read_csv("ai_responses.txt", sep="\t", encoding="utf-8", names=["word", "ai_response"])
+
+new_inclusion_words = set()
+
+for idx in range(len(df)):
+    x = df.ai_response.iloc[idx].lower()
+    if "drug" in x or "medicinal" in x or "traditional medicine" in x or "herbal medicine" in x or "chinese medicine" in x or "pharmacological" in x or "medication" in x:
+        word = df.word.iloc[idx]
+        new_inclusion_words.add(word)
+
+print("New inclusion words:")
+
+print(json.dumps(list(new_inclusion_words), indent=4))
+
+all_inclusion_words = sorted(common_english_words_to_include_in_drugs_dictionary.union(new_inclusion_words))
+
+TEMPLATE = """'''
 MIT License
 
 Copyright (c) 2023 Fast Data Science Ltd (https://fastdatascience.com)
@@ -27,7 +50,11 @@ SOFTWARE.
 
 '''
 
-__version__ = "2.0.0"
+common_english_words_to_include_in_drugs_dictionary = """
 
+serialised = json.dumps(all_inclusion_words, indent=4)
+serialised = re.sub(r'\[', "{", serialised)
+serialised = re.sub(r'\]', "}", serialised)
 
-from drug_named_entity_recognition.drugs_finder import find_drugs
+with open("new_inclusions.py", "w", encoding="utf-8") as f:
+    f.write(TEMPLATE + serialised)
