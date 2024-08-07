@@ -32,6 +32,7 @@ classifiers=[
 ]
 # this set should be kept minimal!
 dependencies = [
+    "requests==2.32.3; python_version <= '3.13'",
 ]
 
 [project.optional-dependencies]
