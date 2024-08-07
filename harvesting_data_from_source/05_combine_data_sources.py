@@ -195,7 +195,7 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
 
 print("Finding all drugs that are also in the NLTK list of English words.")
 
-all_english_vocab = set(words.words())
+all_english_vocab = set([w.lower() for w in words.words()])
 
 words_to_check_with_ai = set()
 for word in list(drug_variant_to_canonical):
