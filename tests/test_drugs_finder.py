@@ -40,10 +40,11 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual(1, len(drugs))
         self.assertEqual("Sertraline", drugs[0][0]['name'])
 
-    def test_drugs_lowercase(self):
-        drugs = find_drugs("i bought some sertraline".split(" "), is_ignore_case=False)
-
-        self.assertEqual(0, len(drugs))
+    #
+    # def test_drugs_lowercase(self):
+    #     drugs = find_drugs("i bought some sertraline".split(" "), is_ignore_case=False)
+    #
+    #     self.assertEqual(0, len(drugs))
 
     def test_drugs_synonym(self):
         drugs = find_drugs("i bought some Zoloft".split(" "))
@@ -51,10 +52,10 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual(1, len(drugs))
         self.assertEqual("Sertraline", drugs[0][0]['name'])
 
-    def test_drugs_synonym_lc(self):
-        drugs = find_drugs("i bought some zoloft".split(" "), is_ignore_case=False)
-
-        self.assertEqual(0, len(drugs))
+    # def test_drugs_synonym_lc(self):
+    #     drugs = find_drugs("i bought some zoloft".split(" "), is_ignore_case=False)
+    #
+    #     self.assertEqual(0, len(drugs))
 
     def test_generic_lc(self):
         drugs = find_drugs("i bought some Rimonabant".split(" "))
@@ -75,34 +76,36 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual("Emicizumab", drugs[0][0]['name'])
 
     def test_paracetamol(self):
-        drugs = find_drugs("i bought some paracetamol".split(" "), is_ignore_case=True)
+        drugs = find_drugs("i bought some paracetamol".split(" "))
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Acetaminophen", drugs[0][0]['name'])
-        self.assertEqual("Acetaminophen", drugs[0][0]['generic_names'][0])
+        # self.assertEqual("Acetaminophen", drugs[0][0]['generic_names'][0])
 
     def test_tylenol(self):
-        drugs = find_drugs("i bought some tylenol".split(" "), is_ignore_case=True)
+        drugs = find_drugs("i bought some tylenol".split(" "))
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Acetaminophen", drugs[0][0]['name'])
-        self.assertEqual("Acetaminophen", drugs[0][0]['generic_names'][0])
+        # self.assertEqual("Acetaminophen", drugs[0][0]['generic_names'][0])
 
     def test_actemra(self):
-        drugs = find_drugs("i bought some Actemra".split(" "), is_ignore_case=True)
+        drugs = find_drugs("i bought some Actemra".split(" "))
+
+        print(drugs[0])
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Tocilizumab", drugs[0][0]['name'])
-        self.assertEqual("Tocilizumab", drugs[0][0]['generic_names'][0])
+        # self.assertEqual("Tocilizumab", drugs[0][0]['generic_names'][0])
 
     def test_insulin(self):
-        drugs = find_drugs("i bought some insulin".split(" "), is_ignore_case=True)
+        drugs = find_drugs("i bought some insulin".split(" "))
 
         self.assertEqual(1, len(drugs))
-        self.assertEqual("insulin", drugs[0][0]['name'])
+        self.assertEqual("Insulin", drugs[0][0]['name'])
 
     def test_acetylsalicylic_acid(self):
-        drugs = find_drugs("i bought some acetylsalicylic acid".split(" "), is_ignore_case=True)
+        drugs = find_drugs("i bought some acetylsalicylic acid".split(" "))
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Aspirin", drugs[0][0]['name'])
@@ -119,9 +122,16 @@ class TestDrugsFinder(unittest.TestCase):
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Bacitracin/polymyxin B", drugs[0][0]['name'])
-    #
-    # def test_glycyrrhiza(self):
-    #     drugs = find_drugs("i bought some Glycyrrhiza Spp. Root".split(" "))
-    #
-    #     self.assertEqual(1, len(drugs))
-    #     self.assertEqual("Glycyrrhiza", drugs[0][0]['name'])
+
+    def test_glycyrrhiza(self):
+        drugs = find_drugs("i bought some Glycyrrhiza Spp. Root".split(" "))
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Glycyrrhiza glabra", drugs[0][0]['name'])
+
+    def test_structure(self):
+        drugs = find_drugs("i bought some Bivalirudin".split(" "), is_include_structure=True)
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Bivalirudin", drugs[0][0]['name'])
+        self.assertIn("0.0000 C", drugs[0][0]['structure_mol'])

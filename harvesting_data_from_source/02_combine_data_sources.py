@@ -1,0 +1,234 @@
+'''
+MIT License
+
+Copyright (c) 2023 Fast Data Science Ltd (https://fastdatascience.com)
+
+Maintainer: Thomas Wood
+
+Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+'''
+
+
+import bz2
+import csv
+import json
+import pathlib
+import pickle as pkl
+import re
+
+from nltk.corpus import words
+
+from inclusions import common_english_words_to_include_in_drugs_dictionary
+
+re_num = re.compile(r'^\d+$')
+re_three_digits = re.compile(r'\d\d\d')
+
+this_path = pathlib.Path(__file__).parent.resolve()
+
+drug_variant_to_canonical = {}
+drug_canonical_to_data = {}
+drug_variant_to_variant_data = {}
+
+
+def add_canonical(canonical: str, data: dict):
+    canonical_norm = canonical.lower().strip()
+    data["name"] = canonical
+    if canonical_norm not in drug_canonical_to_data:
+        drug_canonical_to_data[canonical_norm] = data
+    else:
+        drug_canonical_to_data[canonical_norm] = drug_canonical_to_data[canonical_norm] | data
+
+
+def add_synonym(synonym: str, canonical: str, synonym_data: dict = None):
+    canonical_norm = canonical.lower().strip()
+    synonym_norm = synonym.lower().strip()
+    if synonym_norm not in drug_variant_to_canonical:
+        drug_variant_to_canonical[synonym_norm] = [canonical_norm]
+    else:
+        if canonical_norm not in drug_variant_to_canonical:
+            drug_variant_to_canonical[synonym_norm].append(canonical_norm)
+    if synonym_data is not None:
+        if synonym_norm not in drug_variant_to_variant_data:
+            drug_variant_to_variant_data[synonym_norm] = synonym_data
+        else:
+            drug_variant_to_variant_data[synonym_norm] = drug_variant_to_variant_data[synonym_norm] | synonym_data
+
+
+with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding="utf-8") as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in csv_reader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        canonical = row[1]
+        synonyms = row[2].split("|")
+
+        canonical = re.sub(
+            r"(?i) (Injection|Oral Inhalation|Transdermal|Ophthalmic|Topical|Vaginal Cream|Nasal Spray|Transdermal Patch|Rectal)",
+            "", canonical)
+
+        add_canonical(canonical, {"medline_plus_id": id})
+        add_synonym(canonical, canonical, {"is_brand": False})
+        for synonym in synonyms:
+            add_synonym(synonym, canonical)
+
+with open("all_nhs_drugs.json", "r", encoding="utf-8") as f:
+    nhs_data = json.loads(f.read())
+
+
+def get_names_nhs(text: str):
+    possible_names = re.split("[,\(]", text)
+
+    names_found = list()
+    for name in possible_names:
+        name = re.sub(r'\)|,', '', name).strip()
+        name = re.sub(r'^(?:rectal|oral|vaginal|.*-acting)\b', '', name).strip()
+        name = re.sub(
+            r'\b(?:rectal foam and enemas|for (?:adults|children|skin|eyes|depression|piles|pain|migraine|thrush|mouth|type|gestational).*|gels?|rectal foams?|nasal sprays?|pain and migraine|tablets?|tablets and liquid|creams?|skin creams?)$',
+            '', name)
+        name = name.strip()
+        name = re.sub(r'\.$', '', name)
+        names_found.append(name)
+
+    return names_found
+
+
+def get_brand_names_nhs(description: str):
+    if "brand name" in description.lower():
+        description = description.strip()
+        description = re.sub('(?i)\W*brand names?\W*', '', description)
+        description = re.sub('(?i)find out.*', '', description)
+        return get_names_nhs(description)
+    return []
+
+
+for nhs_drug in nhs_data:
+    names = get_names_nhs(nhs_drug["name"])
+    brand_names = get_brand_names_nhs(nhs_drug["description"])
+    data = {"nhs_url": nhs_drug["url"]}
+    canonical = names[0]
+    add_canonical(canonical, data)
+    add_synonym(canonical, canonical, {"is_brand": False})
+    if len(names) > 1:
+        for synonym in names[1:]:
+            add_synonym(synonym, canonical)
+    for synonym in brand_names:
+        add_synonym(synonym, canonical, {"is_brand": True})
+
+with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in csv_reader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        generic_names = row[1].split("|")
+        common_name = row[2]
+        synonyms = row[3].split("|")
+        data = {"mesh_id": id}
+
+        canonical = common_name
+        add_canonical(canonical, data)
+        for synonym in generic_names:
+            add_synonym(synonym, canonical, {"is_brand": False})
+        add_synonym(common_name, canonical)
+        for synonym in synonyms:
+            add_synonym(synonym, canonical)
+
+with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in csv_reader:
+        if not headers:
+            headers = row
+            continue
+        id = row[0]
+        data = {"drugbank_id": id}
+        canonical = row[2]
+        synonyms = row[5].split("|")
+
+        add_canonical(canonical, data)
+        add_synonym(canonical, canonical)
+        for synonym in synonyms:
+            add_synonym(synonym, canonical)
+
+with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=',')
+    headers = None
+    for row in csv_reader:
+        if not headers:
+            headers = row
+            continue
+        wikipedia_url = row[0]
+        data = {"wikipedia_url": wikipedia_url}
+        canonical = row[1]
+        canonical = re.sub(r' \(medication.+', '', canonical)
+        synonyms = row[2].split("|")
+
+        add_canonical(canonical, data)
+        add_synonym(canonical, canonical)
+        for synonym in synonyms:
+            add_synonym(synonym, canonical)
+
+# Remove common English words
+
+print("Finding all drugs that are also in the NLTK list of English words.")
+
+all_english_vocab = set(words.words())
+
+words_to_check_with_ai = set()
+for word in list(drug_variant_to_canonical):
+    reason = None
+    if word in all_english_vocab and word not in common_english_words_to_include_in_drugs_dictionary:
+        reason = "it is an English word in NLTK dictionary"
+        if word not in common_english_words_to_include_in_drugs_dictionary:
+            words_to_check_with_ai.add(word)
+    elif len(word) < 4 and word not in common_english_words_to_include_in_drugs_dictionary:
+        reason = "it is short"
+    elif len(re_num.findall(word)) > 0:
+        reason = "it is numeric"
+    elif len(word) > 50:
+        reason = "it is too long"
+    elif "(" in word or "//" in word:
+        reason = "it contains forbidden punctuation"
+    elif len(re_three_digits.findall(word)) > 0:
+        reason = "it contains 3 or more consecutive digits"
+    if reason is not None:
+        print(f"Removing [{word}] from drug dictionary because {reason}")
+        del drug_variant_to_canonical[word]
+        if word in drug_canonical_to_data:
+            del drug_canonical_to_data[word]
+
+with open("words_to_check_with_ai.txt", "w", encoding="utf-8") as f:
+    f.write("\n".join(words_to_check_with_ai))
+
+
+with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
+    pkl.dump(
+        {"drug_variant_to_canonical": drug_variant_to_canonical,
+         "drug_canonical_to_data": drug_canonical_to_data,
+         "drug_variant_to_variant_data": drug_variant_to_variant_data},
+        f
+    )
