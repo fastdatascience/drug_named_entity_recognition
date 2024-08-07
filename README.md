@@ -17,6 +17,8 @@ You can run the walkthrough Python notebook in [Google Colab](https://colab.rese
 
 # Drug named entity recognition Python library by Fast Data Science
 
+## Finds drug names and can look up molecular structure
+
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
 [![PyPI package](https://img.shields.io/badge/pip%20install-drug_named_entity_recognition-brightgreen)](https://pypi.org/project/drug-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/drug-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/drug_named_entity_recognition)](https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE)
@@ -36,7 +38,9 @@ Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-lib
 
 This is a lightweight Python library for finding drug names in a string, otherwise known as [named entity recognition (NER)](https://fastdatascience.com/named-entity-recognition/) and named entity linking.
 
-Please note this library finds only high confidence drugs and doesn't support misspellings at present.
+Please note this library finds only high confidence drugs.
+
+**New in version 2.0.0: we can support misspellings by using fuzzy matching!**
 
 It also only finds the English names of these drugs. Names in other languages are not supported.
 
