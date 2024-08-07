@@ -305,5 +305,6 @@ common_english_words_to_include_in_drugs_dictionary = {
     "wormwood",
     "xanthopterin",
     "yajeine",
-    "yohimbine"
+    "yohimbine",
+"glycyrrhiza"
 }

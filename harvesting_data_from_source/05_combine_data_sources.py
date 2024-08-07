@@ -125,7 +125,9 @@ def get_brand_names_nhs(description: str):
 for nhs_drug in nhs_data:
     names = get_names_nhs(nhs_drug["name"])
     brand_names = get_brand_names_nhs(nhs_drug["description"])
-    data = {"nhs_url": nhs_drug["url"]}
+
+    nhs_website_url = re.sub(".+nhs.uk/nhs-website-content", "https://nhs.uk", nhs_drug["url"])
+    data = {"nhs_api_url": nhs_drug["url"], "nhs_url": nhs_website_url}
     canonical = names[0]
     add_canonical(canonical, data)
     add_synonym(canonical, canonical, {"is_brand": False})
