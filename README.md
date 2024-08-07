@@ -76,12 +76,21 @@ outputs a list of tuples.
 [({'name': 'Prednisone', 'synonyms': {'Sone', 'Sterapred', 'Deltasone', 'Panafcort', 'Prednidib', 'Cortan', 'Rectodelt', 'Prednisone', 'Cutason', 'Meticorten', 'Panasol', 'Enkortolon', 'Ultracorten', 'Decortin', 'Orasone', 'Winpred', 'Dehydrocortisone', 'Dacortin', 'Cortancyl', 'Encorton', 'Encortone', 'Decortisyl', 'Kortancyl', 'Pronisone', 'Prednisona', 'Predniment', 'Prednisonum', 'Rayos'}, 'medline_plus_id': 'a601102', 'mesh_id': 'D018931', 'drugbank_id': 'DB00635'}, 3, 3)]
 ```
 
-You can ignore case with:
+## Fuzzy matching (misspellings)
+
+You can turn on fuzzy matching (ngrams) with `is_fuzzy_match`
 
 ```
-find_drugs("i bought some prednisone".split(" "), is_ignore_case=True)
+find_drugs(["paraxcetamol"], is_fuzzy_match=True)
 ```
 
+## Metadata such as molecular structure.
+
+You can retrieve molecular structure in `.mol` format with:
+
+```
+drugs = find_drugs("i bought some Bivalirudin".split(" "), is_include_structure=True)
+```
 
 # Interested in other kinds of named entity recognition (NER)? 💸Finances, 🎩company names, 🌎countries, 🗺️locations, proteins, 🧬genes, 🧪molecules?
 
@@ -126,7 +135,7 @@ from drug_named_entity_recognition import find_drugs
 import spacy
 nlp = spacy.blank("en")
 doc = nlp("i routinely rx rimonabant and pts prefer it")
-find_drugs([t.text for t in doc], is_ignore_case=True)
+find_drugs([t.text for t in doc])
 ```
 
 outputs:
@@ -143,7 +152,7 @@ You can also use the tool together with the [Natural Language Toolkit (NLTK)](ht
 from drug_named_entity_recognition import find_drugs
 from nltk.tokenize import wordpunct_tokenize
 tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it")
-find_drugs(tokens, is_ignore_case=True)
+find_drugs(tokens)
 ```
 
 # 📁Data sources
