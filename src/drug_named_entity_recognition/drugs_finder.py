@@ -122,11 +122,13 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 for l in f:
                     if is_in_structure:
                         if "DRUGBANK_ID" not in l:
-                            current_structure = current_structure + "\n" + l
+                            current_structure = current_structure + l
                     if l.startswith("DB"):
                         dbid_to_mol_lookup[l.strip()] = current_structure
                         current_structure = ""
                         is_in_structure = False
+                    if l.startswith("$$$$"):
+                        is_in_structure = True
 
     drug_matches = []
     is_exclude = set()
