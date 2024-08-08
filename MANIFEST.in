@@ -10,3 +10,4 @@ include find_short_drug_names.py
 recursive-include harvesting_data_from_source *.py
 recursive-include harvesting_data_from_source *.csv
 recursive-include src *.bz2
+recursive-include harvesting_data_from_source *.json
