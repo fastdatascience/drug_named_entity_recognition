@@ -50,7 +50,11 @@ drug_variant_to_variant_data = {}
 
 def add_canonical(canonical: str, data: dict):
     canonical_norm = canonical.lower().strip()
-    data["name"] = canonical
+    if canonical_norm in drug_variant_to_canonical and canonical_norm not in drug_variant_to_canonical[canonical_norm]:
+        print(f"Adding canonical {canonical_norm} but it already maps to {drug_variant_to_canonical[canonical_norm]}")
+        canonical_norm = drug_variant_to_canonical[canonical_norm][0]
+    elif canonical_norm not in drug_variant_to_canonical:
+        data["name"] = canonical
     if canonical_norm not in drug_canonical_to_data:
         drug_canonical_to_data[canonical_norm] = data
     else:
