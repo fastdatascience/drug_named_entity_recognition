@@ -36,7 +36,7 @@ import re
 
 from nltk.corpus import words
 
-from inclusions import common_english_words_to_include_in_drugs_dictionary
+from inclusions import common_english_words_to_include_in_drugs_dictionary, extra_terms_to_exclude_from_drugs_dictionary
 
 re_num = re.compile(r'^\d+$')
 re_three_digits = re.compile(r'\d\d\d')
@@ -210,6 +210,8 @@ for word in list(drug_variant_to_canonical):
         reason = "it is an English word in NLTK dictionary"
         if word not in common_english_words_to_include_in_drugs_dictionary:
             words_to_check_with_ai.add(word)
+    elif word in extra_terms_to_exclude_from_drugs_dictionary:
+        reason = "it is in the manual ignore list"
     elif len(word) < 4 and word not in common_english_words_to_include_in_drugs_dictionary:
         reason = "it is short"
     elif len(re_num.findall(word)) > 0:
