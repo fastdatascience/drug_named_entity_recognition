@@ -147,3 +147,8 @@ class TestDrugsFinder(unittest.TestCase):
         drugs = find_drugs("i bought some Penicillin streptomycin".split(" "), is_include_structure=True)
 
         self.assertEqual(2, len(drugs))  # should be 1?
+
+    def test_mounjaro(self):
+        drugs = find_drugs("i bought some Mounjaro".split(" "), is_include_structure=True)
+
+        self.assertEqual(1, len(drugs))

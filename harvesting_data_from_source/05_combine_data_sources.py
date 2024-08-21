@@ -36,7 +36,7 @@ import re
 
 from nltk.corpus import words
 
-from inclusions import common_english_words_to_include_in_drugs_dictionary, extra_terms_to_exclude_from_drugs_dictionary
+from inclusions import common_english_words_to_include_in_drugs_dictionary, extra_terms_to_exclude_from_drugs_dictionary, extra_mappings
 
 re_num = re.compile(r'^\d+$')
 re_three_digits = re.compile(r'\d\d\d')
@@ -196,6 +196,9 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
         add_synonym(canonical, canonical)
         for synonym in synonyms:
             add_synonym(synonym, canonical)
+
+for surface_form, canonical_form in extra_mappings.items():
+    add_synonym(surface_form, canonical_form)
 
 # Remove common English words
 

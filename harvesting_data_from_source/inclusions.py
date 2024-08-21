@@ -347,3 +347,5 @@ extra_terms_to_exclude_from_drugs_dictionary = {
     "java tea",
     "kidney tea",
 }
+
+extra_mappings = {"mounjaro": "tirzepatide"}
