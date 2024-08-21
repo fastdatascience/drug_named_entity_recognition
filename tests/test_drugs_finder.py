@@ -142,3 +142,8 @@ class TestDrugsFinder(unittest.TestCase):
         self.assertEqual(1, len(drugs))
         self.assertEqual("Guaifenesin", drugs[0][0]['name'])
         self.assertIn("0.0000 C", drugs[0][0]['structure_mol'])
+
+    def test_penicillin_streptomycin(self):
+        drugs = find_drugs("i bought some Penicillin streptomycin".split(" "), is_include_structure=True)
+
+        self.assertEqual(2, len(drugs))  # should be 1?
