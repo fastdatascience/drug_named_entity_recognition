@@ -157,3 +157,11 @@ class TestDrugsFinder(unittest.TestCase):
         drugs = find_drugs("i bought some dry ice".split(" "), is_include_structure=True)
 
         self.assertEqual(0, len(drugs))
+
+    def test_mounjaro_misspelt(self):
+        drugs = find_drugs("i bought some Monjaro".split(" "), is_include_structure=True, is_fuzzy_match=True)
+
+        import json
+        print(json.dumps(drugs, indent=4))
+
+        self.assertEqual(1, len(drugs))

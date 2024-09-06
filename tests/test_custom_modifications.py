@@ -29,23 +29,49 @@ SOFTWARE.
 
 import unittest
 
-from drug_named_entity_recognition.drugs_finder import find_drugs, add_custom_drug_synonym, add_custom_new_drug
+from drug_named_entity_recognition.drugs_finder import find_drugs, add_custom_drug_synonym, reset_drugs_data, \
+    add_custom_new_drug, remove_drug_synonym
 
 
 class TestDrugsFinderModifications(unittest.TestCase):
 
     def test_drug_synonym_not_working_first(self):
+        reset_drugs_data()
         drugs = find_drugs("i bought some potato".split(" "))
 
-        print (drugs)
+        print(drugs)
 
         self.assertEqual(0, len(drugs))
 
-
     def test_drug_synonym_1(self):
+        reset_drugs_data()
         add_custom_drug_synonym("potato", "sertraline")
 
         drugs = find_drugs("i bought some potato".split(" "))
 
         self.assertEqual(1, len(drugs))
         self.assertEqual("Sertraline", drugs[0][0]['name'])
+
+    def test_completely_new_drug(self):
+        reset_drugs_data()
+        add_custom_new_drug("potato", {"name": "solanum tuberosum"})
+
+        drugs = find_drugs("i bought some potato".split(" "))
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("solanum tuberosum", drugs[0][0]['name'])
+
+    def test_drug_synonym_working_control(self):
+        reset_drugs_data()
+        drugs = find_drugs("i bought some Sertraline".split(" "))
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Sertraline", drugs[0][0]['name'])
+
+    def test_drug_synonym_absent_after_erasure(self):
+        reset_drugs_data()
+        remove_drug_synonym("sertraline")
+
+        drugs = find_drugs("i bought some Sertraline".split(" "))
+
+        self.assertEqual(0, len(drugs))

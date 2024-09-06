@@ -39,21 +39,14 @@ dbid_to_mol_lookup = {}
 
 this_path = pathlib.Path(__file__).parent.resolve()
 
-# Load dictionary from disk
-
 with bz2.open(this_path.joinpath("drug_ner_dictionary.pkl.bz2"), "rb") as f:
     d = pkl.load(f)
 
-drug_variant_to_canonical = d["drug_variant_to_canonical"]
-drug_canonical_to_data = d["drug_canonical_to_data"]
-drug_variant_to_variant_data = d["drug_variant_to_variant_data"]
-
-for variant, canonicals in drug_variant_to_canonical.items():
-    for canonical in canonicals:
-        if canonical in drug_canonical_to_data:
-            if "synonyms" not in drug_canonical_to_data[canonical]:
-                drug_canonical_to_data[canonical]["synonyms"] = []
-            drug_canonical_to_data[canonical]["synonyms"].append(variant)
+drug_variant_to_canonical = {}
+drug_canonical_to_data = {}
+drug_variant_to_variant_data = {}
+ngram_to_variant = {}
+variant_to_ngrams = {}
 
 
 def get_ngrams(text):
@@ -64,15 +57,32 @@ def get_ngrams(text):
     return ngrams
 
 
-ngram_to_variant = {}
-variant_to_ngrams = {}
-for drug_variant in drug_variant_to_canonical:
-    ngrams = get_ngrams(drug_variant)
-    variant_to_ngrams[drug_variant] = ngrams
-    for ngram in ngrams:
-        if ngram not in ngram_to_variant:
-            ngram_to_variant[ngram] = []
-        ngram_to_variant[ngram].append(drug_variant)
+# Load dictionary from disk
+def reset_drugs_data():
+    drug_variant_to_canonical.clear()
+    drug_canonical_to_data.clear()
+    drug_variant_to_variant_data.clear()
+    ngram_to_variant.clear()
+    variant_to_ngrams.clear()
+
+    drug_variant_to_canonical.update(d["drug_variant_to_canonical"])
+    drug_canonical_to_data.update(d["drug_canonical_to_data"])
+    drug_variant_to_variant_data.update(d["drug_variant_to_variant_data"])
+
+    for variant, canonicals in drug_variant_to_canonical.items():
+        for canonical in canonicals:
+            if canonical in drug_canonical_to_data:
+                if "synonyms" not in drug_canonical_to_data[canonical]:
+                    drug_canonical_to_data[canonical]["synonyms"] = []
+                drug_canonical_to_data[canonical]["synonyms"].append(variant)
+
+    for drug_variant in drug_variant_to_canonical:
+        ngrams = get_ngrams(drug_variant)
+        variant_to_ngrams[drug_variant] = ngrams
+        for ngram in ngrams:
+            if ngram not in ngram_to_variant:
+                ngram_to_variant[ngram] = []
+            ngram_to_variant[ngram].append(drug_variant)
 
 
 def add_custom_drug_synonym(drug_variant: str, canonical_name: str, optional_variant_data: dict = None):
@@ -105,11 +115,13 @@ def remove_drug_synonym(drug_variant: str):
     ngrams = get_ngrams(drug_variant)
 
     del variant_to_ngrams[drug_variant]
+    del drug_variant_to_canonical[drug_variant]
+    del drug_variant_to_variant_data[drug_variant]
 
     for ngram in ngrams:
         ngram_to_variant[ngram].remove(drug_variant)
 
-    return f"Added {drug_variant} from dictionary"
+    return f"Removed {drug_variant} from dictionary"
 
 
 def get_fuzzy_match(surface_form: str):
@@ -122,16 +134,21 @@ def get_fuzzy_match(surface_form: str):
 
     candidate_to_jaccard = {}
     for candidate, num_matching_ngrams in candidate_to_num_matching_ngrams.items():
-        ngrams_in_query_and_candidate = ngrams.union(variant_to_ngrams[candidate])
+        ngrams_in_query_and_candidate = query_ngrams.union(variant_to_ngrams[candidate])
         jaccard = num_matching_ngrams / len(ngrams_in_query_and_candidate)
         candidate_to_jaccard[candidate] = jaccard
 
+    query_length = len(surface_form)
     if len(candidate_to_num_matching_ngrams) > 0:
         top_candidate = max(candidate_to_jaccard, key=candidate_to_jaccard.get)
         jaccard = candidate_to_jaccard[top_candidate]
         query_ngrams_missing_in_candidate = query_ngrams.difference(variant_to_ngrams[top_candidate])
         candidate_ngrams_missing_in_query = variant_to_ngrams[top_candidate].difference(query_ngrams)
-        if max([len(query_ngrams_missing_in_candidate), len(candidate_ngrams_missing_in_query)]) <= 3:
+
+        candidate_length = len(top_candidate)
+        length_diff = abs(query_length - candidate_length)
+        if max([len(query_ngrams_missing_in_candidate), len(candidate_ngrams_missing_in_query)]) <= 3 \
+                and length_diff <= 2:
             return top_candidate, jaccard
     return None, None
 
@@ -226,3 +243,6 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                     match_data["structure_mol"] = structure
 
     return drug_matches
+
+
+reset_drugs_data()
