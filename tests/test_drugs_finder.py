@@ -152,3 +152,8 @@ class TestDrugsFinder(unittest.TestCase):
         drugs = find_drugs("i bought some Mounjaro".split(" "), is_include_structure=True)
 
         self.assertEqual(1, len(drugs))
+
+    def test_dry_ice(self):
+        drugs = find_drugs("i bought some dry ice".split(" "), is_include_structure=True)
+
+        self.assertEqual(0, len(drugs))
