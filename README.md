@@ -93,7 +93,76 @@ find_drugs(["paraxcetamol"], is_fuzzy_match=True)
 You can retrieve molecular structure in `.mol` format with:
 
 ```
-drugs = find_drugs("i bought some Bivalirudin".split(" "), is_include_structure=True)
+from drug_named_entity_recognition.drugs_finder import find_drugs
+drugs = find_drugs("i bought some paracetamol".split(" "), is_include_structure=True)
+```
+
+this will return the atomic structure of the drug if that data is available.
+
+```
+>>> print (drugs[0][0]["structure_mol"])
+316
+  Mrv0541 02231214352D          
+
+ 11 11  0  0  0  0            999 V2000
+    2.3645   -2.1409    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7934    1.1591    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3645    1.1591    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3645    0.3341    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0790   -0.0784    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6500   -0.0784    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0790   -0.9034    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6500   -0.9034    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3645   -1.3159    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0790    1.5716    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0790    2.3966    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  9  1  0  0  0  0
+  2 10  2  0  0  0  0
+  3  4  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  7  9  2  0  0  0  0
+  8  9  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+DB00316
+
+```
+
+
+## Add and remove drugs (customise the drugs list)
+
+Now you can modify the drug recogniser's behaviour if there is a particular drug which it isn't finding:
+
+To reset the drugs dictionary
+
+```
+from drug_named_entity_recognition.drugs_finder import reset_drugs_data
+reset_drugs_data()
+```
+
+To add a synonym
+
+```
+from drug_named_entity_recognition.drugs_finder import add_custom_drug_synonym
+add_custom_drug_synonym("potato", "sertraline")
+```
+
+To add a new drug
+
+```
+from drug_named_entity_recognition.drugs_finder import add_custom_new_drug
+add_custom_new_drug("potato", {"name": "solanum tuberosum"})
+```
+
+To remove an existing drug
+
+```
+from drug_named_entity_recognition.drugs_finder import remove_drug_synonym
+remove_drug_synonym("sertraline")
 ```
 
 # Interested in other kinds of named entity recognition (NER)? 💸Finances, 🎩company names, 🌎countries, 🗺️locations, proteins, 🧬genes, 🧪molecules?
