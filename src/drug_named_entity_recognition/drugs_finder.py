@@ -75,6 +75,43 @@ for drug_variant in drug_variant_to_canonical:
         ngram_to_variant[ngram].append(drug_variant)
 
 
+def add_custom_drug_synonym(drug_variant: str, canonical_name: str, optional_variant_data: dict = None):
+    drug_variant = drug_variant.lower()
+    canonical_name = canonical_name.lower()
+    drug_variant_to_canonical[drug_variant] = [canonical_name]
+    if optional_variant_data is not None and len(optional_variant_data) > 0:
+        drug_variant_to_variant_data[drug_variant] = optional_variant_data
+
+    ngrams = get_ngrams(drug_variant)
+    variant_to_ngrams[drug_variant] = ngrams
+    for ngram in ngrams:
+        if ngram not in ngram_to_variant:
+            ngram_to_variant[ngram] = []
+        ngram_to_variant[ngram].append(drug_variant)
+
+    return f"Added {drug_variant} as a synonym for {canonical_name}. Optional data attached to this synonym = {optional_variant_data}"
+
+
+def add_custom_new_drug(drug_name, drug_data):
+    drug_name = drug_name.lower()
+    drug_canonical_to_data[drug_name] = drug_data
+    add_custom_drug_synonym(drug_name, drug_name)
+
+    return f"Added {drug_name} to the tool with data {drug_data}"
+
+
+def remove_drug_synonym(drug_variant: str):
+    drug_variant = drug_variant.lower()
+    ngrams = get_ngrams(drug_variant)
+
+    del variant_to_ngrams[drug_variant]
+
+    for ngram in ngrams:
+        ngram_to_variant[ngram].remove(drug_variant)
+
+    return f"Added {drug_variant} from dictionary"
+
+
 def get_fuzzy_match(surface_form: str):
     query_ngrams = get_ngrams(surface_form)
     candidate_to_num_matching_ngrams = Counter()

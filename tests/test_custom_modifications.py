@@ -27,6 +27,25 @@ SOFTWARE.
 
 '''
 
-__version__ = "2.0.0"
+import unittest
 
 from drug_named_entity_recognition.drugs_finder import find_drugs, add_custom_drug_synonym, add_custom_new_drug
+
+
+class TestDrugsFinderModifications(unittest.TestCase):
+
+    def test_drug_synonym_not_working_first(self):
+        drugs = find_drugs("i bought some potato".split(" "))
+
+        print (drugs)
+
+        self.assertEqual(0, len(drugs))
+
+
+    def test_drug_synonym_1(self):
+        add_custom_drug_synonym("potato", "sertraline")
+
+        drugs = find_drugs("i bought some potato".split(" "))
+
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("Sertraline", drugs[0][0]['name'])
