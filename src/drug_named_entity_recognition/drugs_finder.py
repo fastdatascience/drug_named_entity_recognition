@@ -199,7 +199,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         if match:
 
             for m in match:
-                match_data = dict(drug_canonical_to_data[m]) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
 
                 drug_matches.append((match_data, token_idx, token_idx + 1))
                 is_exclude.add(token_idx)
@@ -210,7 +210,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 if fuzzy_matched_variant is not None:
                     match = drug_variant_to_canonical[fuzzy_matched_variant]
                     for m in match:
-                        match_data = dict(drug_canonical_to_data[m]) | drug_variant_to_variant_data.get(
+                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
                             fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
@@ -232,7 +232,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 if fuzzy_matched_variant is not None:
                     match = drug_variant_to_canonical[fuzzy_matched_variant]
                     for m in match:
-                        match_data = dict(drug_canonical_to_data[m]) | drug_variant_to_variant_data.get(
+                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
                             fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
