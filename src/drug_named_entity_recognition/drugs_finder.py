@@ -224,7 +224,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         match = drug_variant_to_canonical.get(cand_norm, None)
         if match:
             for m in match:
-                match_data = dict(drug_canonical_to_data[m]) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
                 drug_matches.append((match_data, token_idx, token_idx))
         elif is_fuzzy_match:
             if cand_norm not in stopwords and len(cand_norm) > 3:
