@@ -235,16 +235,12 @@ for variant, canonicals in drug_variant_to_canonical.items():
     for canonical in canonicals:
         canonical_has_variants_pointing_to_it.add(canonical)
 
-for canonical in list(drug_canonical_to_data):
-    if canonical not in canonical_has_variants_pointing_to_it:
-        print(f"removing data for {canonical} because there are no synonyms pointing to it")
-        del drug_canonical_to_data[canonical]
-
 with open("words_to_check_with_ai.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(words_to_check_with_ai))
 
 # Find any redirects that go through twice
 
+all_redirects_fixed = set()
 for i in range(3):
     print(f"Normalising redirects step {i}")
     redirects_needed = {}
@@ -254,9 +250,26 @@ for i in range(3):
                 for canonical_of_canonical in drug_variant_to_canonical[canonical]:
                     if canonical_of_canonical != canonical:
                         redirects_needed[variant] = drug_variant_to_canonical[canonical]
+                        all_redirects_fixed.add(variant)
     print(f"There are {len(redirects_needed)} drug names which are redirected twice. These need to be normalised")
     for source, targets in redirects_needed.items():
         drug_variant_to_canonical[source] = targets
+
+for variant in all_redirects_fixed:
+    canonicals = drug_variant_to_canonical[variant]
+    for canonical in canonicals:
+        synonyms = set(drug_canonical_to_data[canonical].get("synonyms", []))
+        if variant not in synonyms:
+            print(f"Variant {variant} not listed as synonym of {canonical}. Adding it")
+            synonyms.add(variant)
+            drug_canonical_to_data[canonical]["synonyms"] = sorted(synonyms)
+
+# Remove any entries in the database that will never be used because nothing points there
+
+for canonical in list(drug_canonical_to_data):
+    if canonical not in canonical_has_variants_pointing_to_it:
+        print(f"removing data for {canonical} because there are no synonyms pointing to it")
+        del drug_canonical_to_data[canonical]
 
 with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
     pkl.dump(
