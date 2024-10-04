@@ -36,7 +36,8 @@ import re
 
 from nltk.corpus import words
 
-from inclusions import common_english_words_to_include_in_drugs_dictionary, extra_terms_to_exclude_from_drugs_dictionary, extra_mappings
+from inclusions import common_english_words_to_include_in_drugs_dictionary, \
+    extra_terms_to_exclude_from_drugs_dictionary, extra_mappings
 
 re_num = re.compile(r'^\d+$')
 re_three_digits = re.compile(r'\d\d\d')
@@ -241,6 +242,21 @@ for canonical in list(drug_canonical_to_data):
 
 with open("words_to_check_with_ai.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(words_to_check_with_ai))
+
+# Find any redirects that go through twice
+
+for i in range(3):
+    print(f"Normalising redirects step {i}")
+    redirects_needed = {}
+    for variant, canonicals in list(drug_variant_to_canonical.items()):
+        for canonical in canonicals:
+            if canonical in drug_variant_to_canonical:
+                for canonical_of_canonical in drug_variant_to_canonical[canonical]:
+                    if canonical_of_canonical != canonical:
+                        redirects_needed[variant] = drug_variant_to_canonical[canonical]
+    print(f"There are {len(redirects_needed)} drug names which are redirected twice. These need to be normalised")
+    for source, targets in redirects_needed.items():
+        drug_variant_to_canonical[source] = targets
 
 with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
     pkl.dump(

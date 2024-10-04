@@ -165,3 +165,8 @@ class TestDrugsFinder(unittest.TestCase):
         print(json.dumps(drugs, indent=4))
 
         self.assertEqual(1, len(drugs))
+
+    def test_restasis(self):
+        drugs = find_drugs("i bought some restasis".split(" "), is_include_structure=True)
+
+        self.assertEqual(1, len(drugs))
