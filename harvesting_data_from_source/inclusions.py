@@ -346,6 +346,7 @@ extra_terms_to_exclude_from_drugs_dictionary = {
     "cashew fruit",
     "java tea",
     "kidney tea",
+    "g proteins"
 }
 
 extra_mappings = {"mounjaro": "tirzepatide"}
