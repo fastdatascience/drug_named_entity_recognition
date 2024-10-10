@@ -15,7 +15,7 @@
 
 You can run the walkthrough Python notebook in [Google Colab](https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb) with a single click: <a href="https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-# Drug named entity recognition Python library by Fast Data Science
+# Drug Named Entity Recognition Python library by Fast Data Science
 
 ## Finds drug names and can look up molecular structure
 
@@ -28,7 +28,7 @@ You can run the walkthrough Python notebook in [Google Colab](https://colab.rese
 
 <!-- badges: end -->
 
-# 💊 Drug named entity recognition
+# 💊 Drug Named Entity Recognition
 
 Developed by Fast Data Science, https://fastdatascience.com
 
@@ -36,25 +36,25 @@ Source code at https://github.com/fastdatascience/drug_named_entity_recognition
 
 Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
 
-This is a lightweight Python library for finding drug names in a string, otherwise known as [named entity recognition (NER)](https://fastdatascience.com/named-entity-recognition/) and named entity linking.
+This is a lightweight Python [natural language processing](https://naturallanguageprocessing.com/applications-nlp-use-cases-business-solutions/) library for finding drug names in a string, otherwise known as [named entity recognition (NER)](https://fastdatascience.com/named-entity-recognition/) and named entity linking. This can be used for analysing unstructured text documents such as [clinical trial protocols](https://clinicaltrialrisk.org/clinical-trial-protocol-software/) or other [unstructured data in biopharma](https://harmonydata.ac.uk/data-harmonisation/data-harmonisation-in-biopharma/). 
 
 Please note this library finds only high confidence drugs.
 
 **New in version 2.0.0: we can support misspellings by using fuzzy matching!**
 
-It also only finds the English names of these drugs. Names in other languages are not supported.
+It also only finds the English names of these drugs. Names [in other languages](https://fastdatascience.com/natural-language-processing/multilingual-natural-language-processing/) are not supported.
 
 It also doesn't find short code names of drugs, such as abbreviations commonly used in medicine, such as "Ceph" for "Cephradin" - as these are highly ambiguous.
 
-# 💻Installing drug named entity recognition Python package
+# 💻Installing Drug Named Entity Recognition Python package
 
-You can install from [PyPI](https://pypi.org/project/drug-named-entity-recognition).
+You can install Drug Named Entity Recognition from [PyPI](https://pypi.org/project/drug-named-entity-recognition).
 
 ```
 pip install drug-named-entity-recognition
 ```
 
-If you get an error installing, try making a new Python environment in Conda (`conda create -n test-env; conda activate test-env`) or Venv (`python -m testenv; source testenv/bin/activate` / `testenv\Scripts\activate`) and then installing the library.
+If you get an error installing Drug Named Entity Recognition, try making a new Python environment in Conda (`conda create -n test-env; conda activate test-env`) or Venv (`python -m testenv; source testenv/bin/activate` / `testenv\Scripts\activate`) and then installing the library.
 
 The library already contains the drug names so if you don't need to update the dictionary, then you should not have to run any of the download scripts.
 
@@ -314,7 +314,7 @@ This package
 
 ## 🧍Re-releasing the package manually
 
-The code to re-release Harmony on PyPI is as follows:
+The code to re-release Drug Named Entity Recognition on PyPI is as follows:
 
 ```
 source activate py311
@@ -326,7 +326,7 @@ twine upload dist/*
 
 ## 😊 Who worked on the Drug Named Entity Recognition library?
 
-The tool was developed:
+The tool was developed by:
 
 * Thomas Wood ([Fast Data Science](https://fastdatascience.com))
 
