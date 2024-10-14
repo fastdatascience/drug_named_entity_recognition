@@ -37,11 +37,16 @@ import requests
 
 
 def download_structures(this_path):
-    response = requests.get("https://go.drugbank.com/releases/latest#open-data")
+    temp_mirror_url = 'https://fastdatascience.z33.web.core.windows.net/drugbank_all_open_structures.sdf.zip'
 
-    re_url = re.compile(r'\bhttps://go.drugbank.com/releases/[a-z0-9-/]+all-open-structures\b')
+    if not temp_mirror_url:
+        response = requests.get("https://go.drugbank.com/releases/latest#open-data")
 
-    url = re_url.findall(response.text)[0]
+        re_url = re.compile(r'\bhttps://go.drugbank.com/releases/[a-z0-9-/]+all-open-structures\b')
+
+        url = re_url.findall(response.text)[0]
+    else:
+        url = temp_mirror_url
 
     print(f"URL to download structured data from on Drugbank is {url}")
 
