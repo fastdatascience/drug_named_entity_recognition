@@ -27,7 +27,7 @@ SOFTWARE.
 
 '''
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 
 from drug_named_entity_recognition.drugs_finder import find_drugs, add_custom_drug_synonym, add_custom_new_drug, \
     reset_drugs_data, remove_drug_synonym

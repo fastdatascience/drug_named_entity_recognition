@@ -43,6 +43,10 @@ this_path = pathlib.Path(__file__).parent.resolve()
 with bz2.open(this_path.joinpath("drug_ner_dictionary.pkl.bz2"), "rb") as f:
     d = pkl.load(f)
 
+home_path = pathlib.Path.home()
+structures_folder = home_path.joinpath(".drug_names")
+structures_file = structures_folder.joinpath("open structures.sdf")
+
 drug_variant_to_canonical = {}
 drug_canonical_to_data = {}
 drug_variant_to_variant_data = {}
@@ -166,10 +170,11 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
     if is_include_structure:
         if len(dbid_to_mol_lookup) == 0:
             dbid_to_mol_lookup["downloading"] = True
-            structures_file = this_path.joinpath("open structures.sdf")
+
             is_exists = os.path.exists(structures_file)
             if not is_exists:
-                download_structures(this_path)
+                structures_folder.mkdir(parents=True, exist_ok=True)
+                download_structures(structures_folder)
 
             is_in_structure = True
             current_structure = ""
