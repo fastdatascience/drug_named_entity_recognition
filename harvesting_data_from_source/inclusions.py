@@ -352,6 +352,7 @@ extra_terms_to_exclude_from_drugs_dictionary = {
     "ligands",
 }
 
+# Add pharma company names
 extra_terms_to_exclude_from_drugs_dictionary = extra_terms_to_exclude_from_drugs_dictionary.union(
     {
         'abbott',
