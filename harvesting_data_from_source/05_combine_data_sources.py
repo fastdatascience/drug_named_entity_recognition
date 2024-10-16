@@ -37,7 +37,7 @@ import re
 from nltk.corpus import words
 
 from inclusions import common_english_words_to_include_in_drugs_dictionary, \
-    extra_terms_to_exclude_from_drugs_dictionary, extra_mappings
+    extra_terms_to_exclude_from_drugs_dictionary, extra_mappings, drugs_to_exclude_under_all_variants
 
 re_num = re.compile(r'^\d+$')
 re_three_digits = re.compile(r'\d\d\d')
@@ -270,6 +270,20 @@ for canonical in list(drug_canonical_to_data):
     if canonical not in canonical_has_variants_pointing_to_it:
         print(f"removing data for {canonical} because there are no synonyms pointing to it")
         del drug_canonical_to_data[canonical]
+
+# Hard delete some terms in all variants e.g. blood glucose
+inverted_index_lookup_canonical_to_variants = dict()
+for variant, canonicals in drug_variant_to_canonical.items():
+    for canonical in canonicals:
+        if canonical not in inverted_index_lookup_canonical_to_variants:
+            inverted_index_lookup_canonical_to_variants[canonical] = set()
+        inverted_index_lookup_canonical_to_variants[canonical].add(variant)
+
+for term_to_delete in drugs_to_exclude_under_all_variants:
+    variants = inverted_index_lookup_canonical_to_variants[term_to_delete]
+    for variant in variants:
+        del drug_variant_to_canonical[variant]
+    del drug_canonical_to_data[term_to_delete]
 
 with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
     pkl.dump(

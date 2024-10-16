@@ -27,6 +27,10 @@ SOFTWARE.
 
 '''
 
+drugs_to_exclude_under_all_variants = {
+    "blood glucose"
+}
+
 common_english_words_to_include_in_drugs_dictionary = {
     "absinthium",
     "acetphenetidin",
@@ -349,7 +353,7 @@ extra_terms_to_exclude_from_drugs_dictionary = {
     "g proteins",
     "johnson",
     "ligand",
-    "ligands",
+    "ligands"
 }
 
 # Add pharma company names

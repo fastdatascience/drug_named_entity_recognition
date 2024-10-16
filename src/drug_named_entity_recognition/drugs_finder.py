@@ -133,9 +133,10 @@ def get_fuzzy_match(surface_form: str):
     query_ngrams = get_ngrams(surface_form)
     candidate_to_num_matching_ngrams = Counter()
     for ngram in query_ngrams:
-        candidates = ngram_to_variant[ngram]
-        for candidate in candidates:
-            candidate_to_num_matching_ngrams[candidate] += 1
+        candidates = ngram_to_variant.get(ngram, None)
+        if candidates is not None:
+            for candidate in candidates:
+                candidate_to_num_matching_ngrams[candidate] += 1
 
     candidate_to_jaccard = {}
     for candidate, num_matching_ngrams in candidate_to_num_matching_ngrams.items():
@@ -205,6 +206,8 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
 
             for m in match:
                 match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data["match_type"] = "exact"
+                match_data["matching_string"] = cand
 
                 drug_matches.append((match_data, token_idx, token_idx + 1))
                 is_exclude.add(token_idx)
@@ -219,7 +222,8 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                             fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
-
+                        match_data["match_variant"] = fuzzy_matched_variant
+                        match_data["matching_string"] = cand
                         drug_matches.append((match_data, token_idx, token_idx + 1))
 
     for token_idx, token in enumerate(tokens):
@@ -230,6 +234,8 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         if match:
             for m in match:
                 match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data["match_type"] = "exact"
+                match_data["matching_string"] = token
                 drug_matches.append((match_data, token_idx, token_idx))
         elif is_fuzzy_match:
             if cand_norm not in stopwords and len(cand_norm) > 3:
@@ -241,6 +247,8 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                             fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
+                        match_data["match_variant"] = fuzzy_matched_variant
+                        match_data["matching_string"] = token
                         drug_matches.append((match_data, token_idx, token_idx + 1))
 
     if is_include_structure:
