@@ -60,6 +60,10 @@ The library already contains the drug names so if you don't need to update the d
 
 If you have problems installing, try our [Google Colab](https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb) walkthrough.
 
+## Interested in disease names?
+
+Check out our new Medical Named Entity Recognition package, now in beta! https://github.com/fastdatascience/medical_named_entity_recognition
+
 # 💡Usage examples
 
 You must first tokenise your input text using a tokeniser of your choice (NLTK, spaCy, etc).
