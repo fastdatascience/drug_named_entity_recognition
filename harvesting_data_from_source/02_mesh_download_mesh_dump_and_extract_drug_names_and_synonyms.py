@@ -64,7 +64,7 @@ IMPORTANT_TAGS = {'DescriptorName', 'String', 'DescriptorUI', 'DescriptorRecord'
 class CustomContentHandler(xml.sax.ContentHandler):
     def __init__(self, writer):
         self.writer = writer
-        self.writer.writerow(["Mesh ID", "Generic name", "Common name", "Synonyms"])
+        self.writer.writerow(["Mesh ID", "Generic name", "Common name", "Synonyms", "Tree"])
         self.postCount = 0
         self.entryCount = 0
         self.is_in = dict([n, False] for n in IMPORTANT_TAGS)
@@ -103,7 +103,7 @@ class CustomContentHandler(xml.sax.ContentHandler):
                     is_include = False
                     break
             if is_include:
-                self.writer.writerow([self.id, "|".join(self.generic_names), self.title, "|".join(self.terms)])
+                self.writer.writerow([self.id, "|".join(self.generic_names), self.title, "|".join(self.terms), "|".join(self.tree_numbers)])
                 print(self.id, self.title, self.tree_numbers, self.terms)
             self.title = ""
             self.id = ""

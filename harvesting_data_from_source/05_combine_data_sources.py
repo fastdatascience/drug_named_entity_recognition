@@ -153,7 +153,8 @@ with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8"
         generic_names = row[1].split("|")
         common_name = row[2]
         synonyms = row[3].split("|")
-        data = {"mesh_id": id}
+        tree = row[4].split("|")
+        data = {"mesh_id": id, "mesh_tree": tree}
 
         canonical = common_name
         add_canonical(canonical, data)
