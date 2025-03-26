@@ -46,11 +46,11 @@ for word in drug_variant_to_canonical:
         "omop_id": omop_id
     })
 
-# ✅ Output short drug names
+# Output short drug names
 print("\nShort drug names (length <= 3):")
 print(list(short_drug_names))
 
-# ✅ Output top 10 drugs with OMOP IDs
+# Output top 10 drugs with OMOP IDs
 print("\nSample drugs with OMOP ID:")
 for entry in drugs_with_omop[:10]:
     print(f"{entry['canonical_name']} (variant: {entry['variant']}) → OMOP ID: {entry['omop_id']}")
