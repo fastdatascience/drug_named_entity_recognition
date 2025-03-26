@@ -209,7 +209,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = cand
 
-                drug_matches.append((match_data, token_idx, token_idx + 1))
+                drug_matches.append((match_data, token_idx, token_idx + 2))
                 is_exclude.add(token_idx)
                 is_exclude.add(token_idx + 1)
         elif is_fuzzy_match:
@@ -224,7 +224,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = cand
-                        drug_matches.append((match_data, token_idx, token_idx + 1))
+                        drug_matches.append((match_data, token_idx, token_idx + 2))
 
     for token_idx, token in enumerate(tokens):
         if token_idx in is_exclude:
@@ -236,7 +236,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = token
-                drug_matches.append((match_data, token_idx, token_idx))
+                drug_matches.append((match_data, token_idx, token_idx + 1))
         elif is_fuzzy_match:
             if cand_norm not in stopwords and len(cand_norm) > 3:
                 fuzzy_matched_variant, similarity = get_fuzzy_match(cand_norm)
