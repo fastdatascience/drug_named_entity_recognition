@@ -170,3 +170,7 @@ class TestDrugsFinder(unittest.TestCase):
         drugs = find_drugs("i bought some restasis".split(" "), is_include_structure=True)
 
         self.assertEqual(1, len(drugs))
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -75,3 +75,7 @@ class TestDrugsFinderModifications(unittest.TestCase):
         drugs = find_drugs("i bought some Sertraline".split(" "))
 
         self.assertEqual(0, len(drugs))
+
+
+if __name__ == "__main__":
+    unittest.main()
