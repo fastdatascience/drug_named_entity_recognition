@@ -1,19 +1,23 @@
 import json
 from drug_named_entity_recognition.drugs_finder import find_drugs
 
-# Test input
+# Input text
 input_text = "I bought some paracetamol yesterday"
 tokens = input_text.lower().split()
 
-# Call the drug recogniser
-results = find_drugs(tokens)
+print(f"Input Tokens: {tokens}")
 
-# Build pretty output
+# Call the drug recogniser (with OMOP enabled)
+results = find_drugs(tokens, use_omop_api=True)
+
+print(f"Raw Results: {results}")
+
+# Build nicely formatted output
 output = []
 for result in results:
     data, start_idx, end_idx = result
     formatted = {
-        "input": input_text[start_idx:end_idx+1],
+        "matched_text": input_text.split()[start_idx:end_idx + 1],
         "results": {
             "name": data.get("name", ""),
             "omop_id": data.get("omop_id", ""),
@@ -30,5 +34,5 @@ for result in results:
     }
     output.append(formatted)
 
-# Print JSON pretty
+print("\nFormatted Output:\n")
 print(json.dumps(output, indent=2))
