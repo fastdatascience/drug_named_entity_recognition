@@ -200,6 +200,7 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         next_token = tokens[token_idx + 1]
         cand = token + " " + next_token
         cand_norm = cand.lower()
+
         match = drug_variant_to_canonical.get(cand_norm, None)
         if match:
             for m in match:
@@ -210,7 +211,25 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 if use_omop_api:
                     match_data["omop_id"] = cached_get_omop_id(lookup_name)
                 drug_matches.append((match_data, token_idx, token_idx + 1))
-                is_exclude.update([token_idx, token_idx + 1])
+            is_exclude.update([token_idx, token_idx + 1])
+
+        elif is_fuzzy_match:
+            if token.lower() not in stopwords and next_token.lower() not in stopwords:
+                fuzzy_matched_variant, similarity = get_fuzzy_match(cand_norm)
+                if fuzzy_matched_variant is not None:
+                    match = drug_variant_to_canonical[fuzzy_matched_variant]
+                    for m in match:
+                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
+                            fuzzy_matched_variant, {})
+                        match_data["match_type"] = "fuzzy"
+                        match_data["match_similarity"] = similarity
+                        match_data["match_variant"] = fuzzy_matched_variant
+                        match_data["matching_string"] = cand
+                        if use_omop_api:
+                            lookup_name = match_data.get("name") or m
+                            match_data["omop_id"] = cached_get_omop_id(lookup_name)
+                        drug_matches.append((match_data, token_idx, token_idx + 1))
+
 
     for token_idx, token in enumerate(tokens):
         if token_idx in is_exclude:
