@@ -232,6 +232,24 @@ tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it")
 find_drugs(tokens)
 ```
 
+## Using the OMOP API
+
+The tool can also connect to the OMOP API to return the OMOP ID of a drug.
+
+```
+from drug_named_entity_recognition import find_drugs
+print (find_drugs("paracetamol".split(), is_use_omop_api=True))
+```
+
+Response includes `'omop_id': '161'`:
+
+```
+🔍 Looking up OMOP ID for: acetaminophen
+→ RxCUI (used as OMOP ID): 161
+[({'medline_plus_id': 'a621016', 'name': 'Acetaminophen', 'nhs_api_url': 'https://int.api.service.nhs.uk/nhs-website-content/medicines/paracetamol-for-children/', 'nhs_url': 'https://nhs.uk/medicines/paracetamol-for-children/', 'mesh_id': 'D058633', 'mesh_tree': ['D02.092.146.113.092.040', 'D02.065.199.092.040'], 'drugbank_id': 'DB00316', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Paracetamol', 'synonyms': ['calpol', 'acetaminophen', 'panadol', 'tylenol', 'actamin', 'ofirmev', 'apap', 'paracetamol', 'acephen rectal suppository', 'neopap supprettes rectal suppository', 'calpol', 'acetominophen', 'p-hydroxyacetanilide', 'acamol', 'acetaco', 'p-acetamidophenol', 'anacin-3', 'hydroxyacetanilide', 'anacin 3', 'algotropyl', 'n-acetyl-p-aminophenol', 'anacin3', 'acetamidophenol', 'datril', 'acephen', '4-acetamidophenol', "4'-hydroxyacetanilide", 'acenol', 'acetaminofén', 'acétaminophène', 'p-acetaminophenol', 'p-acetylaminophenol', 'p-hydroxy-acetanilid', 'p-hydroxyphenolacetamide', 'paracétamol', 'paracetamolum'], 'is_brand': False, 'match_type': 'exact', 'matching_string': 'paracetamol', 'omop_id': '161'}, 0, 1)]
+
+```
+
 # 📁Data sources
 
 The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
@@ -252,7 +270,8 @@ If you want to update the Wikipedia dictionary, download the dump from:
 
 and run `extract_drug_names_and_synonyms_from_wikipedia_dump.py`
 
-## OMOP(Observational Medical Outcomes Partnership) ID
+## OMOP (Observational Medical Outcomes Partnership) ID
+
 ## Attribution for RxNorm Data
 
 This project uses data from **RxNorm** courtesy of the **U.S. National Library of Medicine**.
