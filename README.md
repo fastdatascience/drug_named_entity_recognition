@@ -252,6 +252,16 @@ If you want to update the Wikipedia dictionary, download the dump from:
 
 and run `extract_drug_names_and_synonyms_from_wikipedia_dump.py`
 
+## OMOP(Observational Medical Outcomes Partnership) ID
+## Attribution for RxNorm Data
+
+This project uses data from **RxNorm** courtesy of the **U.S. National Library of Medicine**.
+**NLM is not responsible for this product and does not endorse it.**
+We do not claim ownership of RxNorm data. The tool retrieves information from the RxNorm API and allows users to optionally access OMOP IDs.
+
+For offline use, users must download the RxNorm dataset themselves from [NLM RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/index.html) after obtaining a free UMLS license.
+
+
 ## Update the MeSH dictionary
 
 If you want to update the dictionary, run

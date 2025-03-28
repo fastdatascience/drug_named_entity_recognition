@@ -1,4 +1,5 @@
 '''
+
 MIT License
 
 Copyright (c) 2023 Fast Data Science Ltd (https://fastdatascience.com)
@@ -32,14 +33,32 @@ import os
 import pathlib
 import pickle as pkl
 from collections import Counter
-
 from drug_named_entity_recognition.structure_file_downloader import download_structures
 from drug_named_entity_recognition.util import stopwords
+from drug_named_entity_recognition.omop_api import get_omop_id_from_drug
+import pickle
+
+# Caching setup
+CACHE_FILE = "omop_cache.pkl"
+if os.path.exists(CACHE_FILE):
+    with open(CACHE_FILE, "rb") as f:
+        omop_cache = pickle.load(f)
+else:
+    omop_cache = {}
+
+def cached_get_omop_id(drug_name):
+    name = drug_name.lower()
+    if name in omop_cache:
+        return omop_cache[name]
+    omop_id = get_omop_id_from_drug(name)
+    omop_cache[name] = omop_id
+    with open(CACHE_FILE, "wb") as f:
+        pickle.dump(omop_cache, f)
+    return omop_id
 
 dbid_to_mol_lookup = {}
 
 this_path = pathlib.Path(__file__).parent.resolve()
-
 with bz2.open(this_path.joinpath("drug_ner_dictionary.pkl.bz2"), "rb") as f:
     d = pkl.load(f)
 
@@ -53,7 +72,6 @@ drug_variant_to_variant_data = {}
 ngram_to_variant = {}
 variant_to_ngrams = {}
 
-
 def get_ngrams(text):
     n = 3
     ngrams = set()
@@ -61,8 +79,6 @@ def get_ngrams(text):
         ngrams.add(text[i:i + n])
     return ngrams
 
-
-# Load dictionary from disk
 def reset_drugs_data():
     drug_variant_to_canonical.clear()
     drug_canonical_to_data.clear()
@@ -88,7 +104,6 @@ def reset_drugs_data():
             if ngram not in ngram_to_variant:
                 ngram_to_variant[ngram] = []
             ngram_to_variant[ngram].append(drug_variant)
-
 
 def add_custom_drug_synonym(drug_variant: str, canonical_name: str, optional_variant_data: dict = None):
     drug_variant = drug_variant.lower()
@@ -158,60 +173,46 @@ def get_fuzzy_match(surface_form: str):
             return top_candidate, jaccard
     return None, None
 
+def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_include_structure=False, use_omop_api=False):
+    if is_include_structure and len(dbid_to_mol_lookup) == 0:
+        dbid_to_mol_lookup["downloading"] = True
+        if not os.path.exists(structures_file):
+            structures_folder.mkdir(parents=True, exist_ok=True)
+            download_structures(structures_folder)
 
-def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_include_structure=False):
-    """
-
-    @param tokens:
-    @param is_fuzzy_match:
-    @param is_ignore_case: just for backward compatibility
-    @return:
-    """
-
-    if is_include_structure:
-        if len(dbid_to_mol_lookup) == 0:
-            dbid_to_mol_lookup["downloading"] = True
-
-            is_exists = os.path.exists(structures_file)
-            if not is_exists:
-                structures_folder.mkdir(parents=True, exist_ok=True)
-                download_structures(structures_folder)
-
-            is_in_structure = True
-            current_structure = ""
-            with open(structures_file, "r", encoding="utf-8") as f:
-                for l in f:
-                    if is_in_structure:
-                        if "DRUGBANK_ID" not in l:
-                            current_structure = current_structure + l
-                    if l.startswith("DB"):
-                        dbid_to_mol_lookup[l.strip()] = current_structure
-                        current_structure = ""
-                        is_in_structure = False
-                    if l.startswith("$$$$"):
-                        is_in_structure = True
+        is_in_structure = True
+        current_structure = ""
+        with open(structures_file, "r", encoding="utf-8") as f:
+            for l in f:
+                if is_in_structure and "DRUGBANK_ID" not in l:
+                    current_structure += l
+                if l.startswith("DB"):
+                    dbid_to_mol_lookup[l.strip()] = current_structure
+                    current_structure = ""
+                    is_in_structure = False
+                if l.startswith("$$$$"):
+                    is_in_structure = True
 
     drug_matches = []
     is_exclude = set()
 
-    # Search for 2 token sequences
     for token_idx, token in enumerate(tokens[:-1]):
         next_token = tokens[token_idx + 1]
         cand = token + " " + next_token
         cand_norm = cand.lower()
 
         match = drug_variant_to_canonical.get(cand_norm, None)
-
         if match:
-
             for m in match:
                 match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = cand
-
+                lookup_name = match_data.get("name") or m
+                if use_omop_api:
+                    match_data["omop_id"] = cached_get_omop_id(lookup_name)
                 drug_matches.append((match_data, token_idx, token_idx + 1))
-                is_exclude.add(token_idx)
-                is_exclude.add(token_idx + 1)
+            is_exclude.update([token_idx, token_idx + 1])
+
         elif is_fuzzy_match:
             if token.lower() not in stopwords and next_token.lower() not in stopwords:
                 fuzzy_matched_variant, similarity = get_fuzzy_match(cand_norm)
@@ -224,7 +225,11 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = cand
+                        if use_omop_api:
+                            lookup_name = match_data.get("name") or m
+                            match_data["omop_id"] = cached_get_omop_id(lookup_name)
                         drug_matches.append((match_data, token_idx, token_idx + 1))
+
 
     for token_idx, token in enumerate(tokens):
         if token_idx in is_exclude:
@@ -236,20 +241,10 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = token
+                lookup_name = match_data.get("name") or m
+                if use_omop_api:
+                    match_data["omop_id"] = cached_get_omop_id(lookup_name)
                 drug_matches.append((match_data, token_idx, token_idx))
-        elif is_fuzzy_match:
-            if cand_norm not in stopwords and len(cand_norm) > 3:
-                fuzzy_matched_variant, similarity = get_fuzzy_match(cand_norm)
-                if fuzzy_matched_variant is not None:
-                    match = drug_variant_to_canonical[fuzzy_matched_variant]
-                    for m in match:
-                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
-                            fuzzy_matched_variant, {})
-                        match_data["match_type"] = "fuzzy"
-                        match_data["match_similarity"] = similarity
-                        match_data["match_variant"] = fuzzy_matched_variant
-                        match_data["matching_string"] = token
-                        drug_matches.append((match_data, token_idx, token_idx + 1))
 
     if is_include_structure:
         for match in drug_matches:
@@ -260,6 +255,5 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                     match_data["structure_mol"] = structure
 
     return drug_matches
-
 
 reset_drugs_data()
