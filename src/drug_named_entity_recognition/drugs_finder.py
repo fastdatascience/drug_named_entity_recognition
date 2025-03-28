@@ -105,6 +105,74 @@ def reset_drugs_data():
                 ngram_to_variant[ngram] = []
             ngram_to_variant[ngram].append(drug_variant)
 
+def add_custom_drug_synonym(drug_variant: str, canonical_name: str, optional_variant_data: dict = None):
+    drug_variant = drug_variant.lower()
+    canonical_name = canonical_name.lower()
+    drug_variant_to_canonical[drug_variant] = [canonical_name]
+    if optional_variant_data is not None and len(optional_variant_data) > 0:
+        drug_variant_to_variant_data[drug_variant] = optional_variant_data
+
+    ngrams = get_ngrams(drug_variant)
+    variant_to_ngrams[drug_variant] = ngrams
+    for ngram in ngrams:
+        if ngram not in ngram_to_variant:
+            ngram_to_variant[ngram] = []
+        ngram_to_variant[ngram].append(drug_variant)
+
+    return f"Added {drug_variant} as a synonym for {canonical_name}. Optional data attached to this synonym = {optional_variant_data}"
+
+
+def add_custom_new_drug(drug_name, drug_data):
+    drug_name = drug_name.lower()
+    drug_canonical_to_data[drug_name] = drug_data
+    add_custom_drug_synonym(drug_name, drug_name)
+
+    return f"Added {drug_name} to the tool with data {drug_data}"
+
+
+def remove_drug_synonym(drug_variant: str):
+    drug_variant = drug_variant.lower()
+    ngrams = get_ngrams(drug_variant)
+
+    del variant_to_ngrams[drug_variant]
+    del drug_variant_to_canonical[drug_variant]
+    del drug_variant_to_variant_data[drug_variant]
+
+    for ngram in ngrams:
+        ngram_to_variant[ngram].remove(drug_variant)
+
+    return f"Removed {drug_variant} from dictionary"
+
+
+def get_fuzzy_match(surface_form: str):
+    query_ngrams = get_ngrams(surface_form)
+    candidate_to_num_matching_ngrams = Counter()
+    for ngram in query_ngrams:
+        candidates = ngram_to_variant.get(ngram, None)
+        if candidates is not None:
+            for candidate in candidates:
+                candidate_to_num_matching_ngrams[candidate] += 1
+
+    candidate_to_jaccard = {}
+    for candidate, num_matching_ngrams in candidate_to_num_matching_ngrams.items():
+        ngrams_in_query_and_candidate = query_ngrams.union(variant_to_ngrams[candidate])
+        jaccard = num_matching_ngrams / len(ngrams_in_query_and_candidate)
+        candidate_to_jaccard[candidate] = jaccard
+
+    query_length = len(surface_form)
+    if len(candidate_to_num_matching_ngrams) > 0:
+        top_candidate = max(candidate_to_jaccard, key=candidate_to_jaccard.get)
+        jaccard = candidate_to_jaccard[top_candidate]
+        query_ngrams_missing_in_candidate = query_ngrams.difference(variant_to_ngrams[top_candidate])
+        candidate_ngrams_missing_in_query = variant_to_ngrams[top_candidate].difference(query_ngrams)
+
+        candidate_length = len(top_candidate)
+        length_diff = abs(query_length - candidate_length)
+        if max([len(query_ngrams_missing_in_candidate), len(candidate_ngrams_missing_in_query)]) <= 3 \
+                and length_diff <= 2:
+            return top_candidate, jaccard
+    return None, None
+
 def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_include_structure=False, use_omop_api=False):
     if is_include_structure and len(dbid_to_mol_lookup) == 0:
         dbid_to_mol_lookup["downloading"] = True
