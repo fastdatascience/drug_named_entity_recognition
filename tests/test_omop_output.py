@@ -1,38 +1,47 @@
-import json
+'''
+MIT License
+
+Copyright (c) 2023 Fast Data Science Ltd (https://fastdatascience.com)
+
+Maintainer: Thomas Wood
+
+Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+'''
+
+import unittest
+
 from drug_named_entity_recognition.drugs_finder import find_drugs
 
-# Input text
-input_text = "I bought some paracetamol yesterday"
-tokens = input_text.lower().split()
 
-print(f"Input Tokens: {tokens}")
+class TestOmop(unittest.TestCase):
 
-# Call the drug recogniser (with OMOP enabled)
-results = find_drugs(tokens, use_omop_api=True)
+    def test_paracetamol_is_omop_161(self):
+        drugs = find_drugs("I bought some paracetamol yesterday".split(" "), is_use_omop_api=True)
 
-print(f"Raw Results: {results}")
+        print(drugs[0])
 
-# Build nicely formatted output
-output = []
-for result in results:
-    data, start_idx, end_idx = result
-    formatted = {
-        "matched_text": input_text.split()[start_idx:end_idx + 1],
-        "results": {
-            "name": data.get("name", ""),
-            "omop_id": data.get("omop_id", ""),
-            "medline_plus_id": data.get("medline_plus_id", ""),
-            "nhs_api_url": data.get("nhs_api_url", ""),
-            "nhs_url": data.get("nhs_url", ""),
-            "mesh_id": data.get("mesh_id", ""),
-            "drugbank_id": data.get("drugbank_id", ""),
-            "wikipedia_url": data.get("wikipedia_url", ""),
-            "synonyms": data.get("synonyms", []),
-            "match_type": data.get("match_type", ""),
-            "matching_string": data.get("matching_string", "")
-        }
-    }
-    output.append(formatted)
+        self.assertEqual(1, len(drugs))
+        self.assertEqual("161", drugs[0][0]['omop_id'])
 
-print("\nFormatted Output:\n")
-print(json.dumps(output, indent=2))
+
+if __name__ == "__main__":
+    unittest.main()
