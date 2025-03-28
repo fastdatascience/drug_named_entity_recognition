@@ -75,7 +75,7 @@ variant_to_ngrams = {}
 def get_ngrams(text):
     n = 3
     ngrams = set()
-    for i in range(0, len(text) - n + 1):
+    for i in range(0, len(text) - n + 1, 1):
         ngrams.add(text[i:i + n])
     return ngrams
 
