@@ -31,6 +31,7 @@ import os
 import pathlib
 import re
 import subprocess
+import zipfile
 from sys import platform
 
 import requests
@@ -67,12 +68,16 @@ def download_structures(this_path):
 
     print(f"Downloaded Drugbank dump from {url} to {tmpfile}.")
 
-    if "win" in platform:  # if we are on Windows, use curl.exe (supported in Windows 10 and up)
-        unzip = subprocess.Popen(["unzip", -"o", tmpfile, "-d", str(this_path)])
-    else:
-        unzip = subprocess.Popen(["unzip", "-o", tmpfile, "-d", str(this_path)])
-
-    os.waitpid(unzip.pid, 0)
+    with zipfile.ZipFile(tmpfile, 'r') as zip_ref:
+        zip_ref.extractall(str(this_path))
+    #
+    #
+    # if "win" in platform:  # if we are on Windows, use curl.exe (supported in Windows 10 and up)
+    #     unzip = subprocess.Popen(["unzip", -"o", tmpfile, "-d", str(this_path)])
+    # else:
+    #     unzip = subprocess.Popen(["unzip", "-o", tmpfile, "-d", str(this_path)])
+    #
+    # os.waitpid(unzip.pid, 0)
 
     print(f"Unzipped Drugbank dump from {tmpfile} to directory {this_path}.")
 
