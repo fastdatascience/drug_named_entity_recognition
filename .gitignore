@@ -139,3 +139,6 @@ wget-log*
 /harvesting_data_from_source/drugbank vocabulary.csv
 /harvesting_data_from_source/drugs_dictionary_mesh.csv
 /src/drug_named_entity_recognition/open structures.sdf
+
+# OMOP API local cache
+omop_cache.pkl
