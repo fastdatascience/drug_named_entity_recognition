@@ -37,7 +37,7 @@ import traceback
 from tqdm import tqdm
 import requests
 
-MODEL = 'gpt-3.5-turbo'
+MODEL = 'gpt-4o'
 
 with open("words_to_check_with_ai.txt", "r", encoding="utf-8") as f:
     words_to_check_with_ai = f.read().split("\n")

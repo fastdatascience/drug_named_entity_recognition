@@ -142,3 +142,10 @@ wget-log*
 
 # OMOP API local cache
 omop_cache.pkl
+/harvesting_data_from_source/CID-MeSH
+/harvesting_data_from_source/CID-SMILES
+/harvesting_data_from_source/CID-SMILES.gz
+/harvesting_data_from_source/mesh_name_to_smiles.json
+/harvesting_data_from_source/CID-Mass
+/harvesting_data_from_source/mesh_name_to_mass.json
+/harvesting_data_from_source/words_to_check_with_ai.txt

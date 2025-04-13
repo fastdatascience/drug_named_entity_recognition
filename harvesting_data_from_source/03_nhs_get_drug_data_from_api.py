@@ -1,7 +1,7 @@
 import json
 import os
+import traceback
 import time
-
 import requests
 
 all_nhs_drugs = []
@@ -20,33 +20,43 @@ for page_no in range(1, 20):
 
     print("page", page_no)
 
-    params = {
-        'page': str(page_no)
-    }
+    try:
 
-    response = requests.get(endpoint_url, headers=headers, params=params)
+        params = {
+            'page': str(page_no)
+        }
 
-    response_json = response.json()
+        response = requests.get(endpoint_url, headers=headers, params=params)
 
-    print("number of responses:", len(response_json['significantLink']))
+        response_json = response.json()
 
-    if len(response_json['significantLink']) == 0:
+        if 'significantLink' not in response_json:
+            print("No 'significantLink' found in JSON. Exiting...")
+            break
+
+        print("number of responses:", len(response_json['significantLink']))
+
+        if len(response_json['significantLink']) == 0:
+            break
+
+        first_item_url = response_json['significantLink'][0]['url']
+
+        if first_item_url in already_seen:
+            break
+
+        for link in response_json['significantLink']:
+            item_url = link['url']
+            already_seen.add(item_url)
+
+        print(f"Name of first drug returned by API on page {page_no}:", response_json['significantLink'][0]['name'])
+
+        all_nhs_drugs.extend(response_json['significantLink'])
+
+    except:
+        print("Exiting loop.", traceback.format_exc())
         break
 
-    first_item_url = response_json['significantLink'][0]['url']
-
-    if first_item_url in already_seen:
-        break
-
-    for link in response_json['significantLink']:
-        item_url = link['url']
-        already_seen.add(item_url)
-
-    print(response_json['significantLink'][0]['name'])
-
-    all_nhs_drugs.extend(response_json['significantLink'])
-
-    time.sleep(60)
+    time.sleep(30)
 
 with open("all_nhs_drugs.json", "w", encoding="utf-8") as f:
     f.write(json.dumps(all_nhs_drugs, indent=4))
