@@ -46,6 +46,8 @@ It also only finds the English names of these drugs. Names [in other languages](
 
 It also doesn't find short code names of drugs, such as abbreviations commonly used in medicine, such as "Ceph" for "Cephradin" - as these are highly ambiguous.
 
+It also returns the chemical formula, SMILES representation, and molecular weight of a drug if that information is available.
+
 # 💻Installing Drug Named Entity Recognition Python package
 
 You can install Drug Named Entity Recognition from [PyPI](https://pypi.org/project/drug-named-entity-recognition).
@@ -249,10 +251,14 @@ Response includes `'omop_id': '161'`:
 [({'medline_plus_id': 'a621016', 'name': 'Acetaminophen', 'nhs_api_url': 'https://int.api.service.nhs.uk/nhs-website-content/medicines/paracetamol-for-children/', 'nhs_url': 'https://nhs.uk/medicines/paracetamol-for-children/', 'mesh_id': 'D058633', 'mesh_tree': ['D02.092.146.113.092.040', 'D02.065.199.092.040'], 'drugbank_id': 'DB00316', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Paracetamol', 'synonyms': ['calpol', 'acetaminophen', 'panadol', 'tylenol', 'actamin', 'ofirmev', 'apap', 'paracetamol', 'acephen rectal suppository', 'neopap supprettes rectal suppository', 'calpol', 'acetominophen', 'p-hydroxyacetanilide', 'acamol', 'acetaco', 'p-acetamidophenol', 'anacin-3', 'hydroxyacetanilide', 'anacin 3', 'algotropyl', 'n-acetyl-p-aminophenol', 'anacin3', 'acetamidophenol', 'datril', 'acephen', '4-acetamidophenol', "4'-hydroxyacetanilide", 'acenol', 'acetaminofén', 'acétaminophène', 'p-acetaminophenol', 'p-acetylaminophenol', 'p-hydroxy-acetanilid', 'p-hydroxyphenolacetamide', 'paracétamol', 'paracetamolum'], 'is_brand': False, 'match_type': 'exact', 'matching_string': 'paracetamol', 'omop_id': '161'}, 0, 1)]
 
 ```
+## SMILES (Simplified Molecular Input Line Entry System Integration)
+
+We now support SMILES (Simplified Molecular Input Line Entry System) strings for drug molecules. SMILES data is extracted from PubChem’s CID-SMILES.gz file and integrated during the dictionary build step (06_add_smiles_from_pubchem.py), enriching each drug entry with a machine-readable structure. If available, a SMILES string is returned in the find_drugs() output under the smiles key. For visualisation, users can refer to the example notebook using RDKit (optional dependency). This enhancement allows better structural insight without relying on external APIs.
+
 
 # 📁Data sources
 
-The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
+The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus, Pubchem, and Wikipedia.
 
 🌟 There is a handy Jupyter Notebook, `update.ipynb` which will update the Drugbank and MeSH data sources (re-download them from the relevant third parties). 
 
@@ -302,6 +308,8 @@ To the extent possible under law, the person who associated CC0 with the DrugBan
 ```
 
 * Text from Wikipedia data dump is licensed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.html) and [Creative Commons Attribution-Share-Alike 3.0 License](https://creativecommons.org/licenses/by-sa/3.0/). [More information](https://dumps.wikimedia.org/legal.html).
+
+* Pubchem is an open access database. More information: https://pubchem.ncbi.nlm.nih.gov/docs/downloads2
 
 ## Contributing to the Drug Named Entity Recognition library
 
@@ -369,15 +377,20 @@ MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
 
 ## ✍️ Citing the Drug Named Entity Recognition library
 
-Wood, T.A., Drug Named Entity Recognition [Computer software], Version 2.0.7, accessed at [https://fastdatascience.com/drug-named-entity-recognition-python-library](https://fastdatascience.com/drug-named-entity-recognition-python-library), Fast Data Science Ltd (2024)
+Wood, T.A., Drug Named Entity Recognition [Computer software], Version 2.0.8, accessed at [https://fastdatascience.com/drug-named-entity-recognition-python-library](https://fastdatascience.com/drug-named-entity-recognition-python-library), Fast Data Science Ltd (2024)
 
 ```
 @unpublished{drugnamedentityrecognition,
     AUTHOR = {Wood, T.A.},
-    TITLE  = {Drug Named Entity Recognition (Computer software), Version 2.0.7},
+    TITLE  = {Drug Named Entity Recognition (Computer software), Version 2.0.8},
     YEAR   = {2024},
     Note   = {To appear},
     url = {https://zenodo.org/doi/10.5281/zenodo.10970631},
     doi = {10.5281/zenodo.10970631}
 }
 ```
+
+## Citations
+
+1. Kim S, Chen J, Cheng T, et al. PubChem 2025 update. Nucleic Acids Res. 2025;53(D1):D1516-D1525. doi:10.1093/nar/gkae1059
+2. Knox C, Wilson M, Klinger CM, et al. DrugBank 6.0: the DrugBank Knowledgebase for 2024. Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.

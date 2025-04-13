@@ -104,7 +104,7 @@ class CustomContentHandler(xml.sax.ContentHandler):
                     break
             if is_include:
                 self.writer.writerow([self.id, "|".join(self.generic_names), self.title, "|".join(self.terms), "|".join(self.tree_numbers)])
-                print(self.id, self.title, self.tree_numbers, self.terms)
+                # print(self.id, self.title, self.tree_numbers, self.terms)
             self.title = ""
             self.id = ""
             self.tree_numbers = set()

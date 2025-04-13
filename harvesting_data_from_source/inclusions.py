@@ -31,6 +31,9 @@ drugs_to_exclude_under_all_variants = {
     "blood glucose"
 }
 
+# This list is manually maintained. If you run script `08_optional_check_words_with_ai.py` you can find if OpenAI/GPT
+# associates a particular word primarily with a drug. E.g. some of these words are more likely to refer to hormones,
+# or the use of the molecule in a non-drug context.
 common_english_words_to_include_in_drugs_dictionary = {
     "absinthium",
     "acetphenetidin",

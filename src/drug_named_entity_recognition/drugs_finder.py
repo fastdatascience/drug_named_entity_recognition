@@ -31,7 +31,6 @@ SOFTWARE.
 import bz2
 import os
 import pathlib
-import pickle
 import pickle as pkl
 from collections import Counter
 
@@ -39,11 +38,21 @@ from drug_named_entity_recognition.omop_api import get_omop_id_from_drug
 from drug_named_entity_recognition.structure_file_downloader import download_structures
 from drug_named_entity_recognition.util import stopwords
 
+dbid_to_mol_lookup = {}
+
+this_path = pathlib.Path(__file__).parent.resolve()
+with bz2.open(this_path.joinpath("drug_ner_dictionary.pkl.bz2"), "rb") as f:
+    d = pkl.load(f)
+
+home_path = pathlib.Path.home()
+structures_folder = home_path.joinpath(".drug_names")
+structures_file = structures_folder.joinpath("open structures.sdf")
+
 # Caching setup
-CACHE_FILE = "omop_cache.pkl"
+CACHE_FILE = home_path.joinpath(".omop_cache.pkl")
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, "rb") as f:
-        omop_cache = pickle.load(f)
+        omop_cache = pkl.load(f)
 else:
     omop_cache = {}
 
@@ -55,19 +64,9 @@ def cached_get_omop_id(drug_name):
     omop_id = get_omop_id_from_drug(name)
     omop_cache[name] = omop_id
     with open(CACHE_FILE, "wb") as f:
-        pickle.dump(omop_cache, f)
+        pkl.dump(omop_cache, f)
     return omop_id
 
-
-dbid_to_mol_lookup = {}
-
-this_path = pathlib.Path(__file__).parent.resolve()
-with bz2.open(this_path.joinpath("drug_ner_dictionary.pkl.bz2"), "rb") as f:
-    d = pkl.load(f)
-
-home_path = pathlib.Path.home()
-structures_folder = home_path.joinpath(".drug_names")
-structures_file = structures_folder.joinpath("open structures.sdf")
 
 drug_variant_to_canonical = {}
 drug_canonical_to_data = {}

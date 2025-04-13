@@ -4,7 +4,7 @@
         "name": "Aciclovir (Zovirax)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/aciclovir/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/aciclovir/",
         "description": "Find out how aciclovir treats cold sores, chickenpox, shingles and other herpes virus infections, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -20,7 +20,7 @@
         "name": "Acrivastine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/acrivastine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/acrivastine/",
         "description": "NHS medicines information on acrivastine (Benadryl) \u2013 what it's used for, side effects, dosage and who can take it",
         "mainEntityOfPage": {
             "genre": [
@@ -30,7 +30,7 @@
                 "2021-10-13T13:39:00+00:00",
                 "2024-10-13T13:39:00+00:00"
             ],
-            "dateModified": "2024-04-17T16:44:12+00:00",
+            "dateModified": "2025-02-20T17:22:09+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -39,7 +39,7 @@
         "name": "Adalimumab",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/adalimumab/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/adalimumab/",
         "description": "Brand names: Humira, Amgevita, Hyrimoz, Idacio, Imraldi, Yuflyma. Find out how adalimumab treats swelling (inflammation), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -55,7 +55,7 @@
         "name": "Alendronic acid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/alendronic-acid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/alendronic-acid/",
         "description": "NHS medicines information on alendronic acid \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -65,7 +65,7 @@
                 "2021-09-10T14:00:00+00:00",
                 "2024-09-10T14:00:00+00:00"
             ],
-            "dateModified": "2024-04-17T17:08:02+00:00",
+            "dateModified": "2025-02-28T13:33:42+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -74,7 +74,7 @@
         "name": "Allopurinol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/allopurinol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/allopurinol/",
         "description": "Find out how allopurinol treats gout and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -90,14 +90,14 @@
         "name": "Alogliptin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/alogliptin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/alogliptin/",
         "description": "Brand name: Vipidia. Find out how alogliptin treats type 2 diabetes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-17T17:17:41+00:00",
+            "dateModified": "2025-02-25T16:04:26+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -106,17 +106,14 @@
         "name": "Amitriptyline for depression",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/amitriptyline-for-depression/",
-        "description": "NHS medicines information on amitriptyline for depression \u2013 how it works, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/amitriptyline-for-depression/",
+        "description": "Find out how amitriptyline treats depression and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-09-09T10:00:00+00:00",
-                "2024-09-09T10:00:00+00:00"
-            ],
-            "dateModified": "2024-04-17T17:24:37+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-05T17:54:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -125,7 +122,7 @@
         "name": "Amitriptyline for pain and migraine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/amitriptyline-for-pain/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/amitriptyline-for-pain/",
         "description": "Find out how amitriptyline treats pain and prevents migraine and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -141,14 +138,14 @@
         "name": "Amlodipine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/amlodipine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/amlodipine/",
         "description": "Brand name: Istin. Find out how amlodipine treats high blood pressure and helps to prevent heart disease, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:29:18+00:00",
+            "dateModified": "2024-12-03T16:56:46+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -157,7 +154,7 @@
         "name": "Amoxicillin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/amoxicillin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/amoxicillin/",
         "description": "NHS medicines information on amoxicillin \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -167,7 +164,7 @@
                 "2021-11-12T15:00:00+00:00",
                 "2024-11-12T15:00:00+00:00"
             ],
-            "dateModified": "2024-04-18T08:05:47+00:00",
+            "dateModified": "2024-09-11T11:38:11+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -176,14 +173,14 @@
         "name": "Anastrozole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/anastrozole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/anastrozole/",
         "description": "Find out how anastrozole treats and helps prevent breast cancer, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-10T18:00:37+00:00",
+            "dateModified": "2024-09-10T12:54:33+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -192,14 +189,14 @@
         "name": "Apixaban",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/apixaban/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/apixaban/",
         "description": "Find out how apixaban helps to prevent blood clots and reduces risk of heart attacks and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T08:21:33+00:00",
+            "dateModified": "2024-12-03T16:58:06+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -208,14 +205,14 @@
         "name": "Aripiprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/aripiprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/aripiprazole/",
         "description": "Find out how aripiprazole treats mental health conditions, including schizophrenia and bipolar disorder, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T10:41:23+00:00",
+            "dateModified": "2024-10-31T11:13:30+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -224,7 +221,7 @@
         "name": "Aspirin for pain relief",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/aspirin-for-pain-relief/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/aspirin-for-pain-relief/",
         "description": "Find out more about how aspirin is used for pain relief, and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -240,7 +237,7 @@
         "name": "Atenolol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/atenolol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/atenolol/",
         "description": "Brand name: Tenormin. Find out how atenolol treats high blood pressure (hypertension), irregular heartbeats (arrhythmia) and angina, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -256,14 +253,14 @@
         "name": "Atorvastatin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/atorvastatin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/atorvastatin/",
         "description": "Brand name: Lipitor. Find out how atorvastatin treats heart problems and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T11:00:28+00:00",
+            "dateModified": "2024-12-03T16:59:26+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -272,14 +269,14 @@
         "name": "Azathioprine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/azathioprine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/azathioprine/",
         "description": "Find out how azathioprine treats conditions that affect the immune system such as rheumatoid arthritis, Crohn's disease and ulcerative colitis, skin conditions such as lupus, and helps after an organ transplant, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T11:07:21+00:00",
+            "dateModified": "2024-09-11T15:16:23+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -288,7 +285,7 @@
         "name": "Azithromycin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/azithromycin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/azithromycin/",
         "description": "Brand name: Zithromax. Find out how azithromycin treats infections and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -304,14 +301,14 @@
         "name": "Baclofen",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/baclofen/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/baclofen/",
         "description": "Brand names: Lioresal, Lyflex. Find out how baclofen relieves muscles spasms and helps manage conditions cerebral palsy, meningitis, motor neurone disease and multiple sclerosis.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:03:20+00:00",
+            "dateModified": "2024-09-09T13:03:58+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -320,7 +317,7 @@
         "name": "Beclometasone inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/beclometasone-inhalers/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/beclometasone-inhalers/",
         "description": "Find out how beclometasone inhalers treat asthma and chronic obstructive pulmonary disease (COPD) and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -336,7 +333,7 @@
         "name": "Beclometasone nasal spray",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/beclometasone-nasal-spray/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/beclometasone-nasal-spray/",
         "description": "Find out how beclometasone nasal spray treats allergic rhinitis including hay fever, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -352,14 +349,14 @@
         "name": "Beclometasone skin cream",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/beclometasone-skin-creams/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/beclometasone-skin-creams/",
         "description": "Find out how beclometasone skin cream treats itching, swollen and irritated skin, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-01-09T13:36:21+00:00",
+            "dateModified": "2024-09-17T14:29:21+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -368,7 +365,7 @@
         "name": "Beclometasone tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/beclometasone-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/beclometasone-tablets/",
         "description": "Find out how beclometasone tablets treat ulcerative colitis and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -384,7 +381,7 @@
         "name": "Bendroflumethiazide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/bendroflumethiazide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/bendroflumethiazide/",
         "description": "NHS medicines information on bendroflumethiazide - what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -394,7 +391,7 @@
                 "2021-07-27T23:00:00+00:00",
                 "2024-07-27T23:00:00+00:00"
             ],
-            "dateModified": "2024-04-23T10:33:25+00:00",
+            "dateModified": "2025-03-05T15:05:29+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -403,7 +400,7 @@
         "name": "Benzoyl peroxide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/benzoyl-peroxide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/benzoyl-peroxide/",
         "description": "Find out how benzoyl peroxide treats acne and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -419,7 +416,7 @@
         "name": "Benzydamine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/benzydamine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/benzydamine/",
         "description": "Find out how benzydamine treats mouth ulcers, sore throat and teething, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -435,7 +432,7 @@
         "name": "Betahistine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/betahistine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/betahistine/",
         "description": "Find out how betahistine treats symptoms of M\u00e9ni\u00e8re's disease and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -451,7 +448,7 @@
         "name": "Betamethasone for eyes, ears and nose",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/betamethasone-eyes-ears-and-nose/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/betamethasone-eyes-ears-and-nose/",
         "description": "Find out how betamethasone for eyes, ears and nose treats allergies and inflammation, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -467,14 +464,14 @@
         "name": "Betamethasone for skin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/betamethasone-skin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/betamethasone-skin/",
         "description": "Find out how betamethasone for skin treats skin conditions such as eczema, contact dermatitis and psoriasis, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T13:42:40+00:00",
+            "dateModified": "2024-09-17T14:35:14+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -483,7 +480,7 @@
         "name": "Betamethasone tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/betamethasone-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/betamethasone-tablets/",
         "description": "Find out how betamethasone tablets treat conditions including allergies, swelling (inflammation) and autoimmune conditions, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -496,20 +493,17 @@
     },
     {
         "@type": "LinkRole",
-        "name": "Bimatoprost",
+        "name": "Bimatoprost (Lumigan)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/bimatoprost/",
-        "description": "NHS medicines information on bimatoprost \u2013 what it\u2019s used for, side effects, dosage and who can use it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/bimatoprost/",
+        "description": "Find out how bimatoprost treats high pressure inside the eye (ocular hypertension) and glaucoma, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-01T13:21:00+00:00",
-                "2024-06-01T13:21:00+00:00"
-            ],
-            "dateModified": "2024-04-18T14:15:37+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-09-03T13:57:11+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -518,17 +512,14 @@
         "name": "Bisacodyl",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/bisacodyl/",
-        "description": "NHS medicines information on bisacodyl \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/bisacodyl/",
+        "description": "Find out how bisacodyl treats constipation and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-14T13:08:00+00:00",
-                "2024-06-14T13:08:00+00:00"
-            ],
-            "dateModified": "2024-04-18T14:18:13+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-10-24T12:03:06+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -537,7 +528,7 @@
         "name": "Bisoprolol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/bisoprolol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/bisoprolol/",
         "description": "Brand names: Cardicor, Congescor. Find out how bisoprolol treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -553,17 +544,14 @@
         "name": "Brinzolamide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/brinzolamide/",
-        "description": "NHS medicines information on brinzolamide \u2013 what it\u2019s used for, side effects, dosage and who can use it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/brinzolamide/",
+        "description": "Find out how brinzolamide treats high pressure inside the eye (ocular hypertension) and glaucoma, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-02T12:40:00+00:00",
-                "2024-06-02T12:40:00+00:00"
-            ],
-            "dateModified": "2024-04-18T14:31:48+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-10-01T17:00:31+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -572,7 +560,7 @@
         "name": "Budesonide inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/budesonide-inhalers/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/budesonide-inhalers/",
         "description": "Find out how budesonide inhalers treat asthma and chronic obstructive pulmonary disease (COPD) symptoms and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -588,7 +576,7 @@
         "name": "Budesonide nasal spray",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/budesonide-nasal-spray/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/budesonide-nasal-spray/",
         "description": "Find out how budesonide nasal spray treats cold-like symptoms caused by allergic rhinitis, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -604,7 +592,7 @@
         "name": "Budesonide rectal foam and enemas",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/budesonide-rectal-foam-and-enemas/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/budesonide-rectal-foam-and-enemas/",
         "description": "Find out how to use budesonide rectal foam and enemas to treat ulcerative colitis.",
         "mainEntityOfPage": {
             "genre": [
@@ -620,7 +608,7 @@
         "name": "Budesonide tablets, capsules and granules",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/budesonide-tablets-capsules-and-granules/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/budesonide-tablets-capsules-and-granules/",
         "description": "Find out how budesonide tablets, capsules and granules treat swelling (inflammation) including inflammatory bowel diseases, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -636,7 +624,7 @@
         "name": "Bumetanide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/bumetanide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/bumetanide/",
         "description": "Find out how bumetanide treats oedema (too much fluid in your body) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -652,7 +640,7 @@
         "name": "Buprenorphine for pain",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/buprenorphine-for-pain/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/buprenorphine-for-pain/",
         "description": "Find out how buprenorphine treats moderate to severe pain and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -668,7 +656,7 @@
         "name": "Buscopan (hyoscine butylbromide)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/buscopan-hyoscine-butylbromide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/buscopan-hyoscine-butylbromide/",
         "description": "NHS medicines information on Buscopan \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -678,7 +666,7 @@
                 "2021-10-14T10:03:00+00:00",
                 "2024-10-14T10:03:00+00:00"
             ],
-            "dateModified": "2024-04-18T15:12:56+00:00",
+            "dateModified": "2025-03-05T15:07:28+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -687,7 +675,7 @@
         "name": "Calcipotriol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/calcipotriol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/calcipotriol/",
         "description": "Find out how calcipotriol treats plaque psoriasis and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -703,14 +691,14 @@
         "name": "Candesartan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/candesartan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/candesartan/",
         "description": "Brand name: Amias. Find out how candesartan treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:37:40+00:00",
+            "dateModified": "2024-12-03T17:02:05+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -719,14 +707,14 @@
         "name": "Carbamazepine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/carbamazepine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/carbamazepine/",
         "description": "Brand names: Tegretol, Curatil. Find out how carbamazepine treats epilepsy, nerve pain and bipolar disorder, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T15:23:00+00:00",
+            "dateModified": "2024-10-31T11:09:12+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -735,7 +723,7 @@
         "name": "Carbimazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/carbimazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/carbimazole/",
         "description": "NHS medicines information on carbimazole \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -745,7 +733,7 @@
                 "2021-07-26T14:13:00+00:00",
                 "2024-07-26T14:13:00+00:00"
             ],
-            "dateModified": "2024-04-18T15:31:01+00:00",
+            "dateModified": "2024-09-11T17:09:25+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -754,7 +742,7 @@
         "name": "Carbocisteine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/carbocisteine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/carbocisteine/",
         "description": "Find out how carbocisteine treats chronic obstructive pulmonary disease (COPD) and cystic fibrosis and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -770,7 +758,7 @@
         "name": "Carmellose sodium eye drops",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/carmellose-sodium/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/carmellose-sodium/",
         "description": "Find out how carmellose sodium eye drops treat dry eyes and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -786,14 +774,14 @@
         "name": "Carvedilol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/carvedilol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/carvedilol/",
         "description": "Find out how carvedilol treats high blood pressure and helps prevent heart disease, angina and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-07-15T15:12:01+00:00",
+            "dateModified": "2024-12-04T09:16:57+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -802,7 +790,7 @@
         "name": "Cefalexin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/cefalexin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/cefalexin/",
         "description": "Find out how cefalexin treats infections including urinary tract infections (UTIs), pneumonia and other chest infections, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -818,36 +806,14 @@
         "name": "Cetirizine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/cetirizine/",
-        "description": "NHS medicines information on cetirizine \u2013 what it's used for, side effects, dosage and who can take it",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/cetirizine/",
+        "description": "Find out how cetirizine treats symptoms of allergies and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-10-15T08:55:00+00:00",
-                "2024-10-15T08:55:00+00:00"
-            ],
-            "dateModified": "2024-04-18T15:42:16+00:00",
-            "@type": "MedicalWebPage"
-        }
-    },
-    {
-        "@type": "LinkRole",
-        "name": "Champix (varenicline)",
-        "articleStatus": "published",
-        "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/champix-varenicline/",
-        "description": "NHS medicines information on Champix (varenicline) \u2013 what it's used for, side effects, dosage and who can take it.",
-        "mainEntityOfPage": {
-            "genre": [
-                "Medicine"
-            ],
-            "lastReviewed": [
-                "2022-03-10T13:53:00+00:00",
-                "2025-03-10T13:53:00+00:00"
-            ],
-            "dateModified": "2024-04-18T15:42:54+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-02-20T16:58:41+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -856,7 +822,7 @@
         "name": "Chloramphenicol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/chloramphenicol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/chloramphenicol/",
         "description": "Brand name: Optrex Bacterial Conjunctivitis Eye Ointment. Find out how chloramphenicol treats eye and ear infections, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -872,17 +838,14 @@
         "name": "Chlorhexidine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/chlorhexidine/",
-        "description": "NHS medicines information on chlorhexidine \u2013 what it\u2019s used for, side effects, dosage and who can use it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/chlorhexidine/",
+        "description": "Find out how chlorhexidine treats mouth ulcers, throat infections and skin infections and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-25T13:00:00+00:00",
-                "2024-06-25T13:00:00+00:00"
-            ],
-            "dateModified": "2024-04-18T15:44:55+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-08-22T15:52:52+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -891,7 +854,7 @@
         "name": "Chlorphenamine (Piriton)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/chlorphenamine-including-piriton/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/chlorphenamine-including-piriton/",
         "description": "NHS medicines information on chlorphenamine \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -901,7 +864,7 @@
                 "2021-11-05T09:43:00+00:00",
                 "2024-11-05T09:43:00+00:00"
             ],
-            "dateModified": "2024-04-18T15:46:00+00:00",
+            "dateModified": "2025-02-20T17:21:07+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -910,7 +873,7 @@
         "name": "Cinnarizine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/cinnarizine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/cinnarizine/",
         "description": "Find out how cinnarizine treats travel sickness, vertigo, tinnitus and M\u00e9ni\u00e8re's disease, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -926,7 +889,7 @@
         "name": "Ciprofloxacin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ciprofloxacin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ciprofloxacin/",
         "description": "Find out how ciprofloxacin treats serious infections and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -942,7 +905,7 @@
         "name": "Citalopram",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/citalopram/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/citalopram/",
         "description": "Find out how citalopram treats low mood (depression) and panic attacks and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -958,7 +921,7 @@
         "name": "Clarithromycin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clarithromycin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clarithromycin/",
         "description": "Brand names: Klaricid, Klaricid XL, Xetinin XL. Find out how clarithromycin treats chest infections and pneumonia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -974,14 +937,14 @@
         "name": "Clobetasol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clobetasol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clobetasol/",
         "description": "Find out how clobetasol treats eczema, psoriasis and lichen planus, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T16:05:32+00:00",
+            "dateModified": "2024-09-17T14:39:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -990,14 +953,14 @@
         "name": "Clobetasone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clobetasone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clobetasone/",
         "description": "Find out how clobetasone treats skin itching, swelling and irritation, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T16:06:34+00:00",
+            "dateModified": "2024-09-17T14:41:43+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1006,7 +969,7 @@
         "name": "Clonazepam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clonazepam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clonazepam/",
         "description": "Find out how clonazepam treats epileptic seizures or fits, muscle spasms, panic disorder and restless legs syndrome, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1022,7 +985,7 @@
         "name": "Clonidine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clonidine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clonidine/",
         "description": "Find out how clonidine treats high blood pressure and hot flushes, how it prevents migraines and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1038,17 +1001,14 @@
         "name": "Clopidogrel",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clopidogrel/",
-        "description": "NHS medicines information on clopidogrel - what it\u2019s used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clopidogrel/",
+        "description": "Find out how clopidogrel helps prevent blood clots and reduces the risk of heart attacks and strokes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-08-05T00:00:00+00:00",
-                "2024-08-05T00:00:00+00:00"
-            ],
-            "dateModified": "2024-07-04T15:39:07+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-18T13:48:32+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1057,7 +1017,7 @@
         "name": "Clotrimazole cream, spray and solution",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clotrimazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clotrimazole/",
         "description": "Find out how clotrimazole cream, spray and solution treats fungal infections and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1073,7 +1033,7 @@
         "name": "Clotrimazole for thrush (Canesten)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/clotrimazole-for-thrush/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/clotrimazole-for-thrush/",
         "description": "Find out how clotrimazole treats thrush and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1089,7 +1049,7 @@
         "name": "Co-amoxiclav",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-amoxiclav/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-amoxiclav/",
         "description": "Find out how co-amoxiclav treats bacterial infections such as ear infections and urinary tract infections, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1105,17 +1065,14 @@
         "name": "Co-beneldopa",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-beneldopa/",
-        "description": "NHS medicines information on co-beneldopa \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-beneldopa/",
+        "description": "Find out how co-beneldopa treats Parkinson's disease and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-15T15:13:00+00:00",
-                "2024-06-15T15:13:00+00:00"
-            ],
-            "dateModified": "2024-04-18T16:13:41+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-14T17:37:38+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1124,7 +1081,7 @@
         "name": "Co-careldopa",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-careldopa/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-careldopa/",
         "description": "Find out how co-careldopa treats Parkinson\u2019s disease, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1140,7 +1097,7 @@
         "name": "Co-codamol for adults",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-codamol-for-adults/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-codamol-for-adults/",
         "description": "Find out how co-codamol treats pain in adults and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1156,7 +1113,7 @@
         "name": "Co-codamol for children",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-codamol-for-children/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-codamol-for-children/",
         "description": "Find out how co-codamol treats pain in children and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1172,7 +1129,7 @@
         "name": "Co-codaprin (aspirin and codeine)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-codaprin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-codaprin/",
         "description": "NHS medicines information on co-codaprin - what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1182,7 +1139,7 @@
                 "2021-11-04T01:00:00+00:00",
                 "2024-11-04T01:00:00+00:00"
             ],
-            "dateModified": "2024-03-20T16:25:49+00:00",
+            "dateModified": "2025-03-18T14:22:17+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1191,7 +1148,7 @@
         "name": "Co-dydramol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/co-dydramol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/co-dydramol/",
         "description": "Find out how co-dydramol treats headaches, joint pain and other aches and pains, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1207,14 +1164,14 @@
         "name": "Coal tar",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/coal-tar/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/coal-tar/",
         "description": "Find out how coal tar treats skin irritation, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-18T16:12:05+00:00",
+            "dateModified": "2024-09-17T14:52:04+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1223,7 +1180,7 @@
         "name": "Codeine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/codeine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/codeine/",
         "description": "Find out how codeine treats pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1239,7 +1196,7 @@
         "name": "Colchicine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/colchicine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/colchicine/",
         "description": "Find out how colchicine treats inflammation and pain caused by gout and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1255,7 +1212,7 @@
         "name": "Colecalciferol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/colecalciferol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/colecalciferol/",
         "description": "Find out how colecalciferol treats and prevents lack of vitamin D, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1271,7 +1228,7 @@
         "name": "Contraceptive injections (medroxyprogesterone)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/contraceptive-injections-medroxyprogesterone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/contraceptive-injections-medroxyprogesterone/",
         "description": "Find out how medroxyprogesterone injections are used for contraception and how you have them.",
         "mainEntityOfPage": {
             "genre": [
@@ -1287,7 +1244,7 @@
         "name": "Cyanocobalamin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/cyanocobalamin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/cyanocobalamin/",
         "description": "Find out how cyanocobalamin treats and prevents vitamin B12 deficiency anaemia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1303,7 +1260,7 @@
         "name": "Cyclizine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/cyclizine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/cyclizine/",
         "description": "Brand name: Valoid. Find out how cyclizine treats nausea and vomiting, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1319,14 +1276,14 @@
         "name": "Dabigatran",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dabigatran/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dabigatran/",
         "description": "Brand name: Pradaxa. Find out how dabigatran treats blood clots and reduces risk of heart attacks and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-20T16:54:21+00:00",
+            "dateModified": "2024-12-04T09:24:11+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1335,14 +1292,14 @@
         "name": "Dapagliflozin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dapagliflozin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dapagliflozin/",
         "description": "Find out how dapagliflozin treats type 2 diabetes, heart failure and chronic kidney disease, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-20T17:06:43+00:00",
+            "dateModified": "2025-02-25T16:00:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1351,7 +1308,7 @@
         "name": "Dexamethasone eye drops",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dexamethasone-eye-drops/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dexamethasone-eye-drops/",
         "description": "Find out how dexamethasone eye drops treat eye inflammation and irritation, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -1367,7 +1324,7 @@
         "name": "Dexamethasone tablets and liquid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dexamethasone-tablets-and-liquid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dexamethasone-tablets-and-liquid/",
         "description": "Find out how dexamethasone tablets and liquid treat inflammatory conditions and autoimmune conditions, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -1383,14 +1340,14 @@
         "name": "Diazepam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/diazepam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/diazepam/",
         "description": "Brand names: Diazemuls, Stesolid Rectal Tubes, Diazepam Rectubes, Diazepam Desitin. Find out how diazepam treats anxiety, muscle spasms and seizures or fits, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-20T17:12:07+00:00",
+            "dateModified": "2024-11-20T10:49:28+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1399,17 +1356,14 @@
         "name": "Diclofenac",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/diclofenac/",
-        "description": "NHS medicines information on diclofenac \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/diclofenac/",
+        "description": "Find out how diclofenac treats pain and inflammation, and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-10T00:00:00+00:00",
-                "2024-06-10T00:00:00+00:00"
-            ],
-            "dateModified": "2024-03-20T17:14:28+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-09-17T15:17:37+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1418,7 +1372,7 @@
         "name": "Digoxin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/digoxin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/digoxin/",
         "description": "Find out how digoxin treats heart problems and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1434,7 +1388,7 @@
         "name": "Dihydrocodeine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dihydrocodeine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dihydrocodeine/",
         "description": "Find out how dihydrocodeine treats moderate to severe pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1450,14 +1404,14 @@
         "name": "Diltiazem",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/diltiazem/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/diltiazem/",
         "description": "Find out how diltiazem treats high blood pressure and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:39:58+00:00",
+            "dateModified": "2024-12-04T09:27:19+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1466,7 +1420,7 @@
         "name": "Diphenhydramine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/diphenhydramine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/diphenhydramine/",
         "description": "NHS medicines information on diphenhydramine \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1476,7 +1430,7 @@
                 "2021-10-14T14:53:00+00:00",
                 "2024-10-14T14:53:00+00:00"
             ],
-            "dateModified": "2024-03-20T17:28:43+00:00",
+            "dateModified": "2025-02-20T17:20:30+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1485,14 +1439,14 @@
         "name": "Dipyridamole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dipyridamole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dipyridamole/",
         "description": "Find out how dipyridamole prevents blood clots and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-07-04T15:35:56+00:00",
+            "dateModified": "2024-12-04T09:30:08+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1501,7 +1455,7 @@
         "name": "Docusate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/docusate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/docusate/",
         "description": "Find out how docusate treats constipation, and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1517,7 +1471,7 @@
         "name": "Domperidone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/domperidone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/domperidone/",
         "description": "Find out how domperidone treats feeling sick (nausea) and vomiting, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1533,7 +1487,7 @@
         "name": "Donepezil",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/donepezil/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/donepezil/",
         "description": "Find out how donepezil treats dementia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1549,7 +1503,7 @@
         "name": "Dosulepin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/dosulepin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/dosulepin/",
         "description": "Brand names: Dothiepin, Prothiaden. Find out how dosulepin treats depression, nerve pain and migraines, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1565,7 +1519,7 @@
         "name": "Doxazosin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/doxazosin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/doxazosin/",
         "description": "Brand names: Cardura, Doxadura, Larbex, Raporsin, Slocin. Find out how doxazosin treats high blood pressure (hypertension) and symptoms of an enlarged prostate, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1581,7 +1535,7 @@
         "name": "Doxycycline",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/doxycycline/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/doxycycline/",
         "description": "Brand names: Vibramycin-D, Efracea, Periostat. Find out how doxycycline treats infections including chest infections, dental infections and rosacea and prevents malaria, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1597,14 +1551,14 @@
         "name": "Duloxetine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/duloxetine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/duloxetine/",
         "description": "Brand names: Cymbalta, Yentreve. Find out how duloxetine treats depression, anxiety, nerve pain and urinary incontinence, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-21T17:25:12+00:00",
+            "dateModified": "2024-11-20T10:49:42+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1613,14 +1567,14 @@
         "name": "Edoxaban",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/edoxaban/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/edoxaban/",
         "description": "Brand name: Lixiana. Find out how edoxaban helps to prevent blood clots and reduces risk of heart attacks and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-21T17:28:59+00:00",
+            "dateModified": "2024-12-04T09:32:58+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1629,14 +1583,14 @@
         "name": "Empagliflozin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/empagliflozin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/empagliflozin/",
         "description": "Find out how empagliflozin treats type 2 diabetes, heart failure and chronic kidney disease (CKD), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-10T15:54:55+00:00",
+            "dateModified": "2025-02-25T16:32:42+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1645,7 +1599,7 @@
         "name": "Enalapril",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/enalapril/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/enalapril/",
         "description": "Brand name: Innovace. Find out how enalapril treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1661,7 +1615,7 @@
         "name": "Eplerenone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/eplerenone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/eplerenone/",
         "description": "Find out how eplerenone treats heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1677,7 +1631,7 @@
         "name": "Erythromycin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/erythromycin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/erythromycin/",
         "description": "Brand names: Erythrocin, Erythroped, Erymax,  Erythroped A, Tiloryth. \r\nFind out how erythromycin treats chest and skin infections, ear infections and sexually transmitted infections (STIs), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1693,7 +1647,7 @@
         "name": "Escitalopram",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/escitalopram/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/escitalopram/",
         "description": "Brand name: Cipralex. Find out how escitalopram treats depression, anxiety, obsessive compulsive disorder (OCD) and panic attacks, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1709,7 +1663,7 @@
         "name": "Esomeprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/esomeprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/esomeprazole/",
         "description": "Brand names: Nexium, Nexium Control, Emozul, Guardium Acid Reflux Control and Ventra. Find out how esomeprazole treats indigestion and heartburn and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1725,7 +1679,7 @@
         "name": "Ezetimibe",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ezetimibe/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ezetimibe/",
         "description": "Find out how ezetimibe treats high blood cholesterol and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1741,7 +1695,7 @@
         "name": "Felodipine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/felodipine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/felodipine/",
         "description": "Find out how felodipine treats high blood pressure (hypertension) and angina, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1757,7 +1711,7 @@
         "name": "Fentanyl",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fentanyl/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fentanyl/",
         "description": "Find out how fentanyl treats severe pain and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1773,7 +1727,7 @@
         "name": "Ferrous fumarate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ferrous-fumarate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ferrous-fumarate/",
         "description": "Find out how ferrous fumarate treats and prevents iron deficiency anaemia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1789,7 +1743,7 @@
         "name": "Ferrous sulfate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ferrous-sulfate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ferrous-sulfate/",
         "description": "Find out how ferrous sulfate treats and prevents iron deficiency anaemia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1805,7 +1759,7 @@
         "name": "Fexofenadine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fexofenadine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fexofenadine/",
         "description": "NHS medicines information on fexofenadine \u2013 what it's used for, side effects, dosage and who can take it",
         "mainEntityOfPage": {
             "genre": [
@@ -1815,7 +1769,7 @@
                 "2021-10-14T12:14:00+00:00",
                 "2024-10-14T12:14:00+00:00"
             ],
-            "dateModified": "2024-03-25T17:14:14+00:00",
+            "dateModified": "2025-02-20T17:23:00+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1824,7 +1778,7 @@
         "name": "Finasteride",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/finasteride/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/finasteride/",
         "description": "Find out how finasteride treats benign prostate enlargement and hair loss in men, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1840,7 +1794,7 @@
         "name": "Flucloxacillin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/flucloxacillin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/flucloxacillin/",
         "description": "NHS medicines information on flucloxacillin \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1859,7 +1813,7 @@
         "name": "Fluconazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fluconazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fluconazole/",
         "description": "Find out how fluconazole treats thrush and other fungal infections, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1875,7 +1829,7 @@
         "name": "Fluoxetine (Prozac)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fluoxetine-prozac/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fluoxetine-prozac/",
         "description": "Brand name: Prozac. Find out how fluoxetine treats mental health conditions including depression, obsessive compulsive disorder (OCD) and bulimia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1891,7 +1845,7 @@
         "name": "Fluticasone inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fluticasone-inhalers/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fluticasone-inhalers/",
         "description": "Find out how inhaled fluticasone treats asthma and chronic obstructive pulmonary disease (COPD) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1907,7 +1861,7 @@
         "name": "Fluticasone nasal spray and drops",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fluticasone-nasal-spray-and-drops/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fluticasone-nasal-spray-and-drops/",
         "description": "Find out how fluticasone nasal spray treats allergic rhinitis symptoms and how drops treat nasal polyps, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -1923,14 +1877,14 @@
         "name": "Fluticasone skin creams",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fluticasone-skin-creams/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fluticasone-skin-creams/",
         "description": "Find out how fluticasone skin creams treat itching, swollen and irritated skin, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-25T17:32:51+00:00",
+            "dateModified": "2024-09-17T15:45:55+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -1939,7 +1893,7 @@
         "name": "Folic acid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/folic-acid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/folic-acid/",
         "description": "Find out how folic acid helps keep your baby healthy in pregnancy and treats or prevents folate deficiency anaemia and side effects of methotrexate, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1955,7 +1909,7 @@
         "name": "Furosemide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/furosemide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/furosemide/",
         "description": "Brand names: Frusol, Diuresal. Find out how furosemide treats high blood pressure, heart failure and oedema, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1971,7 +1925,7 @@
         "name": "Fusidic acid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fusidic-acid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fusidic-acid/",
         "description": "Brand names: Fucithalmic, Fucidin. Find out how fusidic acid treats skin and eye infections and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -1987,7 +1941,7 @@
         "name": "Fybogel (ispaghula husk)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/fybogel-ispaghula-husk/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/fybogel-ispaghula-husk/",
         "description": "Find out how Fybogel treats constipation and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2003,7 +1957,7 @@
         "name": "Gabapentin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/gabapentin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/gabapentin/",
         "description": "Read about how gabapentin treats epilepsy and nerve pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2019,7 +1973,7 @@
         "name": "Gaviscon (alginic acid)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/gaviscon/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/gaviscon/",
         "description": "NHS medicines information on Gaviscon \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2029,7 +1983,7 @@
                 "2021-08-10T14:18:00+00:00",
                 "2024-08-10T14:18:00+00:00"
             ],
-            "dateModified": "2024-03-26T11:22:38+00:00",
+            "dateModified": "2024-10-31T09:57:31+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2038,14 +1992,14 @@
         "name": "Gliclazide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/gliclazide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/gliclazide/",
         "description": "Find out how gliclazide treats type 2 diabetes and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:23:31+00:00",
+            "dateModified": "2025-02-25T16:22:05+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2054,14 +2008,14 @@
         "name": "Glimepiride",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/glimepiride/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/glimepiride/",
         "description": "Find out how glimepiride treats type 2 diabetes and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:26:31+00:00",
+            "dateModified": "2025-02-25T16:19:12+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2070,7 +2024,7 @@
         "name": "Glyceryl trinitrate (GTN)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/glyceryl-trinitrate-gtn/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/glyceryl-trinitrate-gtn/",
         "description": "Find out how glyceryl trinitrate (GTN) treats angina (chest pain) and anal fissures and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2086,14 +2040,14 @@
         "name": "Haloperidol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/haloperidol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/haloperidol/",
         "description": "Find out how haloperidol treats mental health conditions and feeling or being sick, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:29:45+00:00",
+            "dateModified": "2024-10-30T13:56:39+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2102,7 +2056,7 @@
         "name": "Heparinoid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/heparinoid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/heparinoid/",
         "description": "Find out how heparinoid treats bruising, haematoma and vein inflammation (superficial thrombophlebitis) and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2118,14 +2072,14 @@
         "name": "Hormone replacement therapy (HRT)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hormone-replacement-therapy-hrt/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hormone-replacement-therapy-hrt/",
         "description": "Find information about HRT for menopause symptoms, including the types of HRT, benefits and risks and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-08-24T10:41:25+00:00",
+            "dateModified": "2025-03-19T14:51:06+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2134,7 +2088,7 @@
         "name": "Hydrocortisone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone/",
         "description": "NHS medicines information on hydrocortisone \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2153,7 +2107,7 @@
         "name": "Hydrocortisone buccal tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-buccal-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-buccal-tablets/",
         "description": "Find out how hydrocortisone buccal tablets treat mouth ulcers and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -2169,14 +2123,14 @@
         "name": "Hydrocortisone for piles and itchy bottom",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-for-piles-and-itchy-bottom/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-for-piles-and-itchy-bottom/",
         "description": "Find out how hydrocortisone cream, ointment, sprays and suppositories treat piles (haemorrhoids) and itchy bottom, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:40:42+00:00",
+            "dateModified": "2024-11-26T13:14:44+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2185,14 +2139,14 @@
         "name": "Hydrocortisone for skin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-for-skin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-for-skin/",
         "description": "Find out how hydrocortisone cream, ointment and lotion treat skin conditions such as eczema, psoriasis and insect bites, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:42:19+00:00",
+            "dateModified": "2024-09-17T15:49:04+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2201,14 +2155,14 @@
         "name": "Hydrocortisone injections",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-injections/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-injections/",
         "description": "Find out how hydrocortisone injections treat swollen and painful joints, and how to get them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-03-26T11:43:45+00:00",
+            "dateModified": "2025-01-29T14:24:33+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2217,7 +2171,7 @@
         "name": "Hydrocortisone rectal foam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-rectal-foam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-rectal-foam/",
         "description": "NHS medicines information on hydrocortisone rectal foam \u2013 this medicine has been discontinued.",
         "mainEntityOfPage": {
             "genre": [
@@ -2236,7 +2190,7 @@
         "name": "Hydrocortisone tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydrocortisone-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydrocortisone-tablets/",
         "description": "Find out how hydrocortisone tablets treat adrenal gland problems and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -2252,7 +2206,7 @@
         "name": "Hydroxocobalamin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydroxocobalamin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydroxocobalamin/",
         "description": "Find out how hydroxocobalamin treats and prevents vitamin B12 deficiency anaemia, and how you'll have it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2268,7 +2222,7 @@
         "name": "Hydroxychloroquine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hydroxychloroquine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hydroxychloroquine/",
         "description": "Find out how hydroxychloroquine treats inflammatory conditions including rheumatoid arthritis and skin conditions, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2284,7 +2238,7 @@
         "name": "Hyoscine hydrobromide (Kwells and Joy-Rides)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/hyoscine-hydrobromide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/hyoscine-hydrobromide/",
         "description": "Find out how hyoscine hydrobromide treats travel sickness and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2300,7 +2254,7 @@
         "name": "Ibuprofen and codeine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ibuprofen-and-codeine-nurofen-plus/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ibuprofen-and-codeine-nurofen-plus/",
         "description": "NHS medicines information on ibuprofen and codeine \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2310,7 +2264,7 @@
                 "2021-06-01T13:06:00+00:00",
                 "2024-06-01T13:06:00+00:00"
             ],
-            "dateModified": "2024-03-26T12:02:17+00:00",
+            "dateModified": "2024-10-01T13:40:20+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2319,7 +2273,7 @@
         "name": "Ibuprofen for adults (Nurofen)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ibuprofen-for-adults/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ibuprofen-for-adults/",
         "description": "Other brand names: Brufen, Calprofen, Fenbid, Ibugel, Ibuleve. Find out how ibuprofen treats pain and swelling (inflammation), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2335,7 +2289,7 @@
         "name": "Ibuprofen for children",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ibuprofen-for-children/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ibuprofen-for-children/",
         "description": "Find out how ibuprofen for children treats pain and inflammation (swelling) including cold symptoms, teething, toothache, sprains and strains, and reduces a high temperature, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2351,7 +2305,7 @@
         "name": "Indapamide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/indapamide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/indapamide/",
         "description": "Brand names: Natrilix, Indipam, Rawel, Tensaid, Alkapamid. Find out how indapamide treats high blood pressure and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2367,14 +2321,14 @@
         "name": "Insulin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/insulin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/insulin/",
         "description": "Find information about types of insulin and how to take insulin to treat type 1 diabetes, type 2 diabetes and gestational diabetes.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-02-07T11:20:42+00:00",
+            "dateModified": "2025-02-25T16:34:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2383,14 +2337,14 @@
         "name": "Irbesartan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/irbesartan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/irbesartan/",
         "description": "Brand name: Aprovel. Find out how irbesartan treats high blood pressure (hypertension) and helps to prevent the risk of strokes, heart attacks and kidney problems.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:18:40+00:00",
+            "dateModified": "2025-01-07T14:57:53+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2399,17 +2353,14 @@
         "name": "Isosorbide mononitrate and isosorbide dinitrate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/isosorbide-mononitrate-dinitrate/",
-        "description": "NHS medicines information on isosorbide mononitrate and isosorbide dinitrate \u2013 what they're used for, side effects, dosage and who can take them.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/isosorbide-mononitrate-dinitrate/",
+        "description": "Find out how isosorbide mononitrate and isosorbide dinitrate prevent angina symptoms and treat heart failure, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-07-01T16:03:00+00:00",
-                "2024-07-01T16:03:00+00:00"
-            ],
-            "dateModified": "2024-05-09T21:15:19+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-08-29T09:57:01+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2418,7 +2369,7 @@
         "name": "Isotretinoin capsules (Roaccutane)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/isotretinoin-capsules/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/isotretinoin-capsules/",
         "description": "Other brand names: Rizuderm, Reticutan. Find out how isotretinoin capsules treat acne and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -2434,7 +2385,7 @@
         "name": "Isotretinoin gel (Isotrex)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/isotretinoin-gel/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/isotretinoin-gel/",
         "description": "NHS medicines information on isotretinoin gel (Isotrex) \u2013 this medicine has been discontinued.",
         "mainEntityOfPage": {
             "genre": [
@@ -2453,17 +2404,14 @@
         "name": "Ketoconazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ketoconazole/",
-        "description": "NHS medicines information on ketoconazole \u2013 what it's used for, side effects, dosage and who can use it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ketoconazole/",
+        "description": "Find out how ketoconazole cream and shampoo treats fungal skin infections and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-24T15:57:00+00:00",
-                "2024-06-24T15:57:00+00:00"
-            ],
-            "dateModified": "2024-05-09T21:22:19+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-08-19T16:21:18+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2472,7 +2420,7 @@
         "name": "Labetalol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/labetalol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/labetalol/",
         "description": "Brand name: Trandate. Find out how labetalol treats high blood pressure (hypertension) including high blood pressure in pregnancy and angina, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2488,7 +2436,7 @@
         "name": "Lactulose",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lactulose/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lactulose/",
         "description": "Brand names: Duphalac, Lactugal. Find out how lactulose treats constipation and hepatic encephalopathy, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2504,14 +2452,14 @@
         "name": "Lamotrigine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lamotrigine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lamotrigine/",
         "description": "Brand name: Lamictal. Find out how lamotrigine treats epilepsy and bipolar disorder, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-09T21:40:00+00:00",
+            "dateModified": "2024-10-30T13:53:18+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2520,7 +2468,7 @@
         "name": "Lansoprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lansoprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lansoprazole/",
         "description": "NHS medicines information on lansoprazole \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2530,7 +2478,7 @@
                 "2021-11-15T11:48:00+00:00",
                 "2024-11-15T11:48:00+00:00"
             ],
-            "dateModified": "2024-05-15T07:26:02+00:00",
+            "dateModified": "2025-02-18T21:43:46+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2539,7 +2487,7 @@
         "name": "Latanoprost",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/latanoprost/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/latanoprost/",
         "description": "Find out how latanoprost treats high pressure inside the eye, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2555,14 +2503,14 @@
         "name": "Lercanidipine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lercanidipine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lercanidipine/",
         "description": "Brand name: Zanidip. Find out how lercanidipine treats high blood pressure (hypertension), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T21:10:33+00:00",
+            "dateModified": "2024-12-17T08:55:24+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2571,7 +2519,7 @@
         "name": "Letrozole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/letrozole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/letrozole/",
         "description": "Find out how letrozole treats breast cancer and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2587,7 +2535,7 @@
         "name": "Levetiracetam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/levetiracetam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/levetiracetam/",
         "description": "Brand names: Keppra, Desitrend. Find out how levetiracetam treats epilepsy, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2603,7 +2551,7 @@
         "name": "Levothyroxine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/levothyroxine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/levothyroxine/",
         "description": "NHS medicines information on levothyroxine \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2613,7 +2561,7 @@
                 "2021-12-17T09:18:00+00:00",
                 "2024-12-17T09:18:00+00:00"
             ],
-            "dateModified": "2024-05-14T23:05:58+00:00",
+            "dateModified": "2024-10-28T10:06:01+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2622,7 +2570,7 @@
         "name": "Lidocaine for mouth and throat",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lidocaine-for-mouth-and-throat/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lidocaine-for-mouth-and-throat/",
         "description": "Find out how lidocaine treats mouth ulcers, sore throats and teething, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2638,7 +2586,7 @@
         "name": "Lidocaine for piles and itchy bottom",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lidocaine-for-piles-and-itchy-bottom/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lidocaine-for-piles-and-itchy-bottom/",
         "description": "Find out how lidocaine treats piles (haemorrhoids) and itchy bottom, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2654,7 +2602,7 @@
         "name": "Lidocaine skin cream",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lidocaine-skin-cream/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lidocaine-skin-cream/",
         "description": "Find out how lidocaine skin cream numbs the skin before minor procedures, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2670,14 +2618,14 @@
         "name": "Linagliptin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/linagliptin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/linagliptin/",
         "description": "Brand name: Trajenta. Find out how linagliptin treats type 2 diabetes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T21:53:41+00:00",
+            "dateModified": "2025-02-25T16:24:32+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2686,14 +2634,14 @@
         "name": "Lisinopril",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lisinopril/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lisinopril/",
         "description": "Brand name: Zestril. Find out how lisinopril treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T21:57:00+00:00",
+            "dateModified": "2024-12-17T08:58:05+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2702,14 +2650,14 @@
         "name": "Lithium",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lithium/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lithium/",
         "description": "Find out how lithium treats mood disorders such as mania and bipolar disorder, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T22:04:15+00:00",
+            "dateModified": "2024-10-30T13:58:51+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2718,7 +2666,7 @@
         "name": "Loperamide (Imodium)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/loperamide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/loperamide/",
         "description": "Find out how loperamide treats diarrhoea and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2734,7 +2682,7 @@
         "name": "Loratadine (Clarityn)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/loratadine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/loratadine/",
         "description": "NHS medicines information on loratadine (Clarityn) - what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2744,7 +2692,7 @@
                 "2021-10-14T16:00:00+00:00",
                 "2024-10-14T16:00:00+00:00"
             ],
-            "dateModified": "2024-05-14T22:15:02+00:00",
+            "dateModified": "2025-02-20T17:18:19+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2753,7 +2701,7 @@
         "name": "Lorazepam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lorazepam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lorazepam/",
         "description": "Find out how lorazepam treats anxiety and sleeping problems, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2769,14 +2717,14 @@
         "name": "Losartan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/losartan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/losartan/",
         "description": "Brand name: Cozaar. Find out how losartan treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T22:25:47+00:00",
+            "dateModified": "2025-02-25T16:02:15+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2785,14 +2733,14 @@
         "name": "Low-dose aspirin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/low-dose-aspirin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/low-dose-aspirin/",
         "description": "Brand names: Danamep, Mandaprin, Nu-Seals. Find out how low-dose aspirin helps prevent heart attacks and strokes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-14T22:44:27+00:00",
+            "dateModified": "2024-12-17T09:00:50+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2801,7 +2749,7 @@
         "name": "Lymecycline",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/lymecycline/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/lymecycline/",
         "description": "Brand name: Tetralysal 300. Find out how lymecycline treats acne and infections and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2817,7 +2765,7 @@
         "name": "Macrogol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/macrogol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/macrogol/",
         "description": "Find out how macrogol treats constipation and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2833,7 +2781,7 @@
         "name": "Mebendazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mebendazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mebendazole/",
         "description": "Find out how mebendazole treats threadworms, roundworms and other worm infections, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2849,7 +2797,7 @@
         "name": "Mebeverine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mebeverine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mebeverine/",
         "description": "Find out how mebeverine treats muscle spasms and stomach cramps, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2865,7 +2813,7 @@
         "name": "Medroxyprogesterone tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/medroxyprogesterone-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/medroxyprogesterone-tablets/",
         "description": "Find out how medroxyprogesterone tablets treat hormonal conditions such as heavy periods, endometriosis and polycystic ovary syndrome (PCOS), and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -2881,7 +2829,7 @@
         "name": "Melatonin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/melatonin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/melatonin/",
         "description": "Find out how melatonin treats sleep problems like insomnia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2897,7 +2845,7 @@
         "name": "Memantine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/memantine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/memantine/",
         "description": "Find out how memantine treats dementia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2913,17 +2861,14 @@
         "name": "Mesalazine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mesalazine/",
-        "description": "NHS medicines information on mesalazine \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mesalazine/",
+        "description": "Find out how mesalazine treats inflammatory bowel conditions and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-07-19T16:05:00+00:00",
-                "2024-07-19T16:05:00+00:00"
-            ],
-            "dateModified": "2024-05-15T17:06:18+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-14T10:13:36+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2932,14 +2877,14 @@
         "name": "Metformin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/metformin/",
-        "description": "Brand names: Axpinet, Diagemet, Glucient, Glucophage, Metabet. Find out how metformin treats type 2 diabetes, gestational diabetes and polycystic ovary syndrome, and how to take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/metformin/",
+        "description": "Find out how metformin treats type 2 diabetes, gestational diabetes and polycystic ovary syndrome, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-05-15T17:07:22+00:00",
+            "dateModified": "2025-03-11T15:22:27+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2948,7 +2893,7 @@
         "name": "Methadone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/methadone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/methadone/",
         "description": "NHS medicines information on methadone \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2958,7 +2903,7 @@
                 "2021-03-24T00:00:00+00:00",
                 "2024-03-24T00:00:00+00:00"
             ],
-            "dateModified": "2024-05-15T17:16:08+00:00",
+            "dateModified": "2025-03-21T14:11:47+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -2967,7 +2912,7 @@
         "name": "Methotrexate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/methotrexate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/methotrexate/",
         "description": "Find out how methotrexate treats rheumatoid arthritis, psoriasis, Crohn's disease and other autoimmune conditions, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2983,7 +2928,7 @@
         "name": "Methylphenidate for adults",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/methylphenidate-adults/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/methylphenidate-adults/",
         "description": "NHS medicines information on methylphenidate \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -2993,7 +2938,7 @@
                 "2021-07-27T17:27:00+00:00",
                 "2024-07-27T14:00:00+00:00"
             ],
-            "dateModified": "2024-05-16T20:51:25+00:00",
+            "dateModified": "2025-03-24T13:49:22+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3002,17 +2947,14 @@
         "name": "Methylphenidate for children",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/methylphenidate-children/",
-        "description": "NHS medicines information on methylphenidate \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/methylphenidate-children/",
+        "description": "Find out how methylphenidate for children treats attention deficit hyperactivity disorder (ADHD) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-07-27T14:38:00+00:00",
-                "2024-07-27T14:38:00+00:00"
-            ],
-            "dateModified": "2024-05-16T20:53:11+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-24T14:38:15+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3021,7 +2963,7 @@
         "name": "Metoclopramide",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/metoclopramide/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/metoclopramide/",
         "description": "Find out how metoclopramide treats feeling sick (nausea) and being sick (vomiting), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3037,14 +2979,14 @@
         "name": "Metoprolol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/metoprolol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/metoprolol/",
         "description": "Find out how metoprolol treats high blood pressure, heart problems and migraine, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:04:42+00:00",
+            "dateModified": "2024-09-26T22:00:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3053,14 +2995,14 @@
         "name": "Metronidazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/metronidazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/metronidazole/",
         "description": "Find out how metronidazole treats infections and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-12-07T11:04:40+00:00",
+            "dateModified": "2024-09-26T22:24:55+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3069,14 +3011,14 @@
         "name": "Mirabegron",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mirabegron/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mirabegron/",
         "description": "Find out how mirabegron treats the symptoms of an overactive bladder such as needing to pee more often, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-07-25T15:58:59+00:00",
+            "dateModified": "2024-09-26T22:32:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3085,14 +3027,14 @@
         "name": "Mirtazapine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mirtazapine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mirtazapine/",
         "description": "Find out how mirtazapine treats depression, obsessive compulsive disorder (OCD) and anxiety, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:04:23+00:00",
+            "dateModified": "2024-09-26T22:39:46+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3101,7 +3043,7 @@
         "name": "Molnupiravir (Lagevrio)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/molnupiravir/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/molnupiravir/",
         "description": "Find out how molnupiravir treats COVID-19 and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3117,14 +3059,14 @@
         "name": "Mometasone for skin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mometasone-for-skin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mometasone-for-skin/",
         "description": "Find out how mometasone for skin treats eczema and psoriasis, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-02-07T16:57:36+00:00",
+            "dateModified": "2024-10-31T14:34:43+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3133,14 +3075,14 @@
         "name": "Mometasone inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mometasone-inhaler/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mometasone-inhaler/",
         "description": "Find out how mometasone inhalers treat asthma and how to use them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-09-13T15:29:25+00:00",
+            "dateModified": "2024-09-26T22:50:36+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3149,14 +3091,14 @@
         "name": "Mometasone nasal spray",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/mometasone-nasal-spray/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/mometasone-nasal-spray/",
         "description": "Find out how mometasone nasal spray treats allergic rhinitis and hay fever, and how to use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-02-14T09:12:18+00:00",
+            "dateModified": "2024-09-26T22:53:33+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3165,14 +3107,14 @@
         "name": "Montelukast",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/montelukast/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/montelukast/",
         "description": "Find out how montelukast treats symptoms of asthma and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-20T10:52:21+00:00",
+            "dateModified": "2024-09-26T22:55:24+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3181,14 +3123,14 @@
         "name": "Morphine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/morphine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/morphine/",
         "description": "Brand names: MST, Zomorph, Sevredol, Morphgesic, MXL, Oramorph. Find out how morphine treats severe pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-09-05T08:06:58+00:00",
+            "dateModified": "2024-09-26T22:58:13+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3197,14 +3139,14 @@
         "name": "Naproxen",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/naproxen/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/naproxen/",
         "description": "Brand names: Naprosyn, Stirlescent. Find out how naproxen treats pain and swelling and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:03:49+00:00",
+            "dateModified": "2024-09-26T23:01:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3213,14 +3155,14 @@
         "name": "Nefopam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nefopam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nefopam/",
         "description": "Find out how nefopam treats pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-25T09:20:20+00:00",
+            "dateModified": "2024-09-26T23:03:36+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3229,14 +3171,14 @@
         "name": "Nicorandil",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nicorandil/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nicorandil/",
         "description": "Brand name: Ikorel. Find out how nicorandil treats chest pain (angina), and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:03:40+00:00",
+            "dateModified": "2024-09-26T23:05:15+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3245,14 +3187,14 @@
         "name": "Nifedipine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nifedipine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nifedipine/",
         "description": "Brand names: Adalat, Adipine, Coracten, Fortipine, Nifedipress. Find out how nifedipine treats high blood pressure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:49:19+00:00",
+            "dateModified": "2024-12-17T09:13:29+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3261,14 +3203,14 @@
         "name": "Nitrofurantoin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nitrofurantoin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nitrofurantoin/",
         "description": "Brand names: Aratoin, Furadantin, Macrobid, Macrodantin. Find out how nitrofurantoin treats urinary tract infections (UTIs) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:03:20+00:00",
+            "dateModified": "2024-08-14T09:23:44+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3277,7 +3219,7 @@
         "name": "Nortriptyline",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nortriptyline/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nortriptyline/",
         "description": "NHS medicines information on nortriptyline \u2013 how it works, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3287,7 +3229,7 @@
                 "2021-06-22T10:55:00+00:00",
                 "2024-06-22T10:55:00+00:00"
             ],
-            "dateModified": "2023-09-05T08:09:31+00:00",
+            "dateModified": "2024-10-07T09:08:30+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3296,14 +3238,14 @@
         "name": "Nystatin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/nystatin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/nystatin/",
         "description": "Find out how nystatin treats and prevents infections caused by a fungus or yeast, including oral thrush and skin infections, and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-08-08T14:06:24+00:00",
+            "dateModified": "2024-09-26T23:18:21+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3312,17 +3254,14 @@
         "name": "Olanzapine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/olanzapine/",
-        "description": "NHS medicines information on olanzapine \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/olanzapine/",
+        "description": "Find out how olanzapine treats symptoms of mental health conditions such as bipolar disorder and schizophrenia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-07-27T14:00:00+00:00",
-                "2024-07-27T14:00:00+00:00"
-            ],
-            "dateModified": "2024-02-12T18:05:47+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-05T11:44:28+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3331,14 +3270,14 @@
         "name": "Olmesartan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/olmesartan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/olmesartan/",
         "description": "Brand name: Olmetec. Find out how olmesartan treats high blood pressure (hypertension) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:50:16+00:00",
+            "dateModified": "2025-01-06T16:28:57+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3347,14 +3286,14 @@
         "name": "Omeprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/omeprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/omeprazole/",
         "description": "Find out how omeprazole can treat your indigestion and heartburn, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:02:59+00:00",
+            "dateModified": "2024-11-20T09:08:08+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3363,17 +3302,14 @@
         "name": "Oxybutynin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/oxybutynin/",
-        "description": "NHS medicines information on oxybutynin \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/oxybutynin/",
+        "description": "Find out how oxybutynin treats symptoms of an overactive bladder, such as needing to pee more often, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-15T08:10:00+00:00",
-                "2024-06-15T08:10:00+00:00"
-            ],
-            "dateModified": "2024-07-04T15:40:17+00:00",
+            "lastReviewed": null,
+            "dateModified": "2024-08-28T14:05:14+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3382,14 +3318,14 @@
         "name": "Oxycodone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/oxycodone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/oxycodone/",
         "description": "Find out how oxycodone treats severe pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-09-05T08:05:26+00:00",
+            "dateModified": "2024-09-26T23:35:48+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3398,7 +3334,7 @@
         "name": "Pantoprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pantoprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pantoprazole/",
         "description": "NHS medicines information on pantoprazole \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3408,7 +3344,7 @@
                 "2021-11-15T15:48:00+00:00",
                 "2024-11-15T15:48:00+00:00"
             ],
-            "dateModified": "2023-07-05T13:40:02+00:00",
+            "dateModified": "2025-02-18T22:16:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3417,14 +3353,14 @@
         "name": "Paracetamol for adults",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/paracetamol-for-adults/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/paracetamol-for-adults/",
         "description": "Find out how paracetamol for adults treats aches, pains and high temperature, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:02:41+00:00",
+            "dateModified": "2024-09-26T23:42:37+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3433,14 +3369,14 @@
         "name": "Paracetamol for children (Calpol)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/paracetamol-for-children/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/paracetamol-for-children/",
         "description": "Find out how paracetamol for children treats pain and high temperature, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T15:01:00+00:00",
+            "dateModified": "2024-09-26T23:43:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3449,7 +3385,7 @@
         "name": "Paroxetine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/paroxetine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/paroxetine/",
         "description": "Brand name: Seroxat. Find out how paroxetine treats depression and anxiety, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3465,7 +3401,7 @@
         "name": "Paxlovid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/paxlovid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/paxlovid/",
         "description": "Find out how Paxlovid treats COVID-19 and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3481,7 +3417,7 @@
         "name": "Peppermint oil",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/peppermint-oil/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/peppermint-oil/",
         "description": "NHS medicines information on peppermint oil \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3500,7 +3436,7 @@
         "name": "Pepto-Bismol (bismuth subsalicylate)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pepto-bismol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pepto-bismol/",
         "description": "Find out how Pepto-Bismol treats heartburn and acid reflux, indigestion, diarrhoea and feeling sick, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3516,14 +3452,14 @@
         "name": "Perindopril",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/perindopril/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/perindopril/",
         "description": "Brand name: Coversyl Arginine. Find out how perindopril treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:52:02+00:00",
+            "dateModified": "2024-12-17T09:23:27+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3532,7 +3468,7 @@
         "name": "Phenoxymethylpenicillin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/phenoxymethylpenicillin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/phenoxymethylpenicillin/",
         "description": "Brand name: Penicillin V. Find out how phenoxymethylpenicillin treats infections and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3548,7 +3484,7 @@
         "name": "Phenytoin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/phenytoin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/phenytoin/",
         "description": "Brand names: Epanutin, Epanutin Infatabs. Find out how phenytoin treats epilepsy and trigeminal neuralgia, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3564,14 +3500,14 @@
         "name": "Pioglitazone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pioglitazone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pioglitazone/",
         "description": "Brand name: Actos. Find out how pioglitazone treats type 2 diabetes and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T14:59:44+00:00",
+            "dateModified": "2025-02-25T16:17:49+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3580,14 +3516,14 @@
         "name": "Pravastatin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pravastatin/",
-        "description": "Brand name: Pravachol. Find out how pravastatin treats high cholesterol and prevents heart attacks and strokes, and how to take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pravastatin/",
+        "description": "Find out how pravastatin treats high cholesterol and prevents heart attacks and strokes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-15T13:01:39+00:00",
+            "dateModified": "2024-12-17T09:25:37+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3596,7 +3532,7 @@
         "name": "Pre-Exposure Prophylaxis (PrEP)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pre-exposure-prophylaxis-prep/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pre-exposure-prophylaxis-prep/",
         "description": "Find out how PrEP reduces the risk of getting HIV and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3612,7 +3548,7 @@
         "name": "Prednisolone tablets and liquid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/prednisolone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/prednisolone/",
         "description": "Brand names: Deltacortril, Deltastab, Dilacort, Pevanti. Find out how prednisolone treats health problems and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3628,7 +3564,7 @@
         "name": "Pregabalin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pregabalin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pregabalin/",
         "description": "NHS medicines information on pregabalin \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3638,7 +3574,7 @@
                 "2021-11-16T20:31:00+00:00",
                 "2024-11-16T20:31:00+00:00"
             ],
-            "dateModified": "2024-04-15T14:05:09+00:00",
+            "dateModified": "2024-10-07T19:00:22+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3647,7 +3583,7 @@
         "name": "Prochlorperazine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/prochlorperazine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/prochlorperazine/",
         "description": "Find out how prochlorperazine treats feeling or being sick, including pregnancy sickness, motion sickness and symptoms of M\u00e9ni\u00e8re's disease, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3663,7 +3599,7 @@
         "name": "Promethazine (Phenergan)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/promethazine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/promethazine/",
         "description": "NHS medicines information on promethazine \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3673,7 +3609,7 @@
                 "2021-10-27T13:04:00+00:00",
                 "2024-10-27T14:04:00+00:00"
             ],
-            "dateModified": "2024-04-15T14:13:42+00:00",
+            "dateModified": "2025-02-20T17:19:44+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3682,7 +3618,7 @@
         "name": "Propranolol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/propranolol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/propranolol/",
         "description": "NHS medicines information on propranolol \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3692,7 +3628,7 @@
                 "2021-11-18T00:00:00+00:00",
                 "2024-11-18T00:00:00+00:00"
             ],
-            "dateModified": "2024-04-15T14:20:38+00:00",
+            "dateModified": "2024-12-17T09:27:57+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3701,7 +3637,7 @@
         "name": "Pseudoephedrine (Sudafed)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/pseudoephedrine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/pseudoephedrine/",
         "description": "Find out how pseudoephedrine treats a blocked or stuffy nose, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3717,14 +3653,14 @@
         "name": "Quetiapine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/quetiapine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/quetiapine/",
         "description": "Find out how quetiapine treats mental health conditions including schizophrenia and bipolar disorder, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-15T14:32:53+00:00",
+            "dateModified": "2024-10-31T11:11:38+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3733,7 +3669,7 @@
         "name": "Rabeprazole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/rabeprazole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/rabeprazole/",
         "description": "Brand name: Pariet. Find out how rabeprazole treats indigestion, heartburn, stomach acid and stomach ulcers and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3749,14 +3685,14 @@
         "name": "Ramipril",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ramipril/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ramipril/",
         "description": "Brand name: Tritace. Find out how ramipril treats high blood pressure (hypertension) and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-23T10:54:24+00:00",
+            "dateModified": "2024-12-17T09:39:53+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3765,7 +3701,7 @@
         "name": "Ranitidine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ranitidine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ranitidine/",
         "description": "NHS medicines information on ranitidine \u2013 this medicine is not currently available in the UK, or globally.",
         "mainEntityOfPage": {
             "genre": [
@@ -3781,26 +3717,10 @@
     },
     {
         "@type": "LinkRole",
-        "name": "Remdesivir (Veklury)",
-        "articleStatus": "published",
-        "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/remdesivir-veklury/",
-        "description": "Find out how remdesivir treats COVID-19 and how to get treatment.",
-        "mainEntityOfPage": {
-            "genre": [
-                "Medicine"
-            ],
-            "lastReviewed": null,
-            "dateModified": "2024-01-25T13:49:02+00:00",
-            "@type": "MedicalWebPage"
-        }
-    },
-    {
-        "@type": "LinkRole",
         "name": "Risedronate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/risedronate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/risedronate/",
         "description": "Find out how risedronate helps your bones stay strong, prevents osteoporosis and treats Paget's disease of bone, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3816,7 +3736,7 @@
         "name": "Risperidone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/risperidone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/risperidone/",
         "description": "NHS medicines information on risperidone \u2013 how it works, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3826,7 +3746,7 @@
                 "2021-08-25T08:51:00+00:00",
                 "2024-08-25T08:51:00+00:00"
             ],
-            "dateModified": "2024-04-15T15:29:02+00:00",
+            "dateModified": "2024-12-17T09:52:02+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3835,14 +3755,14 @@
         "name": "Rivaroxaban",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/rivaroxaban/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/rivaroxaban/",
         "description": "Brand name: Xarelto. Find out how rivaroxaban helps to prevent blood clots, reduces the risk of heart attacks and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-15T15:31:38+00:00",
+            "dateModified": "2024-12-17T15:55:18+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3851,7 +3771,7 @@
         "name": "Ropinirole",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ropinirole/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ropinirole/",
         "description": "NHS medicines information on ropinirole \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3861,7 +3781,7 @@
                 "2021-07-20T14:00:00+00:00",
                 "2024-07-20T14:00:00+00:00"
             ],
-            "dateModified": "2024-04-15T15:49:26+00:00",
+            "dateModified": "2024-10-07T19:54:03+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3870,33 +3790,30 @@
         "name": "Rosuvastatin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/rosuvastatin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/rosuvastatin/",
         "description": "Brand name: Crestor. Find out how rosuvastatin treats high cholesterol and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-15T15:50:02+00:00",
+            "dateModified": "2024-12-17T15:56:02+00:00",
             "@type": "MedicalWebPage"
         }
     },
     {
         "@type": "LinkRole",
-        "name": "Salbutamol inhaler",
+        "name": "Salbutamol inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/salbutamol-inhaler/",
-        "description": "NHS medicines information on salbutamol inhaler \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/salbutamol-inhaler/",
+        "description": "Find out how salbutamol inhalers treat asthma and chronic obstructive pulmonary disease (COPD), and how to use them.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-12-14T01:00:00+00:00",
-                "2024-12-14T01:00:00+00:00"
-            ],
-            "dateModified": "2024-04-15T15:52:50+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-02-20T17:53:41+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3905,14 +3822,14 @@
         "name": "Saxagliptin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/saxagliptin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/saxagliptin/",
         "description": "Brand name: Onglyza. Find out how saxagliptin treats type 2 diabetes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-15T15:53:42+00:00",
+            "dateModified": "2025-03-12T10:15:00+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -3921,7 +3838,7 @@
         "name": "Senna",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/senna/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/senna/",
         "description": "Brand name: Senokot. Find out how senna treats difficulty pooing (constipation) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3937,7 +3854,7 @@
         "name": "Sertraline",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sertraline/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sertraline/",
         "description": "Brand name: Lustral. Find out how sertraline treats depression and other mental health conditions, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3953,7 +3870,7 @@
         "name": "Sildenafil (Viagra)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sildenafil-viagra/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sildenafil-viagra/",
         "description": "Other brand names: Aronix, Liberize, Nipatra, Revatio, Grandipam. Find out how sildenafil treats erection problems and pulmonary hypertension and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3969,7 +3886,7 @@
         "name": "Simeticone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/simeticone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/simeticone/",
         "description": "Find out how simeticone treats farting (flatulence), bloating and trapped wind, and colic in babies, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -3985,14 +3902,14 @@
         "name": "Simvastatin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/simvastatin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/simvastatin/",
         "description": "Brand names: Zocor, Simvador. Find out how simvastatin treats high cholesterol, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-24T09:46:02+00:00",
+            "dateModified": "2024-12-17T15:56:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4001,14 +3918,14 @@
         "name": "Sitagliptin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sitagliptin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sitagliptin/",
         "description": "Brand name: Januvia. Find out how sitagliptin treats type 2 diabetes, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2023-03-15T14:52:57+00:00",
+            "dateModified": "2025-02-24T16:40:00+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4017,7 +3934,7 @@
         "name": "Sodium cromoglicate capsules",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sodium-cromoglicate-capsules/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sodium-cromoglicate-capsules/",
         "description": "Find out how sodium cromoglicate capsules treat food allergies, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -4033,7 +3950,7 @@
         "name": "Sodium cromoglicate eye drops",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sodium-cromoglicate-eye-drops/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sodium-cromoglicate-eye-drops/",
         "description": "Find out how sodium cromoglicate eye drops treat allergies, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -4049,7 +3966,7 @@
         "name": "Sodium valproate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sodium-valproate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sodium-valproate/",
         "description": "NHS medicines information on sodium valproate \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4059,7 +3976,7 @@
                 "2021-08-24T11:34:00+00:00",
                 "2024-08-24T11:34:00+00:00"
             ],
-            "dateModified": "2024-04-24T10:56:08+00:00",
+            "dateModified": "2025-03-05T11:45:45+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4068,7 +3985,7 @@
         "name": "Solifenacin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/solifenacin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/solifenacin/",
         "description": "Find out how solifenacin treats symptoms of an overactive bladder, such as needing to pee more often, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4084,7 +4001,7 @@
         "name": "Sotalol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sotalol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sotalol/",
         "description": "NHS medicines information on sotalol \u2013 what it's used for, side effects, dosage and who can take it",
         "mainEntityOfPage": {
             "genre": [
@@ -4094,7 +4011,7 @@
                 "2021-11-17T09:53:00+00:00",
                 "2024-11-17T09:53:00+00:00"
             ],
-            "dateModified": "2024-04-24T12:23:30+00:00",
+            "dateModified": "2025-03-21T14:11:44+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4103,7 +4020,7 @@
         "name": "Sotrovimab (Xevudy)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sotrovimab/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sotrovimab/",
         "description": "Find out how sotrovimab treats COVID-19 and how you will have it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4119,7 +4036,7 @@
         "name": "Spironolactone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/spironolactone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/spironolactone/",
         "description": "Find out how spironolactone treats oedema (build-up of fluid), high blood pressure and hormone conditions, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4135,17 +4052,14 @@
         "name": "Sulfasalazine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sulfasalazine/",
-        "description": "NHS medicines information on sulfasalazine \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sulfasalazine/",
+        "description": "Find out how sulfasalazine treats inflammatory bowel disease and rheumatoid arthritis, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-07-05T14:44:00+00:00",
-                "2024-07-05T14:44:00+00:00"
-            ],
-            "dateModified": "2024-04-24T13:28:54+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-14T10:13:42+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4154,7 +4068,7 @@
         "name": "Sumatriptan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/sumatriptan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/sumatriptan/",
         "description": "Find out how sumatriptan treats migraines and cluster headaches, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4170,7 +4084,7 @@
         "name": "Tadalafil",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tadalafil/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tadalafil/",
         "description": "Find out how tadalafil treats erectile dysfunction, pulmonary hypertension and benign prostate enlargement, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4186,7 +4100,7 @@
         "name": "Tamsulosin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tamsulosin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tamsulosin/",
         "description": "Find out how tamsulosin treats symptoms of an enlarged prostate and kidney stones, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4202,7 +4116,7 @@
         "name": "Temazepam",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/temazepam/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/temazepam/",
         "description": "Find out how temazepam treats sleeping problems (insomnia) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4218,7 +4132,7 @@
         "name": "Terbinafine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/terbinafine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/terbinafine/",
         "description": "Find out how terbinafine treats fungal skin infections such as athlete's foot, and how to take or use it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4234,7 +4148,7 @@
         "name": "Thiamine (vitamin B1)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/thiamine-vitamin-b1/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/thiamine-vitamin-b1/",
         "description": "Find out how thiamine treats and prevents vitamin B1 deficiency and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4250,7 +4164,7 @@
         "name": "Ticagrelor",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/ticagrelor/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/ticagrelor/",
         "description": "NHS medicines information on ticagrelor \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4260,7 +4174,7 @@
                 "2021-08-03T00:00:00+00:00",
                 "2024-08-03T00:00:00+00:00"
             ],
-            "dateModified": "2024-07-04T15:39:41+00:00",
+            "dateModified": "2025-03-18T14:24:01+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4269,7 +4183,7 @@
         "name": "Timolol eye drops",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/timolol-eye-drops/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/timolol-eye-drops/",
         "description": "Find out how timolol eye drops treat high pressure inside the eye or glaucoma, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -4285,7 +4199,7 @@
         "name": "Timolol tablets",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/timolol-tablets/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/timolol-tablets/",
         "description": "Find out how timolol tablets treat high blood pressure, angina and prevent migraine, and how to take them.",
         "mainEntityOfPage": {
             "genre": [
@@ -4301,7 +4215,7 @@
         "name": "Tiotropium inhalers",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tiotropium-inhalers/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tiotropium-inhalers/",
         "description": "Find out how tiotropium inhalers treat chronic obstructive pulmonary disease (COPD) and asthma, and how to use them.",
         "mainEntityOfPage": {
             "genre": [
@@ -4317,7 +4231,7 @@
         "name": "Tolterodine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tolterodine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tolterodine/",
         "description": "NHS medicines information on tolterodine \u2013 what it\u2019s used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4327,7 +4241,7 @@
                 "2021-06-11T15:36:00+00:00",
                 "2024-06-11T15:36:00+00:00"
             ],
-            "dateModified": "2024-07-04T10:28:36+00:00",
+            "dateModified": "2024-10-07T20:15:34+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4336,7 +4250,7 @@
         "name": "Topiramate",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/topiramate/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/topiramate/",
         "description": "Brand name: Topamax. Find out how topiramate treats epilepsy and migraine, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4352,7 +4266,7 @@
         "name": "Tramadol",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tramadol/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tramadol/",
         "description": "Brand names: Maxitram, Marol, Zydol, Zamadol, Tramulief, Tramquel. Find out how tramadol treats moderate to severe pain and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4368,14 +4282,14 @@
         "name": "Tranexamic acid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/tranexamic-acid/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/tranexamic-acid/",
         "description": "Find out how tranexamic acid treats bleeding, including heavy periods, nosebleeds and hereditary angioedema, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-06-03T13:44:05+00:00",
+            "dateModified": "2024-08-21T15:37:44+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4384,14 +4298,14 @@
         "name": "Trastuzumab (Herceptin)",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/trastuzumab-herceptin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/trastuzumab-herceptin/",
         "description": "Find out how trastuzumab treats some types of cancer and how you will be given it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-29T16:03:54+00:00",
+            "dateModified": "2024-09-10T12:51:48+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4400,7 +4314,7 @@
         "name": "Trazodone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/trazodone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/trazodone/",
         "description": "Brand name: Molipaxin. Find out how trazodone treats depression and anxiety and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4416,7 +4330,7 @@
         "name": "Trimethoprim",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/trimethoprim/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/trimethoprim/",
         "description": "NHS medicines information on trimethoprim \u2013 what it's used for, side effects, dosage and who can take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4426,7 +4340,7 @@
                 "2021-11-15T14:22:00+00:00",
                 "2024-11-15T14:22:00+00:00"
             ],
-            "dateModified": "2023-07-07T15:54:58+00:00",
+            "dateModified": "2024-10-07T14:46:15+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4435,17 +4349,14 @@
         "name": "Valproic acid",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/valproic-acid/",
-        "description": "NHS medicines information on valproic acid \u2013 what it's used for, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/valproic-acid/",
+        "description": "Find out how valproic acid treats bipolar disorder and epilepsy and prevents migraine, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-09-03T00:00:00+00:00",
-                "2024-09-03T00:00:00+00:00"
-            ],
-            "dateModified": "2024-04-30T07:58:05+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-14T12:06:12+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4454,7 +4365,7 @@
         "name": "Valsartan",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/valsartan/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/valsartan/",
         "description": "Brand name: Diovan. Find out how valsartan treats high blood pressure and heart failure, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4467,10 +4378,26 @@
     },
     {
         "@type": "LinkRole",
+        "name": "Varenicline",
+        "articleStatus": "published",
+        "linkRelationship": "Result",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/varenicline/",
+        "description": "Varenicline is a medicine used to help stop smoking in adults. It reduces nicotine cravings and helps with withdrawal symptoms.",
+        "mainEntityOfPage": {
+            "genre": [
+                "Medicine"
+            ],
+            "lastReviewed": null,
+            "dateModified": "2025-01-30T13:38:21+00:00",
+            "@type": "MedicalWebPage"
+        }
+    },
+    {
+        "@type": "LinkRole",
         "name": "Venlafaxine",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/venlafaxine/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/venlafaxine/",
         "description": "Brand names: Vensir, Vencarm, Venlalix, Efexor, Venlablue. Find out how venlafaxine treats depression and anxiety, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4486,17 +4413,14 @@
         "name": "Verapamil",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/verapamil/",
-        "description": "NHS medicines information on verapamil \u2013 how it works, side effects, dosage and who can take it.",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/verapamil/",
+        "description": "Find out how verapamil treats high blood pressure and prevents chest pain caused by angina, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
-            "lastReviewed": [
-                "2021-06-16T21:05:00+00:00",
-                "2024-06-16T21:05:00+00:00"
-            ],
-            "dateModified": "2024-04-30T12:41:12+00:00",
+            "lastReviewed": null,
+            "dateModified": "2025-03-21T11:54:51+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4505,14 +4429,14 @@
         "name": "Warfarin",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/warfarin/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/warfarin/",
         "description": "Find out how warfarin treats blood clots and reduces risk of heart attacks and stroke, and how to take it.",
         "mainEntityOfPage": {
             "genre": [
                 "Medicine"
             ],
             "lastReviewed": null,
-            "dateModified": "2024-04-30T12:41:52+00:00",
+            "dateModified": "2024-12-17T16:01:37+00:00",
             "@type": "MedicalWebPage"
         }
     },
@@ -4521,7 +4445,7 @@
         "name": "Zolpidem",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/zolpidem/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/zolpidem/",
         "description": "Find out how zolpidem treats sleeping problems (insomnia) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
@@ -4537,7 +4461,7 @@
         "name": "Zopiclone",
         "articleStatus": "published",
         "linkRelationship": "Result",
-        "url": "https://int.api.service.nhs.uk/nhs-website-content/medicines/zopiclone/",
+        "url": "https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk/medicines/zopiclone/",
         "description": "Brand name: Zimovane. Find out how zopiclone treats sleeping problems (insomnia) and how to take it.",
         "mainEntityOfPage": {
             "genre": [
