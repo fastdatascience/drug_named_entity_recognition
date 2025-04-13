@@ -38,6 +38,5 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
 - [ ] I have checked my code and corrected any misspellings
-- [ ] The Harmony API is not broken by my change to the Harmony Python library
 - [ ] I add third party dependencies only when necessary. If I changed the requirements, it changes in `pyproject.toml`
 - [ ] If I introduced a new feature, I documented it ideally in the README examples so that people will know how to use it.
