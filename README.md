@@ -255,6 +255,34 @@ Response includes `'omop_id': '161'`:
 
 We now support SMILES (Simplified Molecular Input Line Entry System) strings for drug molecules. SMILES data is extracted from PubChem’s CID-SMILES.gz file and integrated during the dictionary build step (06_add_smiles_from_pubchem.py), enriching each drug entry with a machine-readable structure. If available, a SMILES string is returned in the find_drugs() output under the smiles key. For visualisation, users can refer to the example notebook using RDKit (optional dependency). This enhancement allows better structural insight without relying on external APIs.
 
+## Plotting the molecular structure
+
+This needs you to also install `rdkit`: 
+
+```
+pip install rdkit
+```
+
+```
+from rdkit import Chem
+from rdkit.Chem import Draw
+from drug_named_entity_recognition import find_drugs
+sentences = "I prescribed Dabigatran"
+drugs = find_drugs(sentences.split(), is_include_structure=True)
+for drug in drugs:
+    structure_mol = drug[0]["structure_mol"]
+    break
+print (structure_mol)
+
+mol = Chem.MolFromMolBlock(structure_mol)
+image = Draw.MolToImage(mol, size=(1000,500))
+image.show()
+image.save("dabigatran.png")
+```
+
+displays:
+
+![dabigatran](./dabigatran.png)
 
 # 📁Data sources
 
