@@ -7,6 +7,8 @@ include *.ipynb
 include *.png
 include cross_check_against_common_english_vocab.py
 include find_short_drug_names.py
+include smiles_example_python.py
+include structure_mol_example_python.py
 recursive-include harvesting_data_from_source *.py
 recursive-include harvesting_data_from_source *.csv
 recursive-include src *.bz2
