@@ -418,7 +418,21 @@ Wood, T.A., Drug Named Entity Recognition [Computer software], Version 2.0.8, ac
 }
 ```
 
+
+
+## Case studies: Who is using the Drug Named Entity Recognition Library?
+
+Thankfully, a number of people and organisations around the world have been using the library and have cited us.
+
+### NeuroTrialNER: An Annotated Corpus for Neurological Diseases and Therapies in Clinical Trial Registries
+
+Simona E. Doneva at the University of Zurich and her colleagues used the tool to make an annotated corpus of neurological diseases.
+
+* Doneva, Simona, et al. [NeuroTrialNER: An Annotated Corpus for Neurological Diseases and Therapies in Clinical Trial Registries.](https://aclanthology.org/2024.emnlp-main.1050.pdf) Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. 2024.
+
+
 ## Citations
 
 1. Kim S, Chen J, Cheng T, et al. PubChem 2025 update. Nucleic Acids Res. 2025;53(D1):D1516-D1525. doi:10.1093/nar/gkae1059
 2. Knox C, Wilson M, Klinger CM, et al. DrugBank 6.0: the DrugBank Knowledgebase for 2024. Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.
+
