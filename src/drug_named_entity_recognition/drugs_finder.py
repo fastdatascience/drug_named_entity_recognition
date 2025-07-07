@@ -1,4 +1,4 @@
-'''
+"""
 
 MIT License
 
@@ -26,7 +26,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-'''
+"""
 
 import bz2
 import os
@@ -34,6 +34,9 @@ import pathlib
 import pickle as pkl
 from collections import Counter
 
+from drug_named_entity_recognition.molecular_properties import (
+    get_molecular_weight,
+)
 from drug_named_entity_recognition.omop_api import get_omop_id_from_drug
 from drug_named_entity_recognition.structure_file_downloader import download_structures
 from drug_named_entity_recognition.util import stopwords
@@ -79,7 +82,7 @@ def get_ngrams(text):
     n = 3
     ngrams = set()
     for i in range(0, len(text) - n + 1, 1):
-        ngrams.add(text[i:i + n])
+        ngrams.add(text[i : i + n])
     return ngrams
 
 
@@ -110,7 +113,9 @@ def reset_drugs_data():
             ngram_to_variant[ngram].append(drug_variant)
 
 
-def add_custom_drug_synonym(drug_variant: str, canonical_name: str, optional_variant_data: dict = None):
+def add_custom_drug_synonym(
+    drug_variant: str, canonical_name: str, optional_variant_data: dict = None
+):
     drug_variant = drug_variant.lower()
     canonical_name = canonical_name.lower()
     drug_variant_to_canonical[drug_variant] = [canonical_name]
@@ -168,19 +173,36 @@ def get_fuzzy_match(surface_form: str):
     if len(candidate_to_num_matching_ngrams) > 0:
         top_candidate = max(candidate_to_jaccard, key=candidate_to_jaccard.get)
         jaccard = candidate_to_jaccard[top_candidate]
-        query_ngrams_missing_in_candidate = query_ngrams.difference(variant_to_ngrams[top_candidate])
-        candidate_ngrams_missing_in_query = variant_to_ngrams[top_candidate].difference(query_ngrams)
+        query_ngrams_missing_in_candidate = query_ngrams.difference(
+            variant_to_ngrams[top_candidate]
+        )
+        candidate_ngrams_missing_in_query = variant_to_ngrams[top_candidate].difference(
+            query_ngrams
+        )
 
         candidate_length = len(top_candidate)
         length_diff = abs(query_length - candidate_length)
-        if max([len(query_ngrams_missing_in_candidate), len(candidate_ngrams_missing_in_query)]) <= 3 \
-                and length_diff <= 2:
+        if (
+            max(
+                [
+                    len(query_ngrams_missing_in_candidate),
+                    len(candidate_ngrams_missing_in_query),
+                ]
+            )
+            <= 3
+            and length_diff <= 2
+        ):
             return top_candidate, jaccard
     return None, None
 
 
-def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_include_structure=False,
-               is_use_omop_api=False):
+def find_drugs(
+    tokens: list,
+    is_fuzzy_match=False,
+    is_ignore_case=None,
+    is_include_structure=False,
+    is_use_omop_api=False,
+):
     if is_include_structure and len(dbid_to_mol_lookup) == 0:
         dbid_to_mol_lookup["downloading"] = True
         if not os.path.exists(structures_file):
@@ -211,10 +233,15 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         match = drug_variant_to_canonical.get(cand_norm, None)
         if match:
             for m in match:
-                match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data = dict(
+                    drug_canonical_to_data.get(m, {})
+                ) | drug_variant_to_variant_data.get(cand_norm, {})
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = cand
                 lookup_name = match_data.get("name") or m
+
+                match_data = get_molecular_weight(match_data, lookup_name)
+
                 if is_use_omop_api:
                     match_data["omop_id"] = cached_get_omop_id(lookup_name)
                 drug_matches.append((match_data, token_idx, token_idx + 2))
@@ -226,12 +253,18 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 if fuzzy_matched_variant is not None:
                     match = drug_variant_to_canonical[fuzzy_matched_variant]
                     for m in match:
-                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
-                            fuzzy_matched_variant, {})
+                        match_data = dict(
+                            drug_canonical_to_data.get(m, {})
+                        ) | drug_variant_to_variant_data.get(fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = cand
+
+                        match_data = get_molecular_weight(
+                            match_data, lookup_name
+                        )
+
                         if is_use_omop_api:
                             lookup_name = match_data.get("name") or m
                             match_data["omop_id"] = cached_get_omop_id(lookup_name)
@@ -245,10 +278,15 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
         match = drug_variant_to_canonical.get(cand_norm, None)
         if match:
             for m in match:
-                match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(cand_norm, {})
+                match_data = dict(
+                    drug_canonical_to_data.get(m, {})
+                ) | drug_variant_to_variant_data.get(cand_norm, {})
                 match_data["match_type"] = "exact"
                 match_data["matching_string"] = token
                 lookup_name = match_data.get("name") or m
+
+                match_data = get_molecular_weight(match_data, lookup_name)
+
                 if is_use_omop_api:
                     match_data["omop_id"] = cached_get_omop_id(lookup_name)
                 drug_matches.append((match_data, token_idx, token_idx + 1))
@@ -259,13 +297,19 @@ def find_drugs(tokens: list, is_fuzzy_match=False, is_ignore_case=None, is_inclu
                 if fuzzy_matched_variant is not None:
                     match = drug_variant_to_canonical[fuzzy_matched_variant]
                     for m in match:
-                        match_data = dict(drug_canonical_to_data.get(m, {})) | drug_variant_to_variant_data.get(
-                            fuzzy_matched_variant, {})
+                        match_data = dict(
+                            drug_canonical_to_data.get(m, {})
+                        ) | drug_variant_to_variant_data.get(fuzzy_matched_variant, {})
                         match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = token
                         lookup_name = match_data.get("name") or m
+
+                        match_data = get_molecular_weight(
+                            match_data, lookup_name
+                        )
+
                         if is_use_omop_api:
                             match_data["omop_id"] = cached_get_omop_id(lookup_name)
                         drug_matches.append((match_data, token_idx, token_idx + 1))
