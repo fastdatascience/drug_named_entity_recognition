@@ -190,7 +190,9 @@ def calculate_molecular_weight(formula: str) -> float:
     return round(weight, 2)
 
 
-def get_molecular_weight(match_data: dict, lookup_name: str) -> Dict:
+def get_molecular_weight(
+    match_data: dict, lookup_name: str, use_pub_chem_api=False
+) -> Dict:
     """
     Ensures 'molecular_weight' and 'smiles' are present in match_data.
     Tries to calculate molecular_weight from formula first; falls back to PubChem API if needed.
@@ -207,7 +209,7 @@ def get_molecular_weight(match_data: dict, lookup_name: str) -> Dict:
             pass
 
     # * Fetch from PubChem if still missing molecular_weight
-    if "molecular_weight" not in match_data:
+    if "molecular_weight" not in match_data and use_pub_chem_api:
         mw, _ = fetch_pub_chem_properties(lookup_name)
         if mw:
             match_data["molecular_weight"] = round(mw, 2)

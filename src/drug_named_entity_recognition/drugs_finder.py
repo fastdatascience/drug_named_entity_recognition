@@ -202,6 +202,7 @@ def find_drugs(
     is_ignore_case=None,
     is_include_structure=False,
     is_use_omop_api=False,
+    use_pub_chem_api=False,
 ):
     if is_include_structure and len(dbid_to_mol_lookup) == 0:
         dbid_to_mol_lookup["downloading"] = True
@@ -240,7 +241,9 @@ def find_drugs(
                 match_data["matching_string"] = cand
                 lookup_name = match_data.get("name") or m
 
-                match_data = get_molecular_weight(match_data, lookup_name)
+                match_data = get_molecular_weight(
+                    match_data, lookup_name, use_pub_chem_api
+                )
 
                 if is_use_omop_api:
                     match_data["omop_id"] = cached_get_omop_id(lookup_name)
@@ -262,7 +265,7 @@ def find_drugs(
                         match_data["matching_string"] = cand
 
                         match_data = get_molecular_weight(
-                            match_data, lookup_name
+                            match_data, lookup_name, use_pub_chem_api
                         )
 
                         if is_use_omop_api:
@@ -285,7 +288,9 @@ def find_drugs(
                 match_data["matching_string"] = token
                 lookup_name = match_data.get("name") or m
 
-                match_data = get_molecular_weight(match_data, lookup_name)
+                match_data = get_molecular_weight(
+                    match_data, lookup_name, use_pub_chem_api
+                )
 
                 if is_use_omop_api:
                     match_data["omop_id"] = cached_get_omop_id(lookup_name)
@@ -307,7 +312,7 @@ def find_drugs(
                         lookup_name = match_data.get("name") or m
 
                         match_data = get_molecular_weight(
-                            match_data, lookup_name
+                            match_data, lookup_name, use_pub_chem_api
                         )
 
                         if is_use_omop_api:
