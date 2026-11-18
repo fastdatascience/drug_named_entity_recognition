@@ -205,13 +205,17 @@ def get_molecular_weight(
                 match_data["formula"]
             )
         except Exception:
+            print("Exception with molecular weight calculation from formula")
             # * If formula is invalid or missing elements, fallback to API
             pass
 
     # * Fetch from PubChem if still missing molecular_weight
     if "molecular_weight" not in match_data and use_pub_chem_api:
-        mw, _ = fetch_pub_chem_properties(lookup_name)
-        if mw:
-            match_data["molecular_weight"] = round(mw, 2)
+        try:
+            mw, _ = fetch_pub_chem_properties(lookup_name)
+            if mw:
+                match_data["molecular_weight"] = round(mw, 2)
+        except Exception:
+            print ("Exception with molecular weight")
 
     return match_data
