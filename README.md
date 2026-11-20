@@ -196,9 +196,9 @@ You can install the plugin in Google Sheets [here](https://workspace.google.com/
 ![google_sheets_screenshot.png](google_sheets_screenshot.png)
 
 
-# 😊 Using this tool directly from Google Chrome
+# Using this tool directly from Google Chrome (also no-code!)
 
-This tool will run in your browser and highlight named entities in the text and allow you to export all drugs mentioned in the documet to Sheets or download locally. It works on HTML pages and also on PDFs, so it's ideal for processing clinical trial protocols.
+This tool will run in your browser and highlight named entities in the text and allow you to export all drugs mentioned in the document to Sheets or download locally. It works on HTML pages and also on PDFs, so it's ideal for processing clinical trial protocols.
 
 You can install the Google Chrome extension [from the Chrome store](https://chromewebstore.google.com/detail/drug-name-recogniser-chem/pbacaaedcigcgapknncelkjgjecclmfc).
 
