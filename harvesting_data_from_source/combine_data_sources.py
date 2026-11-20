@@ -1,4 +1,4 @@
-'''
+"""
 MIT License
 
 Copyright (c) 2023 Fast Data Science Ltd (https://fastdatascience.com)
@@ -25,7 +25,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-'''
+"""
 
 import bz2
 import csv
@@ -36,11 +36,15 @@ import re
 
 from nltk.corpus import words
 
-from inclusions import common_english_words_to_include_in_drugs_dictionary, \
-    extra_terms_to_exclude_from_drugs_dictionary, extra_mappings, drugs_to_exclude_under_all_variants
+from inclusions import (
+    common_english_words_to_include_in_drugs_dictionary,
+    extra_terms_to_exclude_from_drugs_dictionary,
+    extra_mappings,
+    drugs_to_exclude_under_all_variants,
+)
 
-re_num = re.compile(r'^\d+$')
-re_three_digits = re.compile(r'\d\d\d')
+re_num = re.compile(r"^\d+$")
+re_three_digits = re.compile(r"\d\d\d")
 
 this_path = pathlib.Path(__file__).parent.resolve()
 
@@ -57,15 +61,22 @@ with open("mesh_name_to_mass.json", "r", encoding="utf-8") as f:
 
 def add_canonical(canonical: str, data: dict):
     canonical_norm = canonical.lower().strip()
-    if canonical_norm in drug_variant_to_canonical and canonical_norm not in drug_variant_to_canonical[canonical_norm]:
-        print(f"Adding canonical {canonical_norm} but it already maps to {drug_variant_to_canonical[canonical_norm]}")
+    if (
+        canonical_norm in drug_variant_to_canonical
+        and canonical_norm not in drug_variant_to_canonical[canonical_norm]
+    ):
+        print(
+            f"Adding canonical {canonical_norm} but it already maps to {drug_variant_to_canonical[canonical_norm]}"
+        )
         canonical_norm = drug_variant_to_canonical[canonical_norm][0]
     elif canonical_norm not in drug_variant_to_canonical:
         data["name"] = canonical
     if canonical_norm not in drug_canonical_to_data:
         drug_canonical_to_data[canonical_norm] = data
     else:
-        drug_canonical_to_data[canonical_norm] = drug_canonical_to_data[canonical_norm] | data
+        drug_canonical_to_data[canonical_norm] = (
+            drug_canonical_to_data[canonical_norm] | data
+        )
 
 
 def add_synonym(synonym: str, canonical: str, synonym_data: dict = None):
@@ -80,11 +91,15 @@ def add_synonym(synonym: str, canonical: str, synonym_data: dict = None):
         if synonym_norm not in drug_variant_to_variant_data:
             drug_variant_to_variant_data[synonym_norm] = synonym_data
         else:
-            drug_variant_to_variant_data[synonym_norm] = drug_variant_to_variant_data[synonym_norm] | synonym_data
+            drug_variant_to_variant_data[synonym_norm] = (
+                drug_variant_to_variant_data[synonym_norm] | synonym_data
+            )
 
 
-with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding="utf-8") as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=',')
+with open(
+    this_path.joinpath("drugs_dictionary_medlineplus.csv"), "r", encoding="utf-8"
+) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
     headers = None
     for row in csv_reader:
         if not headers:
@@ -96,7 +111,9 @@ with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding=
 
         canonical = re.sub(
             r"(?i) (Injection|Oral Inhalation|Transdermal|Ophthalmic|Topical|Vaginal Cream|Nasal Spray|Transdermal Patch|Rectal)",
-            "", canonical)
+            "",
+            canonical,
+        )
 
         add_canonical(canonical, {"medline_plus_id": id})
         add_synonym(canonical, canonical, {"is_brand": False})
@@ -112,13 +129,15 @@ def get_names_nhs(text: str):
 
     names_found = list()
     for name in possible_names:
-        name = re.sub(r'\)|,', '', name).strip()
-        name = re.sub(r'^(?:rectal|oral|vaginal|.*-acting)\b', '', name).strip()
+        name = re.sub(r"\)|,", "", name).strip()
+        name = re.sub(r"^(?:rectal|oral|vaginal|.*-acting)\b", "", name).strip()
         name = re.sub(
-            r'\b(?:rectal foam and enemas|for (?:adults|children|skin|eyes|depression|piles|pain|migraine|thrush|mouth|type|gestational).*|gels?|rectal foams?|nasal sprays?|pain and migraine|tablets?|tablets and liquid|creams?|skin creams?)$',
-            '', name)
+            r"\b(?:rectal foam and enemas|for (?:adults|children|skin|eyes|depression|piles|pain|migraine|thrush|mouth|type|gestational).*|gels?|rectal foams?|nasal sprays?|pain and migraine|tablets?|tablets and liquid|creams?|skin creams?)$",
+            "",
+            name,
+        )
         name = name.strip()
-        name = re.sub(r'\.$', '', name)
+        name = re.sub(r"\.$", "", name)
         names_found.append(name)
 
     return names_found
@@ -127,8 +146,8 @@ def get_names_nhs(text: str):
 def get_brand_names_nhs(description: str):
     if "brand name" in description.lower():
         description = description.strip()
-        description = re.sub(r'(?i)\W*brand names?\W*', '', description)
-        description = re.sub(r'(?i)find out.*', '', description)
+        description = re.sub(r"(?i)\W*brand names?\W*", "", description)
+        description = re.sub(r"(?i)find out.*", "", description)
         return get_names_nhs(description)
     return []
 
@@ -137,8 +156,14 @@ for nhs_drug in nhs_data:
     names = get_names_nhs(nhs_drug["name"])
     brand_names = get_brand_names_nhs(nhs_drug["description"])
 
-    nhs_api_url = re.sub(r"https://nhswebsite-dev.nhs.ukhttps", "https", nhs_drug["url"])
-    nhs_website_url = re.sub(r'https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk', "https://www.nhs.uk", nhs_drug["url"])
+    nhs_api_url = re.sub(
+        r"https://nhswebsite-dev.nhs.ukhttps", "https", nhs_drug["url"]
+    )
+    nhs_website_url = re.sub(
+        r"https://nhswebsite-dev.nhs.ukhttps://api.nhs.uk",
+        "https://www.nhs.uk",
+        nhs_drug["url"],
+    )
     data = {"nhs_api_url": nhs_api_url, "nhs_url": nhs_website_url}
     canonical = names[0]
     add_canonical(canonical, data)
@@ -149,8 +174,10 @@ for nhs_drug in nhs_data:
     for synonym in brand_names:
         add_synonym(synonym, canonical, {"is_brand": True})
 
-with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=',')
+with open(
+    this_path.joinpath("drugs_dictionary_mesh.csv"), "r", encoding="utf-8"
+) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
     headers = None
     for row in csv_reader:
         if not headers:
@@ -172,11 +199,12 @@ with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8"
         for synonym in synonyms:
             add_synonym(synonym, canonical)
 
-print(
-    f"Added MeSH data.")
+print(f"Added MeSH data.")
 
-with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=',')
+with open(
+    this_path.joinpath("drugbank vocabulary.csv"), "r", encoding="utf-8"
+) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
     headers = None
     for row in csv_reader:
         if not headers:
@@ -192,8 +220,10 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
         for synonym in synonyms:
             add_synonym(synonym, canonical)
 
-with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=',')
+with open(
+    this_path.joinpath("drugs_dictionary_wikipedia.csv"), "r", encoding="utf-8"
+) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
     headers = None
     for row in csv_reader:
         if not headers:
@@ -202,7 +232,7 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
         wikipedia_url = row[0]
         data = {"wikipedia_url": wikipedia_url}
         canonical = row[1]
-        canonical = re.sub(r' \(medication.+', '', canonical)
+        canonical = re.sub(r" \(medication.+", "", canonical)
         synonyms = row[2].split("|")
 
         add_canonical(canonical, data)
@@ -236,7 +266,8 @@ for drug_variant, canonical in drug_variant_to_canonical.items():
         number_of_smiles_matches_not_found += 1
 
 print(
-    f"We were able to match the MeSH names to {number_of_smiles_matches_found} SMILES strings but {number_of_smiles_matches_not_found} could not be matched to SMILES.")
+    f"We were able to match the MeSH names to {number_of_smiles_matches_found} SMILES strings but {number_of_smiles_matches_not_found} could not be matched to SMILES."
+)
 
 # Remove common English words
 
@@ -247,13 +278,22 @@ all_english_vocab = set([w.lower() for w in words.words()])
 words_to_check_with_ai = set()
 for word in list(drug_variant_to_canonical):
     reason = None
-    if word in all_english_vocab and word not in common_english_words_to_include_in_drugs_dictionary:
+    if (
+        word in all_english_vocab
+        and word not in common_english_words_to_include_in_drugs_dictionary
+    ):
         reason = "it is an English word in NLTK dictionary"
-        if word not in common_english_words_to_include_in_drugs_dictionary and len(word) > 2:
+        if (
+            word not in common_english_words_to_include_in_drugs_dictionary
+            and len(word) > 2
+        ):
             words_to_check_with_ai.add(word)
     elif word in extra_terms_to_exclude_from_drugs_dictionary:
         reason = "it is in the manual ignore list"
-    elif len(word) < 4 and word not in common_english_words_to_include_in_drugs_dictionary:
+    elif (
+        len(word) < 4
+        and word not in common_english_words_to_include_in_drugs_dictionary
+    ):
         reason = "it is short"
     elif len(re_num.findall(word)) > 0:
         reason = "it is numeric"
@@ -288,7 +328,9 @@ for i in range(3):
                     if canonical_of_canonical != canonical:
                         redirects_needed[variant] = drug_variant_to_canonical[canonical]
                         all_redirects_fixed.add(variant)
-    print(f"There are {len(redirects_needed)} drug names which are redirected twice. These need to be normalised")
+    print(
+        f"There are {len(redirects_needed)} drug names which are redirected twice. These need to be normalised"
+    )
     for source, targets in redirects_needed.items():
         drug_variant_to_canonical[source] = targets
 
@@ -305,7 +347,9 @@ for variant in all_redirects_fixed:
 
 for canonical in list(drug_canonical_to_data):
     if canonical not in canonical_has_variants_pointing_to_it:
-        print(f"removing data for {canonical} because there are no synonyms pointing to it")
+        print(
+            f"removing data for {canonical} because there are no synonyms pointing to it"
+        )
         del drug_canonical_to_data[canonical]
 
 # Hard delete some terms in all variants e.g. blood glucose
@@ -322,10 +366,14 @@ for term_to_delete in drugs_to_exclude_under_all_variants:
         del drug_variant_to_canonical[variant]
     del drug_canonical_to_data[term_to_delete]
 
-with bz2.open("../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb") as f:
+with bz2.open(
+    "../src/drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2", "wb"
+) as f:
     pkl.dump(
-        {"drug_variant_to_canonical": drug_variant_to_canonical,
-         "drug_canonical_to_data": drug_canonical_to_data,
-         "drug_variant_to_variant_data": drug_variant_to_variant_data},
-        f
+        {
+            "drug_variant_to_canonical": drug_variant_to_canonical,
+            "drug_canonical_to_data": drug_canonical_to_data,
+            "drug_variant_to_variant_data": drug_variant_to_variant_data,
+        },
+        f,
     )

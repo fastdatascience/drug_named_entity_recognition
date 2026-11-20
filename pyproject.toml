@@ -1,6 +1,6 @@
 [project]
 name = "drug-named-entity-recognition"
-version = "2.0.9"
+version = "2.0.10"
 description = "Drug Named Entity Recognition library to find and resolve drug names in a string (drug named entity linking)"
 readme = "README.md"
 keywords = ['drug', 'bio', 'biomedical', 'medical', 'pharma', 'pharmaceutical', 'ner', 'nlp', 'named entity recognition', 'natural language processing', 'named entity linking']
@@ -32,7 +32,8 @@ classifiers=[
 ]
 # this set should be kept minimal!
 dependencies = [
-    "requests"
+    "requests",
+    "nltk",
 ]
 
 [project.optional-dependencies]

@@ -1,8 +1,8 @@
 import json
 import re
 
-re_num = re.compile(r'^\d+$')
-re_three_digits = re.compile(r'\d\d\d')
+re_num = re.compile(r"^\d+$")
+re_three_digits = re.compile(r"\d\d\d")
 
 pubchem_id_to_name_lc = {}
 with open("CID-MeSH", "r", encoding="utf-8") as f:

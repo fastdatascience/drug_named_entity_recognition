@@ -27,6 +27,6 @@ SOFTWARE.
 
 '''
 
-__version__ = "2.0.9"
+__version__ = "2.0.10"
 
 from drug_named_entity_recognition.drugs_finder import find_drugs
