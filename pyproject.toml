@@ -32,8 +32,10 @@ classifiers=[
 ]
 # this set should be kept minimal!
 dependencies = [
-    "requests"
-]
+    "requests",
+    "nltk",
+    "fuzzyset2",
+    "english_words"]
 
 [project.optional-dependencies]
 

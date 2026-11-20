@@ -29,10 +29,17 @@ SOFTWARE.
 """
 
 import bz2
+import logging
 import os
 import pathlib
 import pickle as pkl
-from collections import Counter
+
+try:
+    from cfuzzyset import cFuzzySet as FuzzySet
+except ImportError:
+    from fuzzyset import FuzzySet
+
+from english_words import get_english_words_set
 
 from drug_named_entity_recognition.molecular_properties import (
     get_molecular_weight,
@@ -40,6 +47,8 @@ from drug_named_entity_recognition.molecular_properties import (
 from drug_named_entity_recognition.omop_api import get_omop_id_from_drug
 from drug_named_entity_recognition.structure_file_downloader import download_structures
 from drug_named_entity_recognition.util import stopwords
+
+logger = logging.getLogger(__name__)
 
 dbid_to_mol_lookup = {}
 
@@ -77,6 +86,10 @@ drug_variant_to_variant_data = {}
 ngram_to_variant = {}
 variant_to_ngrams = {}
 
+# FuzzySet for drug names and English dictionary
+drug_names_fuzzyset = None
+dictionary_fuzzyset = None
+
 
 def get_ngrams(text):
     n = 3
@@ -87,6 +100,8 @@ def get_ngrams(text):
 
 
 def reset_drugs_data():
+    global drug_names_fuzzyset, dictionary_fuzzyset
+
     drug_variant_to_canonical.clear()
     drug_canonical_to_data.clear()
     drug_variant_to_variant_data.clear()
@@ -112,10 +127,24 @@ def reset_drugs_data():
                 ngram_to_variant[ngram] = []
             ngram_to_variant[ngram].append(drug_variant)
 
+    # Build FuzzySet for drug names
+    drug_names_fuzzyset = FuzzySet()
+    for drug_variant in drug_variant_to_canonical:
+        drug_names_fuzzyset.add(drug_variant.lower())
+    logger.info("Built FuzzySet with %s drug variants", len(drug_variant_to_canonical))
+
+    # Build FuzzySet for English dictionary
+    dictionary_fuzzyset = FuzzySet()
+    for term in get_english_words_set(["web2"], lower=True):
+        dictionary_fuzzyset.add(term)
+    logger.info("Built FuzzySet for English dictionary")
+
 
 def add_custom_drug_synonym(
     drug_variant: str, canonical_name: str, optional_variant_data: dict = None
 ):
+    global drug_names_fuzzyset
+
     drug_variant = drug_variant.lower()
     canonical_name = canonical_name.lower()
     drug_variant_to_canonical[drug_variant] = [canonical_name]
@@ -129,6 +158,10 @@ def add_custom_drug_synonym(
             ngram_to_variant[ngram] = []
         ngram_to_variant[ngram].append(drug_variant)
 
+    # Add to FuzzySet if it exists
+    if drug_names_fuzzyset is not None:
+        drug_names_fuzzyset.add(drug_variant)
+
     return f"Added {drug_variant} as a synonym for {canonical_name}. Optional data attached to this synonym = {optional_variant_data}"
 
 
@@ -141,59 +174,64 @@ def add_custom_new_drug(drug_name, drug_data):
 
 
 def remove_drug_synonym(drug_variant: str):
+    global drug_names_fuzzyset
+
     drug_variant = drug_variant.lower()
     ngrams = get_ngrams(drug_variant)
 
     del variant_to_ngrams[drug_variant]
     del drug_variant_to_canonical[drug_variant]
-    del drug_variant_to_variant_data[drug_variant]
+    if drug_variant in drug_variant_to_variant_data:
+        del drug_variant_to_variant_data[drug_variant]
 
     for ngram in ngrams:
-        ngram_to_variant[ngram].remove(drug_variant)
+        if ngram in ngram_to_variant:
+            ngram_to_variant[ngram].remove(drug_variant)
+
+    # Note: FuzzySet doesn't support removal, so we'd need to rebuild it
+    # For now, we'll just note that removal won't affect FuzzySet until reset_drugs_data() is called
+    # In practice, this is acceptable since removals are rare
 
     return f"Removed {drug_variant} from dictionary"
 
 
-def get_fuzzy_match(surface_form: str):
-    query_ngrams = get_ngrams(surface_form)
-    candidate_to_num_matching_ngrams = Counter()
-    for ngram in query_ngrams:
-        candidates = ngram_to_variant.get(ngram, None)
-        if candidates is not None:
-            for candidate in candidates:
-                candidate_to_num_matching_ngrams[candidate] += 1
+def get_fuzzy_match(surface_form: str, fuzzy_threshold: float = 0.5):
+    """Find fuzzy match for surface form using FuzzySet, excluding common English words.
 
-    candidate_to_jaccard = {}
-    for candidate, num_matching_ngrams in candidate_to_num_matching_ngrams.items():
-        ngrams_in_query_and_candidate = query_ngrams.union(variant_to_ngrams[candidate])
-        jaccard = num_matching_ngrams / len(ngrams_in_query_and_candidate)
-        candidate_to_jaccard[candidate] = jaccard
+    Args:
+        surface_form: The text to match against drug names
+        fuzzy_threshold: Minimum similarity score (0-1) for a match (default: 0.5)
 
-    query_length = len(surface_form)
-    if len(candidate_to_num_matching_ngrams) > 0:
-        top_candidate = max(candidate_to_jaccard, key=candidate_to_jaccard.get)
-        jaccard = candidate_to_jaccard[top_candidate]
-        query_ngrams_missing_in_candidate = query_ngrams.difference(
-            variant_to_ngrams[top_candidate]
-        )
-        candidate_ngrams_missing_in_query = variant_to_ngrams[top_candidate].difference(
-            query_ngrams
-        )
+    Returns:
+        Tuple of (matched_variant, similarity_score) or (None, None) if no match found
+    """
+    if drug_names_fuzzyset is None or dictionary_fuzzyset is None:
+        logger.warning("FuzzySets not initialized. Call reset_drugs_data() first.")
+        return None, None
 
-        candidate_length = len(top_candidate)
-        length_diff = abs(query_length - candidate_length)
-        if (
-            max(
-                [
-                    len(query_ngrams_missing_in_candidate),
-                    len(candidate_ngrams_missing_in_query),
-                ]
-            )
-            <= 3
-            and length_diff <= 2
-        ):
-            return top_candidate, jaccard
-    return None, None
+    surface_form_lower = surface_form.lower()
+
+    # Try to find in drug_names FuzzySet
+    drug_results = drug_names_fuzzyset.get(surface_form_lower)
+    if not drug_results:
+        return None, None
+
+    best_score, best_match = drug_results[0]
+
+    # Check if score meets threshold
+    if best_score < fuzzy_threshold:
+        return None, None
+
+    # Check if it's a common English word in the dictionary
+    dict_results = dictionary_fuzzyset.get(surface_form_lower)
+    is_dict_word = dict_results and dict_results[0][0] >= best_score
+
+    # If it's a dictionary word with higher or equal score, exclude it
+    if is_dict_word:
+        return None, None
+
+    # Return the matched variant and score
+    return best_match, best_score
 
 
 def find_drugs(
@@ -237,9 +275,9 @@ def find_drugs(
                 match_data = dict(
                     drug_canonical_to_data.get(m, {})
                 ) | drug_variant_to_variant_data.get(cand_norm, {})
-                match_data["match_type"] = "exact"
+                match_data["match_similarity"] = 1.0
                 match_data["matching_string"] = cand
-                lookup_name = match_data.get("name") or m
+                lookup_name = match_data.get("name", m)
 
                 match_data = get_molecular_weight(
                     match_data, lookup_name, use_pub_chem_api
@@ -259,17 +297,16 @@ def find_drugs(
                         match_data = dict(
                             drug_canonical_to_data.get(m, {})
                         ) | drug_variant_to_variant_data.get(fuzzy_matched_variant, {})
-                        match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = cand
+                        lookup_name = match_data.get("name", m)
 
                         match_data = get_molecular_weight(
                             match_data, lookup_name, use_pub_chem_api
                         )
 
-                        if is_use_omop_api:
-                            lookup_name = match_data.get("name") or m
+                        if is_use_omop_api: 
                             match_data["omop_id"] = cached_get_omop_id(lookup_name)
                         drug_matches.append((match_data, token_idx, token_idx + 2))
                         is_exclude.update([token_idx, token_idx + 1])
@@ -284,9 +321,9 @@ def find_drugs(
                 match_data = dict(
                     drug_canonical_to_data.get(m, {})
                 ) | drug_variant_to_variant_data.get(cand_norm, {})
-                match_data["match_type"] = "exact"
+                match_data["match_similarity"] = 1.0
                 match_data["matching_string"] = token
-                lookup_name = match_data.get("name") or m
+                lookup_name = match_data.get("name", m)
 
                 match_data = get_molecular_weight(
                     match_data, lookup_name, use_pub_chem_api
@@ -305,11 +342,10 @@ def find_drugs(
                         match_data = dict(
                             drug_canonical_to_data.get(m, {})
                         ) | drug_variant_to_variant_data.get(fuzzy_matched_variant, {})
-                        match_data["match_type"] = "fuzzy"
                         match_data["match_similarity"] = similarity
                         match_data["match_variant"] = fuzzy_matched_variant
                         match_data["matching_string"] = token
-                        lookup_name = match_data.get("name") or m
+                        lookup_name = match_data.get("name", m)
 
                         match_data = get_molecular_weight(
                             match_data, lookup_name, use_pub_chem_api

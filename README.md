@@ -394,6 +394,16 @@ This package
 - includes test files in the source distribution
 - uses **setup.cfg** for [version single-sourcing](https://packaging.python.org/guides/single-sourcing-package-version/) (setuptools 46.4.0+)
 
+## Future Improvements
+
+### Data Storage Format Migration
+
+Currently, the drug dictionary data and FuzzySet data structures are stored using Python's `pickle` format. Pickle is an insecure and opaque binary format. Suggested improvements:
+
+- **Migrate drug dictionary storage from pickle to JSON**: The drug dictionary data (`drug_variant_to_canonical`, `drug_canonical_to_data`, `drug_variant_to_variant_data`) should be stored in a standard JSON format instead of pickle for better portability, version control compatibility, and security.
+
+- **Add JSON serialization support for FuzzySet**: The FuzzySet data structures (used for fuzzy matching) should be serializable to JSON format. This would allow pre-building FuzzySets during data preparation (`harvesting_data_from_source/combine_data_sources.py`) and loading them directly in `drugs_finder.py`, eliminating the need to rebuild them on every import and improving startup performance.
+
 ## 🧍Re-releasing the package manually
 
 The code to re-release Drug Named Entity Recognition on PyPI is as follows:
