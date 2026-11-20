@@ -439,13 +439,16 @@ Thankfully, a number of people and organisations around the world have been usin
 
 ### NeuroTrialNER: An Annotated Corpus for Neurological Diseases and Therapies in Clinical Trial Registries
 
-Simona E. Doneva at the University of Zurich and her colleagues used the tool to make an annotated corpus of neurological diseases.
-
-* Doneva, Simona, et al. [NeuroTrialNER: An Annotated Corpus for Neurological Diseases and Therapies in Clinical Trial Registries.](https://aclanthology.org/2024.emnlp-main.1050.pdf) Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. 2024.
-
+Simona E. Doneva at the University of Zurich and her colleagues used the tool to make an annotated corpus of neurological diseases.[[1]](#citations)
 
 ## Citations
 
-1. Kim S, Chen J, Cheng T, et al. PubChem 2025 update. Nucleic Acids Res. 2025;53(D1):D1516-D1525. doi:10.1093/nar/gkae1059
-2. Knox C, Wilson M, Klinger CM, et al. DrugBank 6.0: the DrugBank Knowledgebase for 2024. Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.
+1. Doneva, Simona, et al. [NeuroTrialNER: An Annotated Corpus for Neurological Diseases and Therapies in Clinical Trial Registries.](https://aclanthology.org/2024.emnlp-main.1050.pdf) Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. 2024.
+2. Kim S, Chen J, Cheng T, et al. PubChem 2025 update. Nucleic Acids Res. 2025;53(D1):D1516-D1525. doi:10.1093/nar/gkae1059
+3. Knox C, Wilson M, Klinger CM, et al. DrugBank 6.0: the DrugBank Knowledgebase for 2024. Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.
+4. Szplit, Dariusz, et al. [How to create perfect patient medical records without having to write anything? Adaptive AI platform for processing medical language in Polish](https://bmjopenquality.bmj.com/content/15/Suppl_2/A110). BMJ Open Quality, 2026.
+5. Szplit, Dariusz, et al. [Developing an AI platform for voice-input medical records in Polish: a digital application for optimisation of physicians’ workload](https://www.nature.com/articles/s41598-026-50490-6). Scientific Reports (2026).
+6. Disharoon, Andrew, et al. [InfoMedex: drug-drug interaction prediction via a multimodal CNN-transformer model](https://www.frontiersin.org/journals/drug-safety-and-regulation/articles/10.3389/fdsfr.2026.1841035/full). Frontiers in Drug Safety and Regulation 6 (2026): 1841035.
+7. Singh, Ramkrishna K., et al. [Harmonizing self-reported and free text medication data: a reproducible pipeline for gerontological research](https://link.springer.com/article/10.1186/s12911-025-03332-w). BMC Medical Informatics and Decision Making 26.1 (2025): 35.
+8. Singh, Ramkrishna K., et al. [Harmonizing self-reported and free text medication data: a reproducible pipeline for gerontological research](https://ieeexplore.ieee.org/abstract/document/10473654/citations#citations). BMC Medical Informatics and Decision Making 26.1 (2025): 35.
 
