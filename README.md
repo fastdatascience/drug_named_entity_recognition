@@ -15,6 +15,8 @@
 
 You can run the walkthrough Python notebook in [Google Colab](https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb) with a single click: <a href="https://colab.research.google.com/github/fastdatascience/drug_named_entity_recognition/blob/main/drug_named_entity_recognition_example_walkthrough.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+Quick links: [Google Sheets plugin](https://workspace.google.com/marketplace/app/drug_name_recogniser/463844408236) * [Google Chrome extension](https://chromewebstore.google.com/detail/drug-name-recogniser-chem/pbacaaedcigcgapknncelkjgjecclmfc)
+
 # Drug Named Entity Recognition Python library by Fast Data Science
 
 ## Finds drug names and can look up molecular structure
@@ -192,6 +194,17 @@ We have a no-code solution where you can [use the library directly from Google S
 You can install the plugin in Google Sheets [here](https://workspace.google.com/marketplace/app/drug_name_recogniser/463844408236).
 
 ![google_sheets_screenshot.png](google_sheets_screenshot.png)
+
+
+# 😊 Using this tool directly from Google Chrome
+
+This tool will run in your browser and highlight named entities in the text and allow you to export all drugs mentioned in the documet to Sheets or download locally. It works on HTML pages and also on PDFs, so it's ideal for processing clinical trial protocols.
+
+You can install the Google Chrome extension [from the Chrome store](https://chromewebstore.google.com/detail/drug-name-recogniser-chem/pbacaaedcigcgapknncelkjgjecclmfc).
+
+[Click here](https://www.youtube.com/watch?v=6bjHKyNqQ_c) to watch a video of how the extension works.
+
+![google_sheets_screenshot.png](https://fastdatascience.com/images/drug-ner-chrome-ext-demo.gif)
 
 # Requirements
 
